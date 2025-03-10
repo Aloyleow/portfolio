@@ -4,29 +4,50 @@
   font-weight: 700;
   font-style: normal;
 
-  background-color: #FAF9F6;
-
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 section {
-  height: 98vh;
-  width: 100vw;
+  height: 90vh;
+  width: 90vw;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  
 }
 
-.hp-hb-div {
-  height: 30%;
-  width: 100%;
+@media (max-width: 767px) {
+
+  .homeIntro-div1 {
+    width: 90vw;
+    cursor: default;
+  }
+  
 }
+
+@media (min-width: 768px) {
+
+  .homeIntro-div1 {
+    height: 120px;
+    width: 600px;
+    cursor: default;
+  }
+}
+
+.homeIntro-div2 div {
+  height: 60px;
+  display: flex;
+  white-space: pre;
+  justify-content: center;
+  align-items: center;
+  
+}
+
