@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom"
-import HomePage from "./pages/DisplayPage"
+import DisplayPage from "./pages/DisplayPage"
 
 function App() {
 
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage/>}/>
+        <Route path="/" element={<DisplayPage/>}/>
       </Routes>
     </>
   )

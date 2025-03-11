@@ -1,7 +1,6 @@
 :root {
   font-family: "Tektur", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 700;
   font-style: normal;
 
   font-synthesis: none;
@@ -11,24 +10,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+
 }
 
+h1 {
+  font-size: xx-large;
+}
+
+p {
+  font-weight: 300;
+  margin: 0;
+}
+
+
 section {
-  height: 90vh;
   width: 90vw;
+  padding-top: 80px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+}
+
+.heading-div {
+  font-size: x-large;
+  border-bottom: 1px solid;
 }
 
 @media (max-width: 767px) {
 
   .homeIntro-div1 {
     width: 90vw;
-    cursor: default;
+  }
+
+  .skills-div1 {
+    width: 90vw;
   }
   
 }
@@ -36,18 +53,52 @@ section {
 @media (min-width: 768px) {
 
   .homeIntro-div1 {
-    height: 120px;
     width: 600px;
-    cursor: default;
   }
-}
 
-.homeIntro-div2 div {
-  height: 60px;
-  display: flex;
-  white-space: pre;
-  justify-content: center;
-  align-items: center;
+  .skills-div1 {
+    width: 600px;
+  }
+  
   
 }
+
+
+/*Home Section*/
+
+
+.homeIntro-div1 {
+  height: 200px;
+  cursor: default;
+  align-content: center;
+}
+
+
+/*Skills Section*/
+
+
+.skills-div1 {
+  height: 200px;
+}
+
+.skills-div2 {
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.skills-div2-about {
+  height: 20%;
+}
+
+
+.skills-logo-div img {
+  width: 30px;
+  height: 40px;
+  filter: grayscale(60%);
+}
+
+
 

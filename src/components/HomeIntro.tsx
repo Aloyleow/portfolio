@@ -3,26 +3,29 @@ import { useState } from "react"
 
 const introName = "Hi, I am Aloysious Leow"
 const introRole = "A Software Engineer"
-const introExtend = `A mid-career switch professional, pursuing my passion and career as a Full-Stack Developer.
-The only constant in dev is change and adapting to that change is my only constant.`
+const introExtend = "A mid-career switch professional, pursuing my passion and career as a Full-Stack Developer."
+const introExtend2 = "The only constant in dev is change and adapting to that change is my only constant."
+
 
 const homeIntroAnimateVar: Variants = {
-  initial: ({opInitial}: {opInitial: number}) => ({
-    opacity: opInitial,
+
+  initial: ({ yInitial }: {yInitial: number}) => ({
+    opacity: 0,
+    y: yInitial,
   }),
   animate: {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.3,
       ease: "easeIn"
     },
   },
-  exit: ({yExit}: {yExit: number}) => ({
+  exit: ({ yExit }: { yExit: number }) => ({
     opacity: 0,
     y: yExit,
     transition: {
-      duration: 0.5,
+      duration: 0.3,
       ease: "easeOut"
     }
   })
@@ -41,37 +44,48 @@ const HomeIntro = () => {
     >
       <AnimatePresence mode="wait">
         {showTag ?
-          <motion.h3
-            key={"introExtend"}
-            variants={homeIntroAnimateVar}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            custom={{yExit: 0, opInitial: 0}}
-          >
-            {introExtend}
-          </motion.h3>
-          :
           <motion.div
-            className="homeIntro-div2"
+            key="introExtend"
           >
-            <motion.h1
-              key={"introName"}
+            <motion.p
               variants={homeIntroAnimateVar}
               initial="initial"
               animate="animate"
               exit="exit"
-              custom={{yExit: -20, opInitial: 0}}
+              custom={{ yExit: 0, yInitial: 0}}
+            >
+              {introExtend}
+            </motion.p>
+            <motion.p
+              variants={homeIntroAnimateVar}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              custom={{ yExit: 0, yInitial: 0}}
+            >
+              {introExtend2}
+            </motion.p>
+          </motion.div>
+          :
+          <motion.div
+            className="homeIntro-div2"
+            key="intro"
+          >
+            <motion.h1
+              variants={homeIntroAnimateVar}
+              initial="initial"
+              animate="animate"
+              exit="exit"
+              custom={{ yExit: -20, yInitial: -10}}
             >
               {introName}
             </motion.h1>
             <motion.h1
-              key={"introRole"}
               variants={homeIntroAnimateVar}
               initial="initial"
               animate="animate"
               exit="exit"
-              custom={{yExit: 20, opInitial: 0}}
+              custom={{ yExit: 20, yInitial: 10}}
             >
               {introRole}
             </motion.h1>
