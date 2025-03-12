@@ -1,4 +1,3 @@
-
 const SkillsHeading = () => {
   return(
     <div className="heading-div">
