@@ -9,13 +9,7 @@ declare global {
   type ProjectsData = {
     index: string;
     name: string;
-    techStack: {
-      FrontEnd: string[];
-      BackEnd: string[];
-      DataBase: string[];
-      DevOps: string[];
-      APIs: string[];
-    };
+    techStack: string[];
     links: {
       Github: string[];
       Weblink: string; 

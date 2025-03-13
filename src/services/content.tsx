@@ -69,67 +69,40 @@ export const projectsData: ProjectsData = [
   {
     index: "A",
     name: "ThreeEndventure Game",
-    techStack:
-    {
-      FrontEnd: ["React.ts"],
-      BackEnd: ["Bun"],
-      DataBase: ["PostgreSQL"],
-      DevOps: ["Git", "Vercel", "Render"],
-      APIs: ["RESTful API with JWTauth"],
-    },
+    techStack: ["React.ts", "Bun", "PostgreSQL", "Vercel", "Render"],
     links: {
       Github: ["https://github.com/Aloyleow/ThreeEndventureGame-frontend", "https://github.com/Aloyleow/ThreeEndventureGame-backend"],
       Weblink: "https://threeendventuregame.vercel.app/"
     },
     image: "/projects/threeend.png",
     about: `
-     is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's 
-     standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled 
-     it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, 
-     remaining essentially unchanged.
+      A Full-Stack gaming application that includes database managment and backend user authentication. 
        `,
   },
   {
     index: "B",
     name: "Shoes-Tracker",
-    techStack:
-    {
-      FrontEnd: ["React.ts", "Bootstrap"],
-      BackEnd: ["Bun"],
-      DataBase: ["PostgreSQL, AWS S3"],
-      DevOps: ["Git", "Vercel", "Render"],
-      APIs: ["RESTful API"],
-    },
+    techStack: ["React.ts", "Bootstrap", "Bun", "PostgreSQL", "AWS S3", "Vercel", "Render"],
     links: {
       Github: ["https://github.com/Aloyleow/Shoe-Frontend", "https://github.com/Aloyleow/Shoes-Backend"],
       Weblink: ""
     },
     image: "/projects/shoes.png",
     about: `
-      Upgraded my portfolio with improved user experience and interface, 
-      applied efficient React state management and CSS for styling with responsive designs. 
-      Implemented form validation using Formik and Yup.
+      A Web-app completed under a tight timeframe as a challenge, full CRUD functionalities with RESTful APIs
        `,
   },
   {
     index: "C",
     name: "Lets*Help (Project Eleos)",
-    techStack:
-    {
-      FrontEnd: ["React.js", "MUI"],
-      BackEnd: ["Node.js"],
-      DataBase: ["PostgreSQL"],
-      DevOps: ["Git", "Render"],
-      APIs: ["RESTful APIs with JWTauth"],
-    },
+    techStack: ["React.js", "MUI", "Node.js", "PostgreSQL", "Render"],
     links: {
       Github: ["https://github.com/Aloyleow/Eleos"],
       Weblink: "https://letshelp.onrender.com/"
     },
     image: "/projects/eleos.png",
     about: `
-       LETSHELP is a volunteer event platform that I developed and designed to enable organizations to host events. 
-       The public can sign up to attend these events while earning stars. 
+       A volunteer event platform application that i developed and designed for my capston project.
        Key features include user authentication and authorization, email notifications, 
        and full CRUD functionality.
        `,
@@ -137,44 +110,28 @@ export const projectsData: ProjectsData = [
   {
     index: "D",
     name: "Wally",
-    techStack:
-    {
-      FrontEnd: ["React.js", "MUI"],
-      BackEnd: ["Node.js", "Express"],
-      DataBase: ["MongoDB"],
-      DevOps: ["Git", "Render"],
-      APIs: ["RESTful APIs with JWTauth"],
-    },
+    techStack: ["React.js", "MUI", "Node.js", "MongoDB", "Render"],
     links: {
       Github: ["https://github.com/Zeffun/wally"],
       Weblink: ""
     },
     image: "/projects/wally.png",
     about: `
-        Collaborated with two teammates to develop a wallet web application that simulates a banking experience. 
-        Users can log in, create accounts, and conduct transactions, including depositing and withdrawing money.  
+        A wallet web application that simulates a banking experience. A collaborated Full-Stack project while learning. 
         `,
 
   },
   {
     index: "E",
     name: "covid19-casedetails",
-    techStack:
-    {
-      FrontEnd: ["React.js", "Pico"],
-      BackEnd: ["N/A"],
-      DataBase: ["External data referencing, Airtable"],
-      DevOps: ["Git", "Netlify"],
-      APIs: ["RESTful APIs"],
-    },
+    techStack: ["React.js", "Pico", "AirTable", "Netlify"],
     links: {
       Github: ["https://github.com/Aloyleow/covid19-casedetails"],
       Weblink: "https://covid19casedetails.netlify.app/"
     },
     image: "/projects/covid.png",
     about: `
-        An application to retrieve Covid-19 Cases from an external API, users
-        are able to view and do simple analysis while saving data for tracking. 
+        An app to retrieve Covid-19 Cases from an external API with full CRUD functions. Front-end project done while learning. 
         `,
 
   },
