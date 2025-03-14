@@ -156,5 +156,20 @@ section {
   margin-right: 8px;
 }
 
+.projects-card-bottom-div {
+  height: 100%;
+  width: 50%;
+}
+
+.projects-card-bottom-div span {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40%;
+}
+
+
+
+
 
 
