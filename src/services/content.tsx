@@ -32,7 +32,11 @@ const skillsImage1: SkillsImage = [
 ]
 
 const skillsImage2: SkillsImage = [
-  
+  {
+    link: "skills/bun.svg",
+    alt: "bunLogo",
+    info: "Bun"
+  },
   {
     link: "skills/node.svg",
     alt: "nodeLogo",
@@ -65,7 +69,7 @@ const skillsImage2: SkillsImage = [
   },
 ]
 
-export const projectsData: ProjectsData = [
+const projectsData: ProjectsData = [
   {
     index: "A",
     name: "ThreeEndventure Game",
@@ -81,6 +85,19 @@ export const projectsData: ProjectsData = [
   },
   {
     index: "B",
+    name: "FigureLab.com",
+    techStack: ["React.ts"],
+    links: {
+      Github: [],
+      Weblink: "https://www.figurelabmy.com/"
+    },
+    image: "/projects/figurelab.png",
+    about: `
+      A Web-app that I developed for FigureLab.com
+       `,
+  },
+  {
+    index: "C",
     name: "Shoes-Tracker",
     techStack: ["React.ts", "Bootstrap", "Bun", "PostgreSQL", "AWS S3", "Vercel", "Render"],
     links: {
@@ -93,7 +110,7 @@ export const projectsData: ProjectsData = [
        `,
   },
   {
-    index: "C",
+    index: "D",
     name: "Lets*Help (Project Eleos)",
     techStack: ["React.js", "MUI", "Node.js", "PostgreSQL", "Render"],
     links: {
@@ -102,13 +119,13 @@ export const projectsData: ProjectsData = [
     },
     image: "/projects/eleos.png",
     about: `
-       A volunteer event platform application that i developed and designed for my capston project.
+       A volunteer event platform application that I developed and designed for my capston project.
        Key features include user authentication and authorization, email notifications, 
        and full CRUD functionality.
        `,
   },
   {
-    index: "D",
+    index: "E",
     name: "Wally",
     techStack: ["React.js", "MUI", "Node.js", "MongoDB", "Render"],
     links: {
@@ -117,12 +134,13 @@ export const projectsData: ProjectsData = [
     },
     image: "/projects/wally.png",
     about: `
-        A wallet web application that simulates a banking experience. A collaborated Full-Stack project while learning. 
+        A wallet web application that simulates a banking experience. 
+        A collaborated Full-Stack project while learning. 
         `,
 
   },
   {
-    index: "E",
+    index: "F",
     name: "covid19-casedetails",
     techStack: ["React.js", "Pico", "AirTable", "Netlify"],
     links: {
@@ -131,7 +149,8 @@ export const projectsData: ProjectsData = [
     },
     image: "/projects/covid.png",
     about: `
-        An app to retrieve Covid-19 Cases from an external API with full CRUD functions. Front-end project done while learning. 
+        An app to retrieve Covid-19 Cases from an external API with full CRUD functions. 
+        Front-end project done while learning. 
         `,
 
   },
@@ -140,4 +159,5 @@ export const projectsData: ProjectsData = [
 export {
   skillsImage1,
   skillsImage2,
+  projectsData
 }
