@@ -4,9 +4,9 @@ import ProjectCardTopSection from "./ProjectCardTopSection";
 import ProjectCardBottomSection from "./ProjectCardBottomSection";
 
 const ProjectsShowcase = () => {
-  const [showLess, setShowLess] = useState(true)
+  const [showLess, setShowLess] = useState<boolean>(true)
 
-  const showProjectsData = showLess ? projectsData.slice(0, 3) : projectsData;
+  const showProjectsData = showLess ? projectsData.slice(0, 4) : projectsData;
 
   const handleClickShow = () => {
     setShowLess(prev => !prev)
@@ -15,12 +15,17 @@ const ProjectsShowcase = () => {
   return (
     <div className="projects-div1">
       {showProjectsData.map((obj, index) => (
-        <div key={index} className="projects-card-div" style={{ flexDirection: index % 2 !== 0 ? "row" : "row-reverse" }}>  
+        <div key={index} className="projects-card-div" style={{ flexDirection: index % 2 !== 0 ? "row" : "row-reverse" }}>
+          <h3>{obj.name}</h3>
           <ProjectCardTopSection obj={obj} />
-          <ProjectCardBottomSection obj={obj} index={index}/>
-        </div> 
+          <ProjectCardBottomSection obj={obj} />
+        </div>
       ))}
-      <button onClick={() => handleClickShow()}>{showLess ? "Show more" : "Show less"}</button>
+      <div className="projects-button-div">
+        <button onClick={() => handleClickShow()}>
+          {showLess ? "More Projects" : "Show Less"}
+        </button>
+      </div>
     </div>
   )
 }

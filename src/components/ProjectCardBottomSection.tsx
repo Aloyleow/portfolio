@@ -2,22 +2,21 @@ import React from "react"
 
 type ProjectCardBottomSectionProps = {
   obj: ProjectData;
-  index: number;
 }
 
-const ProjectCardBottomSection: React.FC<ProjectCardBottomSectionProps> = ({ obj, index }) => {
+const ProjectCardBottomSection: React.FC<ProjectCardBottomSectionProps> = ({ obj }) => {
+
   return (
     <div className="projects-card-bottomSection">
-      <h3 style={{ textAlign: index % 2 !== 0 ? "start" : "end" }}>{obj.name}</h3>
-      <span>
+      <div className="projects-about-div">
         <p>{obj.about}</p>
-      </span>
-      <span>
+      </div>
+      <div className="projects-tech-div">
         {obj.techStack.map((item, tsIndex) => (
           <p key={tsIndex}>{item}</p>
         ))}
-      </span>
-    </div> 
+      </div>
+    </div>
   )
 }
 
