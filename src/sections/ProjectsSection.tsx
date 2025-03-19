@@ -4,7 +4,7 @@ import ProjectsShowcase from "../components/ProjectsShowcase"
 const ProjectsSection = () => {
 
   return (
-    <section>
+    <section id="projects">
       <ProjectsHeading/>
       <ProjectsShowcase/>
     </section>
