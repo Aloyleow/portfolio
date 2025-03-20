@@ -30,6 +30,19 @@ declare global {
     about: string;
   };
 
+  type Exp = {
+    name: string
+    role: string
+    date: string
+    about: string
+  };
+
+  type FormInput = {
+    who: string,
+    what: string,
+    how: string,
+  }
+
 }
 
 export { };

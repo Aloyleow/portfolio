@@ -22,12 +22,12 @@ const skillsImage: SkillsImage = [
   {
     link: "skills/html.svg",
     alt: "htmlLogo",
-    info: "HTML"
+    info: "HTML5"
   },
   {
     link: "skills/css.svg",
     alt: "cssLogo",
-    info: "CSS"
+    info: "CSS3"
   },
   {
     link: "skills/bun.svg",
@@ -152,14 +152,6 @@ const projectsData: ProjectsData = [
 
   },
 ]
-
-type Exp = {
-  name: string
-  role: string
-  date: string
-  about: string
-
-}
 
 const exp: Exp[] = [
   {

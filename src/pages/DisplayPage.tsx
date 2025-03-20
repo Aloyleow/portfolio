@@ -1,3 +1,4 @@
+import ContactSection from "../sections/ContactSection"
 import ExperienceSection from "../sections/ExperienceSection"
 import HomeSection from "../sections/HomeSection"
 import ProjectsSection from "../sections/ProjectsSection"
@@ -10,6 +11,7 @@ const DisplayPage = () => {
       <SkillsSection/>
       <ProjectsSection/>
       <ExperienceSection/>
+      <ContactSection/>
     </>
   )
 }

@@ -1,7 +1,6 @@
 import ExpShowcase from "../components/ExpShowcase"
 import SectionHeading from "../components/SectionHeading"
 
-
 const ExperienceSection = () => {
   return(
     <section id="exp">
