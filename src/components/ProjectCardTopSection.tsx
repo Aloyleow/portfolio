@@ -25,7 +25,7 @@ const ProjectCardTopSection: React.FC<ProjectCardTopSectionProps> = ({ obj }) =>
       <div className="projects-img-div">
         <img src={obj.image} alt={`project${obj.index}`} />
       </div>
-      <motion.div 
+      <motion.div
         className="projects-links-div"
         variants={projectLinksAnimateVar}
         initial="initial"
@@ -34,7 +34,7 @@ const ProjectCardTopSection: React.FC<ProjectCardTopSectionProps> = ({ obj }) =>
         {obj.links.Weblink !== "" &&
           <span>
             <a href={obj.links.Weblink} target="_blank">
-              <img src="/weblinkBlack.svg"  />
+              <img src="/weblinkBlack.svg" alt="linkLogo" />
               <p>Web-Link</p>
             </a>
           </span>
@@ -42,7 +42,7 @@ const ProjectCardTopSection: React.FC<ProjectCardTopSectionProps> = ({ obj }) =>
         {obj.links.Github.length === 1 &&
           <span>
             <a href={obj.links.Github[0]} target="_blank">
-              <img src="/githubBlack.svg"  />
+              <img src="/githubBlack.svg" alt="githublogo" />
               <p>Github</p>
             </a>
           </span>
@@ -50,11 +50,15 @@ const ProjectCardTopSection: React.FC<ProjectCardTopSectionProps> = ({ obj }) =>
         {obj.links.Github.length > 1 &&
           <span>
             <a href={obj.links.Github[0]} target="_blank">
-              <img src="/githubBlack.svg"  />
+              <img src="/githubBlack.svg" alt="githublogo" />
               <p>Frontend</p>
             </a>
+          </span>
+        }
+        {obj.links.Github.length > 1 &&
+          <span>
             <a href={obj.links.Github[1]} target="_blank">
-              <img src="/githubBlack.svg"  />
+              <img src="/githubBlack.svg" alt="githublogo" />
               <p>Backend</p>
             </a>
           </span>

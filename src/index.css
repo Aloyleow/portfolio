@@ -52,6 +52,10 @@ section {
   .projects-div1 {
     width: 90vw;
   }
+
+  .exp-div1 {
+    width: 90vw;
+  }
   
 }
 
@@ -115,6 +119,10 @@ section {
     width: 800px;
   }
 
+  .exp-div1 {
+    width: 600px;
+  }
+
   
 }
 
@@ -151,7 +159,6 @@ section {
     width: 330px;
     position: absolute;
     display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     
@@ -167,7 +174,6 @@ section {
   
   .projects-links-div span {
     height: 125px;
-    width: 300px;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -223,7 +229,6 @@ section {
 
 
 .projects-div1 {
-  /* height: 1000px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -259,6 +264,26 @@ section {
   height: 60px;
   align-content: end;
 }
+
+
+/*Experience Section*/
+
+.exp-card-div {
+  text-align: left;
+}
+
+.exp-card-div h3 {
+  margin: 0;
+}
+
+.exp-card-role {
+  font-size: smaller;
+}
+
+.exp-card-about {
+  margin: 10px 0px 10px 0px;
+}
+
 
 button {
   height: 30px;

@@ -153,7 +153,36 @@ const projectsData: ProjectsData = [
   },
 ]
 
+type Exp = {
+  name: string
+  role: string
+  date: string
+  about: string
+
+}
+
+const exp: Exp[] = [
+  {
+    name: "FigureLab.com",
+    role: "Web-Developer, FreeLance",
+    date: "Nov 2024 to Dec 2024",
+    about: `
+    Developed and designed a Web Application for FigureLab.com (The Figure Lab PLT)
+    Independently managed the project lifecycle, including initial planning, wireframing, coding and deployment.
+    `
+  },
+  {
+    name: "Great Eastern Life",
+    role: "Financial Advisor, Full-Time",
+    date: "Jan 2015 to July 2024",
+    about: `
+    Provided personalized, strategic financial guidance to clients which includes retriemnt planning, wealth accumulation and financial protection.
+    `
+  } 
+]
+
 export {
   skillsImage,
-  projectsData
+  projectsData,
+  exp
 }
