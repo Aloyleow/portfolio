@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { skillsImage1, skillsImage2 } from "../services/content"
+import { skillsImage } from "../services/content"
 import { AnimatePresence, Variants, motion } from "motion/react";
 
 const skillsLogoAnimateVar: Variants = {
@@ -47,7 +47,7 @@ const SkillsShowcase = () => {
   return (
     <div className="skills-div1">
       <div className="skills-div2">
-        {skillsImage1.map((logo, index) => (
+        {skillsImage.map((logo, index) => (
           <motion.div
             key={index}
             className="skills-logo-div"
@@ -55,24 +55,6 @@ const SkillsShowcase = () => {
             initial="initial"
             animate="animate"
             custom={{ yInitial: (index % 2 === 0) ? -4 : 4, yAnimate: [(index % 2 === 0) ? 4 : -4, 0, (index % 2 === 0) ? -4 : 4] }}
-            whileHover={{ scale: 1.2 }}
-            onHoverStart={() => setSkillsinfo(`${logo.info}`)}
-            onHoverEnd={() => setSkillsinfo("")}
-            onTouchStart={() => setSkillsinfo(`${logo.info}`)}
-          >
-            <img src={logo.link} alt={logo.alt} />
-          </motion.div>
-        ))}
-      </div>
-      <div className="skills-div2">
-        {skillsImage2.map((logo, index) => (
-          <motion.div
-            key={index}
-            className="skills-logo-div"
-            variants={skillsLogoAnimateVar}
-            initial="initial"
-            animate="animate"
-            custom={{ yInitial: (index % 3 === 0) ? -4 : 4, yAnimate: [(index % 3 === 0) ? 4 : -4, 0, (index % 3 === 0) ? -4 : 4] }}
             whileHover={{ scale: 1.2 }}
             onHoverStart={() => setSkillsinfo(`${logo.info}`)}
             onHoverEnd={() => setSkillsinfo("")}

@@ -190,11 +190,12 @@ section {
 
 
 .skills-div1 {
-  height: 200px;
+  height: 280px;
 }
 
 .skills-div2 {
-  height: 45%;
+  height: 90%;
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -203,6 +204,11 @@ section {
 
 .skills-div2-about {
   height: 10%;
+  width: 100%;
+}
+
+.skills-logo-div {
+  width: 80px;
 }
 
 
@@ -250,6 +256,8 @@ section {
 
 .projects-button-div {
   width: 100%;
+  height: 60px;
+  align-content: end;
 }
 
 button {

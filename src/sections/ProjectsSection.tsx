@@ -1,11 +1,11 @@
-import ProjectsHeading from "../components/ProjectsHeading"
 import ProjectsShowcase from "../components/ProjectsShowcase"
+import SectionHeading from "../components/SectionHeading"
 
 const ProjectsSection = () => {
 
   return (
     <section id="projects">
-      <ProjectsHeading/>
+      <SectionHeading>Projects</SectionHeading>
       <ProjectsShowcase/>
     </section>
   )

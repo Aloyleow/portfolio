@@ -1,10 +1,10 @@
-import SkillsHeading from "../components/SkillsHeading"
+import SectionHeading from "../components/SectionHeading"
 import SkillsShowcase from "../components/SkillsShowcase"
 
 const SkillsSection = () => {
   return(
     <section id="skills">
-      <SkillsHeading/>
+      <SectionHeading>Skills</SectionHeading>
       <SkillsShowcase/>
     </section>
   )

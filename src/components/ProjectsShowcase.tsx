@@ -13,20 +13,20 @@ const ProjectsShowcase = () => {
   }
 
   return (
-    <div className="projects-div1">
-      {showProjectsData.map((obj, index) => (
-        <div key={index} className="projects-card-div" style={{ flexDirection: index % 2 !== 0 ? "row" : "row-reverse" }}>
-          <h3>{obj.name}</h3>
-          <ProjectCardTopSection obj={obj} />
-          <ProjectCardBottomSection obj={obj} />
+      <div className="projects-div1">
+        {showProjectsData.map((obj, index) => (
+          <div key={index} className="projects-card-div" style={{ flexDirection: index % 2 !== 0 ? "row" : "row-reverse" }}>
+            <h3>{obj.name}</h3>
+            <ProjectCardTopSection obj={obj} />
+            <ProjectCardBottomSection obj={obj} />
+          </div>
+        ))}
+        <div className="projects-button-div">
+          <button onClick={() => handleClickShow()}>
+            {showLess ? "More Projects" : "Show Less"}
+          </button>
         </div>
-      ))}
-      <div className="projects-button-div">
-        <button onClick={() => handleClickShow()}>
-          {showLess ? "More Projects" : "Show Less"}
-        </button>
       </div>
-    </div>
   )
 }
 

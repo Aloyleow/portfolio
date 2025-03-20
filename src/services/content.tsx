@@ -1,4 +1,4 @@
-const skillsImage1: SkillsImage = [
+const skillsImage: SkillsImage = [
   {
     link: "skills/js.svg",
     alt: "jsLogo",
@@ -29,9 +29,6 @@ const skillsImage1: SkillsImage = [
     alt: "cssLogo",
     info: "CSS"
   },
-]
-
-const skillsImage2: SkillsImage = [
   {
     link: "skills/bun.svg",
     alt: "bunLogo",
@@ -157,7 +154,6 @@ const projectsData: ProjectsData = [
 ]
 
 export {
-  skillsImage1,
-  skillsImage2,
+  skillsImage,
   projectsData
 }
