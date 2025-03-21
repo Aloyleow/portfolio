@@ -21,7 +21,7 @@ const ProjectsShowcase = () => {
             <ProjectCardBottomSection obj={obj} />
           </div>
         ))}
-        <div className="projects-button-div">
+        <div className="buttons-div">
           <button onClick={() => handleClickShow()}>
             {showLess ? "More Projects" : "Show Less"}
           </button>

@@ -1,50 +1,64 @@
 import React, { useState } from "react"
+import ContactFormButtons from "./ContactFormButtons";
 
 type ContactFormProps = {
   setFormInput: React.Dispatch<React.SetStateAction<FormInput>>;
   formInput: FormInput;
+  showInput: number;
+  setShowInput: React.Dispatch<React.SetStateAction<number>>;
 }
 
-const ContactForm: React.FC<ContactFormProps> = ({ formInput, setFormInput }) => {
-  const [showInput, setShowInput] = useState<number>(0)
+const ContactForm: React.FC<ContactFormProps> = ({ formInput, setFormInput, showInput, setShowInput }) => {
+  const [errorAnimate, setErrorAnimate] = useState<boolean>(false)
+  
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>, inputId: string) => {
     event.preventDefault()
     setFormInput({ ...formInput, [inputId]: event.target.value })
   }
 
-  const handleButtons = (item: string) => {
-    if (item === "negative"){
-      setShowInput(showInput - 1)
-    } else if (item == "positive"){
-      setShowInput(showInput + 1)
-    } 
-  }
-
   return (
     <div>
       <form>
         {showInput === 0 &&
-          <input type="text" id="who" onChange={(event) => handleChange(event, event.target.id)} />
+          <input 
+            type="text" 
+            id="who" 
+            placeholder="Name / Company: " 
+            onChange={(event) => handleChange(event, event.target.id)}
+            maxLength={50}
+            className={errorAnimate ? "inputError" : ""} 
+          />
         }
         {showInput === 1 &&
-          <input type="text" id="what" onChange={(event) => handleChange(event, event.target.id)} />
+          <input 
+            type="text" 
+            id="what"
+            placeholder="Message: "
+            onChange={(event) => handleChange(event, event.target.id)}
+            maxLength={120}
+            className={errorAnimate ? "inputError" : ""}   
+          />
         }
         {showInput === 2 &&
-          <input type="text" id="how" onChange={(event) => handleChange(event, event.target.id)} />
+          <input 
+            type="text" 
+            id="how" 
+            placeholder="Contact Info: "
+            onChange={(event) => handleChange(event, event.target.id)}
+            maxLength={50}
+            minLength={8}
+            className={errorAnimate ? "inputError" : ""}  
+          />
         }
       </form>
-      <div>
-        {showInput !== 0 &&
-          <button onClick={() => handleButtons("negative")}>Previous</button>
-        }
-        {showInput !== 2 &&
-          <button onClick={() => handleButtons("positive")}>Next</button>
-        }
-        {showInput === 2 &&
-          <button>Submit</button>
-        }
-      </div>
+      <ContactFormButtons 
+        formInput={formInput} 
+        setFormInput={setFormInput} 
+        showInput={showInput} 
+        setShowInput={setShowInput}
+        setErrorAnimate={setErrorAnimate}
+      />
     </div>
   )
 }

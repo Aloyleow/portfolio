@@ -5,6 +5,7 @@ import ContactForm from "../components/ContactForm"
 
 
 const ContactSection = () => {
+  const [showInput, setShowInput] = useState<number>(0)
   const [formInput, setFormInput] = useState<FormInput>({
     who: "",
     what: "",
@@ -14,8 +15,8 @@ const ContactSection = () => {
   return(
     <section id="contact">
       <SectionHeading>Get in touch!</SectionHeading>
-      <ContactScreen formInput={formInput}/>
-      <ContactForm formInput={formInput} setFormInput={setFormInput}/>
+      <ContactScreen formInput={formInput} showInput={showInput}/>
+      <ContactForm formInput={formInput} setFormInput={setFormInput} showInput={showInput} setShowInput={setShowInput}/>
     </section>
   )
 }
