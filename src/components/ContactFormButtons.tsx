@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import emailjs from '@emailjs/browser';
 
 type ContactFormButtonsProps = {
@@ -10,6 +10,7 @@ type ContactFormButtonsProps = {
 }
 
 const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({ formInput, setFormInput, showInput, setShowInput, setErrorAnimate }) => {
+  const [hpInput, setHpInput] = useState<string>("")
 
   const handleButtons = (item: string) => {
 
@@ -29,27 +30,44 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({ formInput, setF
     }
   }
 
-  const handleSubmit = async (formData: FormInput) => {
+  const handleSubmit = async () => {
+    
+    setErrorAnimate(false)
 
-    try {
-      const emailJsData = {
-        user_name: formData.who,
-        message: formData.what,
-        contactemail: formData.how
+    if (formInput.how === "") {
+
+      setErrorAnimate(true)
+
+    } else if (formInput.how !== "" && formInput.who !== "" && formInput.what !== "" && hpInput === "") {
+
+      try {
+
+        const emailJsData = {
+          user_name: formInput.who,
+          message: formInput.what,
+          contactemail: formInput.how
+        }
+  
+        await emailjs.send(
+          import.meta.env.VITE_EJS_SERVICE_ID,
+          import.meta.env.VITE_EJS_TEMPLATE_IDFP,
+          emailJsData,
+          import.meta.env.VITE_EJS_PUBLIC_KEY,
+        );
+  
+        setSuccess(true);
+  
+      } catch (error) {
+        console.error(error)
       }
 
-      await emailjs.send(
-        import.meta.env.VITE_EJS_SERVICE_ID,
-        import.meta.env.VITE_EJS_TEMPLATE_IDFP,
-        emailJsData,
-        import.meta.env.VITE_EJS_PUBLIC_KEY,
-      );
+    } else if (hpInput !== "") {
 
       setSuccess(true);
 
-    } catch (error) {
-      console.error(error)
     }
+
+
 
   };
 
@@ -62,8 +80,13 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({ formInput, setF
         <button onClick={() => handleButtons("positive")}>Next</button>
       }
       {showInput === 2 &&
-        <button>Submit</button>
+        <button onClick={() => handleSubmit}>Submit</button>
       }
+      <input 
+        className="hpInput" 
+        aria-hidden="true"
+        onChange={(event) => setHpInput(event.target.value)}
+      />
     </div>
   )
 }

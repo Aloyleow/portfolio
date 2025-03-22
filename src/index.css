@@ -314,6 +314,12 @@ section {
   margin-bottom: 20px; 
 }
 
+.hpInput {
+  width: 0;
+  height: 0;
+  border: 0;
+}
+
 button {
   height: 30px;
   width: 100px;
