@@ -13,24 +13,31 @@ const ContactSection = () => {
     how: ""
   })
   const [success, setSuccess] = useState<boolean>(false);
-  const [submitting, setSubmitting] = useState<boolean>(true);
+  const [submitting, setSubmitting] = useState<boolean>(false);
+  const [otherError, setOtherError] = useState<boolean>(false);
 
-  return(
+  return (
     <section id="contact">
       <SectionHeading>Get in touch!</SectionHeading>
-      <ContactScreen formInput={formInput} showInput={showInput}/>
-      {success ?
-      <ContactFormSuccess submitting={submitting}/>
-      :
-      <ContactForm 
-        formInput={formInput} 
-        setFormInput={setFormInput} 
-        showInput={showInput} 
-        setShowInput={setShowInput}
-        setSuccess={setSuccess}
-        setSubmitting={setSubmitting}
-      />
+      <ContactScreen formInput={formInput} showInput={showInput} />
+      {success && submitting && 
+        <ContactFormSuccess 
+          submitting={submitting} 
+        />
       }
+      {!success && !submitting &&
+        <ContactForm
+          formInput={formInput}
+          setFormInput={setFormInput}
+          showInput={showInput}
+          setShowInput={setShowInput}
+          setSuccess={setSuccess}
+          setSubmitting={setSubmitting}
+        />
+      }
+      {otherError && }
+
+
     </section>
   )
 }

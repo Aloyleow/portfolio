@@ -78,7 +78,9 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
       }
 
     } catch (error) {
+
       console.error(error)
+      
     }
 
   };
