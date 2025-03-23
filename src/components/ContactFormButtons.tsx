@@ -7,11 +7,22 @@ type ContactFormButtonsProps = {
   showInput: number;
   setShowInput: React.Dispatch<React.SetStateAction<number>>;
   setErrorAnimate: React.Dispatch<React.SetStateAction<boolean>>;
+  hpInput: string;
+  setSubmitting: React.Dispatch<React.SetStateAction<boolean>>;
+  setSuccess: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({ formInput, setFormInput, showInput, setShowInput, setErrorAnimate }) => {
-  const [hpInput, setHpInput] = useState<string>("")
-
+const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({ 
+  formInput, 
+  setFormInput, 
+  showInput, 
+  setShowInput, 
+  setErrorAnimate,
+  hpInput,
+  setSubmitting,
+  setSuccess 
+}) => {
+  
   const handleButtons = (item: string) => {
 
     setErrorAnimate(false)
@@ -31,43 +42,44 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({ formInput, setF
   }
 
   const handleSubmit = async () => {
-    
+
     setErrorAnimate(false)
 
-    if (formInput.how === "") {
+    try {
 
-      setErrorAnimate(true)
+      if (formInput.how === "") {
 
-    } else if (formInput.how !== "" && formInput.who !== "" && formInput.what !== "" && hpInput === "") {
+        setErrorAnimate(true);
 
-      try {
+      } else if (hpInput !== "") {
+
+        setSuccess(true);
+
+      } else if (formInput.who !== "" && formInput.what !== "" && formInput.how !== "" && hpInput === "") {
+
+        setSubmitting(true);
+        setSuccess(true);
 
         const emailJsData = {
           user_name: formInput.who,
           message: formInput.what,
           contactemail: formInput.how
         }
-  
+
         await emailjs.send(
           import.meta.env.VITE_EJS_SERVICE_ID,
           import.meta.env.VITE_EJS_TEMPLATE_IDFP,
           emailJsData,
           import.meta.env.VITE_EJS_PUBLIC_KEY,
         );
-  
-        setSuccess(true);
-  
-      } catch (error) {
-        console.error(error)
+
+        setSubmitting(false);
+
       }
 
-    } else if (hpInput !== "") {
-
-      setSuccess(true);
-
+    } catch (error) {
+      console.error(error)
     }
-
-
 
   };
 
@@ -80,13 +92,8 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({ formInput, setF
         <button onClick={() => handleButtons("positive")}>Next</button>
       }
       {showInput === 2 &&
-        <button onClick={() => handleSubmit}>Submit</button>
+        <button onClick={() => handleSubmit()}>Submit</button>
       }
-      <input 
-        className="hpInput" 
-        aria-hidden="true"
-        onChange={(event) => setHpInput(event.target.value)}
-      />
     </div>
   )
 }
