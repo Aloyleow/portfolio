@@ -1,8 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import emailjs from '@emailjs/browser';
 
 type ContactFormButtonsProps = {
-  setFormInput: React.Dispatch<React.SetStateAction<FormInput>>;
   formInput: FormInput;
   showInput: number;
   setShowInput: React.Dispatch<React.SetStateAction<number>>;
@@ -10,17 +9,18 @@ type ContactFormButtonsProps = {
   hpInput: string;
   setSubmitting: React.Dispatch<React.SetStateAction<boolean>>;
   setSuccess: React.Dispatch<React.SetStateAction<boolean>>;
+  setOtherError: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({ 
   formInput, 
-  setFormInput, 
   showInput, 
   setShowInput, 
   setErrorAnimate,
   hpInput,
   setSubmitting,
-  setSuccess 
+  setSuccess,
+  setOtherError 
 }) => {
   
   const handleButtons = (item: string) => {
@@ -46,15 +46,15 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
     setErrorAnimate(false)
 
     try {
-
+//Handle last form error
       if (formInput.how === "") {
 
         setErrorAnimate(true);
-
+//Handle honeypot
       } else if (hpInput !== "") {
 
         setSuccess(true);
-
+//Handle true submit
       } else if (formInput.who !== "" && formInput.what !== "" && formInput.how !== "" && hpInput === "") {
 
         setSubmitting(true);
@@ -75,11 +75,16 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
 
         setSubmitting(false);
 
+      } else {
+
+        setOtherError(true);
+
       }
 
     } catch (error) {
 
-      console.error(error)
+      console.error(error);
+      setOtherError(true);
       
     }
 

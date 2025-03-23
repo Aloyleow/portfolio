@@ -8,6 +8,7 @@ type ContactFormProps = {
   setShowInput: React.Dispatch<React.SetStateAction<number>>;
   setSubmitting: React.Dispatch<React.SetStateAction<boolean>>;
   setSuccess: React.Dispatch<React.SetStateAction<boolean>>;
+  setOtherError: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const ContactForm: React.FC<ContactFormProps> = ({
@@ -16,7 +17,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
   showInput,
   setShowInput,
   setSubmitting,
-  setSuccess
+  setSuccess,
+  setOtherError
 }) => {
   const [errorAnimate, setErrorAnimate] = useState<boolean>(false)
   const [hpInput, setHpInput] = useState<string>("");
@@ -68,13 +70,13 @@ const ContactForm: React.FC<ContactFormProps> = ({
       </form>
       <ContactFormButtons
         formInput={formInput}
-        setFormInput={setFormInput}
         showInput={showInput}
         setShowInput={setShowInput}
         setErrorAnimate={setErrorAnimate}
         setSubmitting={setSubmitting}
         setSuccess={setSuccess}
         hpInput={hpInput}
+        setOtherError={setOtherError}
       />
     </div>
   )

@@ -3,6 +3,7 @@ import ContactScreen from "../components/ContactScreen"
 import SectionHeading from "../components/SectionHeading"
 import ContactForm from "../components/ContactForm"
 import ContactFormSuccess from "../components/ContactFormSucess"
+import ContactFormError from "../components/ContactFormError"
 
 
 const ContactSection = () => {
@@ -20,12 +21,7 @@ const ContactSection = () => {
     <section id="contact">
       <SectionHeading>Get in touch!</SectionHeading>
       <ContactScreen formInput={formInput} showInput={showInput} />
-      {success && submitting && 
-        <ContactFormSuccess 
-          submitting={submitting} 
-        />
-      }
-      {!success && !submitting &&
+      {!success && !submitting && !otherError &&
         <ContactForm
           formInput={formInput}
           setFormInput={setFormInput}
@@ -33,11 +29,15 @@ const ContactSection = () => {
           setShowInput={setShowInput}
           setSuccess={setSuccess}
           setSubmitting={setSubmitting}
+          setOtherError={setOtherError}
         />
       }
-      {otherError && }
-
-
+      {success && !otherError &&
+        <ContactFormSuccess
+          submitting={submitting}
+        />
+      }
+      {otherError && <ContactFormError />}
     </section>
   )
 }
