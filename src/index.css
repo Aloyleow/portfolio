@@ -61,6 +61,7 @@ section {
 .submit-loader {
   width: 30px;
   padding: 5px;
+  justify-self: center;
   aspect-ratio: 1;
   border-radius: 50%;
   background: black;
@@ -265,10 +266,9 @@ input {
 
 
 .homeIntro-div1 {
-  height: 300px;
-  cursor: default;
-  align-content: center;
+  height: 60vh;
 }
+
 
 
 /*Skills Section*/
@@ -363,7 +363,7 @@ input {
 
 .contact-screen-div1 {
   width: 350px;
-  height: 380px;
+  height: 360px;
   text-align: left;
   padding-bottom: 100px;
 }
@@ -381,6 +381,14 @@ input {
   width: 0;
   height: 0;
   border: 0;
+  background-color: transparent;
+  color: transparent;
+}
+
+.contact-form-div1 {
+  height: 180px;
+  width: 350px;
+  align-content: center;
 }
 
 

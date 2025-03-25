@@ -58,7 +58,6 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
       } else if (formInput.who !== "" && formInput.what !== "" && formInput.how !== "" && hpInput === "") {
 
         setSubmitting(true);
-        setSuccess(true);
 
         const emailJsData = {
           user_name: formInput.who,
@@ -74,6 +73,7 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
         );
 
         setSubmitting(false);
+        setSuccess(true);
 
       } else {
 
@@ -82,8 +82,11 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
       }
 
     } catch (error) {
-
-      console.error(error);
+      
+      if (error) {
+        console.error("Please contact me at aloyleow91@gmail.com")
+      }
+      setSubmitting(false);
       setOtherError(true);
       
     }
