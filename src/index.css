@@ -80,7 +80,7 @@ button {
   height: 30px;
   width: 100px;
   background-color: white;
-  border: 1px solid;
+  border: 2px solid;
   border-radius: 10px;
   cursor: pointer !important;
   margin: 0px 10px 0px 10px;
@@ -89,7 +89,7 @@ button {
 input {
   height: 30px;
   width: 200px;
-  border: 2px solid;
+  border: 1px solid;
   border-radius: 5px;
 }
 
@@ -396,36 +396,21 @@ input {
 /*Footer Section*/
 
 .footer-marquee-div1 {
+  height: 80px;
+  width: 100%;
   position: relative;
-  height: 80px;
-  width: 100%;
-}
-
-.footer-blur {
-  position: absolute;
-  z-index: 1;
-  height: 80px;
-  width: 5%;
-  backdrop-filter: blur(10px);
-}
-
-.footer-blurR {
-  right: 0;
-}
-
-.footer-marquee-div2 {
-  display: flex;
-  justify-content: space-around;
-  height: 80px;
-  width: 100%;
   overflow: hidden;
 }
 
-.footer-marquee-div2 h1 {
+.footer-marquee-div1 h1 {
   font-weight: 900;
   padding: 0;
   margin: 0;
   font-size: 60px;
+}
+
+.footer-marquee-text {
+  position: absolute;
 }
 
 

@@ -33,7 +33,7 @@ const ContactForm: React.FC<ContactFormProps> = ({
     <div className="contact-form-div1">
       {!success && !submitting && !otherError &&
       <div>
-        <form>
+        <form id="contact-form" name="contact-form">
           {showInput === 0 &&
             <input
               type="text"

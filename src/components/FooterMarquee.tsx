@@ -1,38 +1,41 @@
 import { motion, Variants } from "motion/react"
 
-const tagline = ["INNOVATE", "COMPILE", "EXECUTE"];
+const tagline = ["INNOVATE",  "COMPILE", "EXECUTE",];
 
 const marqueeAnimateVar: Variants = {
-  animate: {
+  initial: {
     opacity: 1,
-    x: ["-100%", "120%"],
+    x: -300,
+  },
+  animate: ({indexAnimate}: {indexAnimate: number}) => ({
+    opacity: 1,
+    x: 1500,
     transition: {
-      duration: 5,
+      delay: indexAnimate * 3.2,
+      duration: 10,
       ease: "linear",
       repeat: Infinity,
-      repeatType: "loop"
+      repeatType: "loop",
     },
-  },
+  })
 };
 
 const FooterMarquee = () => {
 
-  return(
+  return (
     <div className="footer-marquee-div1">
-      <div className="footer-blur"></div>
-      <div className="footer-blur footer-blurR"></div>
-      <div className="footer-marquee-div2">
-        {tagline.map((item, index) => (
-          <motion.div
-            key={index}
-            variants={marqueeAnimateVar}
-            whileInView="animate"
-            style={{width: "30%"}}
-          >
-            <h1>{item}</h1>
-          </motion.div>
-        ))}
-      </div>
+      {tagline.map((item, index) => (
+        <motion.div
+          key={index}
+          className="footer-marquee-text"
+          variants={marqueeAnimateVar}
+          initial="initial"
+          animate="animate"
+          custom={{indexAnimate: index}}
+        >
+          <h1>{item}</h1>
+        </motion.div>
+      ))}
     </div>
   )
 }
