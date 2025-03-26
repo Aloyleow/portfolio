@@ -1,10 +1,10 @@
-import { AnimatePresence, Variants, motion } from "motion/react";
-import { useState } from "react"
+// import { AnimatePresence, Variants, motion } from "motion/react";
+// import { useState } from "react"
 
 const introName = "Hi, I am Aloysious Leow"
 const introRole = "A Software Engineer"
-const introExtend = "A mid-career switch professional, pursuing my passion and career as a Full-Stack Developer."
-const introExtend2 = "The only constant in dev is change and adapting to that change is my only constant."
+const introExtend = "A mid-career switch professional, pursuing my passion and career as a Full_Stack Developer."
+// const introExtend2 = "The only constant in dev is change and adapting to that change is my only constant."
 
 
 const HomeIntro = () => {
@@ -14,10 +14,7 @@ const HomeIntro = () => {
       <div>
         <h1>{introName}</h1>
         <h1>{introRole}</h1>
-      </div>
-      <div>
-        <img/>
-      </div>
+      </div>  
       <div>
         <p>{introExtend}</p>
       </div>

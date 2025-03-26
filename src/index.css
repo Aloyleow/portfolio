@@ -267,7 +267,9 @@ input {
 
 .homeIntro-div1 {
   height: 60vh;
+  align-content: center;
 }
+
 
 
 
@@ -386,11 +388,45 @@ input {
 }
 
 .contact-form-div1 {
-  height: 180px;
+  height: 120px;
   width: 350px;
   align-content: center;
 }
 
+/*Footer Section*/
+
+.footer-marquee-div1 {
+  position: relative;
+  height: 80px;
+  width: 100%;
+}
+
+.footer-blur {
+  position: absolute;
+  z-index: 1;
+  height: 80px;
+  width: 5%;
+  backdrop-filter: blur(10px);
+}
+
+.footer-blurR {
+  right: 0;
+}
+
+.footer-marquee-div2 {
+  display: flex;
+  justify-content: space-around;
+  height: 80px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.footer-marquee-div2 h1 {
+  font-weight: 900;
+  padding: 0;
+  margin: 0;
+  font-size: 60px;
+}
 
 
 
