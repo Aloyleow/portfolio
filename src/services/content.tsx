@@ -83,7 +83,7 @@ const projectsData: ProjectsData = [
   {
     index: "B",
     name: "FigureLab.com",
-    techStack: ["React.ts"],
+    techStack: [""],
     links: {
       Github: [],
       Weblink: "https://www.figurelabmy.com/"

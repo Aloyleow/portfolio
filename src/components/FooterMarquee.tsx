@@ -1,4 +1,5 @@
 import { motion, Variants } from "motion/react"
+import { GlitchHandle, useGlitch } from "react-powerglitch";
 
 const tagline = ["INNOVATE",  "COMPILE", "EXECUTE",];
 
@@ -11,8 +12,8 @@ const marqueeAnimateVar: Variants = {
     opacity: 1,
     x: 1500,
     transition: {
-      delay: indexAnimate * 3.2,
-      duration: 10,
+      delay: indexAnimate * 6.4,
+      duration: 20,
       ease: "linear",
       repeat: Infinity,
       repeatType: "loop",
@@ -21,6 +22,36 @@ const marqueeAnimateVar: Variants = {
 };
 
 const FooterMarquee = () => {
+
+  const glitch: GlitchHandle = useGlitch({
+    "playMode": "hover",
+    "optimizeSeo": true,
+    "createContainers": true,
+    "hideOverflow": false,
+    "timing": {
+      "duration": 250,
+      "iterations": 2,
+      "easing": "linear"
+    },
+    "glitchTimeSpan": {
+      "start": 0,
+      "end": 1
+    },
+    "shake": {
+      "velocity": 10,
+      "amplitudeX": 0.2,
+      "amplitudeY": 0.1
+    },
+    "slice": {
+      "count": 15,
+      "velocity": 20,
+      "minHeight": 0.02,
+      "maxHeight": 0.15,
+      "hueRotate": true
+    },
+    "pulse": false
+  })
+
 
   return (
     <div className="footer-marquee-div1">
@@ -33,7 +64,9 @@ const FooterMarquee = () => {
           animate="animate"
           custom={{indexAnimate: index}}
         >
-          <h1>{item}</h1>
+          <div ref={glitch.ref}>
+            <h1>{item}</h1>
+          </div>   
         </motion.div>
       ))}
     </div>

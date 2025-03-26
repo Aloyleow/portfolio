@@ -7,7 +7,7 @@ type SectionHeadingProps = {
 const SectionHeading = ({ children }: SectionHeadingProps) => {
   return(
     <div className="heading-div">
-      <p>{ children }</p>
+      <h2>{ children }</h2>
     </div>
   )
 }

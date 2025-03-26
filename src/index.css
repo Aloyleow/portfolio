@@ -17,6 +17,15 @@ h1 {
   font-size: xx-large;
 }
 
+h2 {
+  margin: 0;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: larger;
+}
+
 p {
   font-weight: 300;
   margin: 0;
@@ -34,7 +43,6 @@ section {
 }
 
 .heading-div {
-  font-size: x-large;
   border-bottom: 1px solid;
   margin-bottom: 30px;
 }
@@ -411,6 +419,8 @@ input {
 
 .footer-marquee-text {
   position: absolute;
+  cursor: default;
+  filter: opacity(0.6);
 }
 
 
