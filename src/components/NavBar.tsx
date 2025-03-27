@@ -34,7 +34,7 @@ const NavBar = () => {
         custom={{time: 0.2, direction: 15}}
       >
         <a href="https://www.linkedin.com/in/aloyleow" target="_blank">
-          <img src="src\assets\linkblack.svg" width={35} height={40} />
+          <img src="linkblack.svg" width={35} height={40} />
         </a>
       </motion.div>
       <motion.div
