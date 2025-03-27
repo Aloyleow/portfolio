@@ -1,5 +1,6 @@
 import React from "react";
 import emailjs from '@emailjs/browser';
+import { motion } from "motion/react";
 
 type ContactFormButtonsProps = {
   formInput: FormInput;
@@ -12,17 +13,17 @@ type ContactFormButtonsProps = {
   setOtherError: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({ 
-  formInput, 
-  showInput, 
-  setShowInput, 
+const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
+  formInput,
+  showInput,
+  setShowInput,
   setErrorAnimate,
   hpInput,
   setSubmitting,
   setSuccess,
-  setOtherError 
+  setOtherError
 }) => {
-  
+
   const handleButtons = (item: string) => {
 
     setErrorAnimate(false)
@@ -46,15 +47,15 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
     setErrorAnimate(false)
 
     try {
-//Handle last form error
+      //Handle last form error
       if (formInput.how === "") {
 
         setErrorAnimate(true);
-//Handle honeypot
+        //Handle honeypot
       } else if (hpInput !== "") {
 
         setSuccess(true);
-//Handle true submit
+        //Handle true submit
       } else if (formInput.who !== "" && formInput.what !== "" && formInput.how !== "" && hpInput === "") {
 
         setSubmitting(true);
@@ -82,13 +83,13 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
       }
 
     } catch (error) {
-      
+
       if (error) {
         console.error("Please contact me at aloyleow91@gmail.com")
       }
       setSubmitting(false);
       setOtherError(true);
-      
+
     }
 
   };
@@ -96,13 +97,31 @@ const ContactFormButtons: React.FC<ContactFormButtonsProps> = ({
   return (
     <div className="buttons-div">
       {showInput !== 0 &&
-        <button onClick={() => handleButtons("negative")}>Previous</button>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleButtons("negative")}
+        >
+          Previous
+        </motion.button>
       }
       {showInput !== 2 &&
-        <button onClick={() => handleButtons("positive")}>Next</button>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleButtons("positive")}
+        >
+          Next
+        </motion.button>
       }
       {showInput === 2 &&
-        <button onClick={() => handleSubmit()}>Submit</button>
+        <motion.button
+          whileHover={{ scale: 1.05 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={() => handleSubmit()}
+        >
+          Submit
+        </motion.button>
       }
     </div>
   )

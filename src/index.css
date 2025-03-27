@@ -53,6 +53,7 @@ section {
   align-content: end;
 }
 
+
 @keyframes blink {
   50% {
     opacity: 0;
@@ -92,6 +93,7 @@ button {
   border-radius: 10px;
   cursor: pointer !important;
   margin: 0px 10px 0px 10px;
+  transform-origin: center;
 }
 
 input {
@@ -274,10 +276,9 @@ input {
 
 
 .homeIntro-div1 {
-  height: 60vh;
+  height: 75vh;
   align-content: center;
 }
-
 
 
 
@@ -286,6 +287,7 @@ input {
 
 .skills-div1 {
   height: 280px;
+  border-radius: 20px;
 }
 
 .skills-div2 {

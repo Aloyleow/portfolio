@@ -6,12 +6,12 @@ function App() {
 
 
   return (
-    <>
+    <div className="background-app">
       <NavBar />
       <Routes>
         <Route path="/" element={<DisplayPage />} />
       </Routes>
-    </>
+    </div>
   )
 }
 

@@ -1,11 +1,9 @@
-// import { AnimatePresence, Variants, motion } from "motion/react";
-// import { useState } from "react"
+import { motion } from "motion/react";
 
 const introName = "Hi, I am Aloysious Leow"
 const introRole = "A Software Engineer"
 const introExtend = "A mid-career switch professional, pursuing my passion and career as a Full_Stack Developer."
 // const introExtend2 = "The only constant in dev is change and adapting to that change is my only constant."
-
 
 const HomeIntro = () => {
 
@@ -14,9 +12,18 @@ const HomeIntro = () => {
       <div>
         <h1>{introName}</h1>
         <h1>{introRole}</h1>
-      </div>  
+      </div>
       <div>
         <p>{introExtend}</p>
+      </div>
+      <div className="buttons-div">
+        <motion.button 
+          onClick={() => document.getElementById("contact")?.scrollIntoView({ behavior: "smooth"})}
+          whileHover={{scale: 1.05}}
+          whileTap={{scale: 0.9}}
+        >
+          Contact Me!
+        </motion.button>
       </div>
     </div>
   )
