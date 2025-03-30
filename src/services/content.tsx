@@ -155,6 +155,14 @@ const projectsData: ProjectsData = [
 
 const exp: Exp[] = [
   {
+    name: "Amber Creative Pte Ltd",
+    role: "Developer",
+    date: "Apr 2025 to Present",
+    about: `
+    Coding, maintaining, modifying layouts to functions. Managing projects with other developers. Setup and manage deployments.
+    `
+  },
+  {
     name: "FigureLab.com",
     role: "Web-Developer, FreeLance",
     date: "Nov 2024 to Dec 2024",

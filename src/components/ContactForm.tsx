@@ -25,7 +25,6 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>, inputId: string) => {
-    event.preventDefault()
     setFormInput({ ...formInput, [inputId]: event.target.value })
   }
 

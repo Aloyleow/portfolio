@@ -49,7 +49,7 @@ section {
 
 .buttons-div {
   width: 100%;
-  height: 60px;
+  height: 70px;
   align-content: end;
 }
 
@@ -288,6 +288,7 @@ input {
 .skills-div1 {
   height: 280px;
   border-radius: 20px;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
 }
 
 .skills-div2 {

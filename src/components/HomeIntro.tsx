@@ -2,8 +2,8 @@ import { motion } from "motion/react";
 
 const introName = "Hi, I am Aloysious Leow"
 const introRole = "A Software Engineer"
-const introExtend = "A mid-career switch professional, pursuing my passion and career as a Full_Stack Developer."
-// const introExtend2 = "The only constant in dev is change and adapting to that change is my only constant."
+const introExtend = "A mid-career switch professional,"
+const introExtend2 = "pursuing my career as a Full_Stack Developer."
 
 const HomeIntro = () => {
 
@@ -14,7 +14,11 @@ const HomeIntro = () => {
         <h1>{introRole}</h1>
       </div>
       <div>
+        
+      </div>
+      <div>
         <p>{introExtend}</p>
+        <p>{introExtend2}</p>
       </div>
       <div className="buttons-div">
         <motion.button 
