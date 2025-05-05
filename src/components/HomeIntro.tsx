@@ -2,7 +2,7 @@ import { motion } from "motion/react";
 
 const introName = "Hi, I am Aloysious Leow"
 const introRole = "A Software Engineer"
-const introExtend = "A mid-career switch professional,"
+const introExtend = "A mid-career switch professional, based in Singapore."
 const introExtend2 = "pursuing my career as a Full_Stack Developer."
 
 const HomeIntro = () => {

@@ -159,7 +159,7 @@ const exp: Exp[] = [
     role: "Developer",
     date: "Apr 2025 to Present",
     about: `
-    Coding, maintaining, modifying layouts to functions. Managing projects with other developers. Setup and manage deployments.
+    Engineer, maintain and review both backend and frontend systems while collaborating closely in agile environments.
     `
   },
   {
