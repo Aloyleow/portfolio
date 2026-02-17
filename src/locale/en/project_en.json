@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "index": "1",
+      "name": "Three Endventure Game",
+      "images": ["teg1", "teg2", "teg3", "teg4"],
+      "tech": [
+        "ts",
+        "fastify",
+        "node",
+        "postgres",
+        "redis",
+        "digitalocean",
+        "tss"
+      ],
+      "description": [
+        "Designed and built a full-stack web-based adventure game with three distinct endings.",
+        "Implemented backend services using Fastify and Node.js, including authentication, session-based cookies, Redis caching, PostgreSQL data modeling and querying, and core game-logic flows.",
+        "On the frontend, implemented route protection, state management, and dynamic UI rendering based on user state."
+      ],
+      "link": "https://www.teg.aloylks.com",
+      "githublink": [
+        "https://github.com/aloyleow/threeEG-front",
+        " https://github.com/aloyleow/threeEG-back"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "index": "2",
+      "company": "Amber Creative Pte Ltd",
+      "position": "全栈程序员",
+      "duration": "Apr 2025 to Present",
+      "tech": [
+        "ts",
+        "js",
+        "fastify",
+        "node",
+        "docker",
+        "postgres",
+        "azure",
+        "aws",
+        "redis",
+        "next"
+      ],
+      "description": [
+        "参与大型培训管理系统的后端和前端端到端系统的设计、构建和维护。",
+        "参与了可扩展 API、数据库设计、第三方集成、CI/CD 流水线、性能测试、安全和环境管理等方面的工作，为项目从开发到生产和上线部署提供支持。",
+        "同时还支持其他基于内容管理系统（CMS）的大型项目，例如 Sitefinity、Kentico 和 Strapi。"
+      ]
+    },
+    {
+      "index": "1",
+      "company": "FigureLab.com",
+      "position": "网络程序员",
+      "duration": "Nov 2024 to Dec 2024",
+      "tech": ["ts", "html", "css", "react"],
+      "description": [
+        "为 FigureLab.com (Figure Lab PLT) 开发和设计了 Web 应用程序。独立管理项目生命周期，包括初始规划、线框图、编码和部署。"
+      ]
+    }
+  ]
+}
