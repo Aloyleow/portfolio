@@ -7,6 +7,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import { LanguageProvider } from "../state/language/LanguageProvider";
 import globalCss from "../styles/global.css?url";
 
 export const Route = createRootRoute({
@@ -30,7 +31,9 @@ export const Route = createRootRoute({
 function RootComponent() {
   return (
     <RootDocument>
-      <Outlet />
+      <LanguageProvider>
+        <Outlet />
+      </LanguageProvider>
     </RootDocument>
   );
 }
