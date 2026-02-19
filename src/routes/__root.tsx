@@ -8,6 +8,7 @@ import {
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { LanguageProvider } from "../state/language/LanguageProvider";
+import { ModeProvider } from "../state/mode/ModeProvider";
 import globalCss from "../styles/global.css?url";
 
 export const Route = createRootRoute({
@@ -32,7 +33,9 @@ function RootComponent() {
   return (
     <RootDocument>
       <LanguageProvider>
-        <Outlet />
+        <ModeProvider>
+          <Outlet />
+        </ModeProvider>
       </LanguageProvider>
     </RootDocument>
   );
@@ -45,7 +48,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
         <link rel="stylesheet" href={globalCss} />
         <HeadContent />
       </head>
-      <body>
+      <body id="root">
         {children}
         <Scripts />
       </body>

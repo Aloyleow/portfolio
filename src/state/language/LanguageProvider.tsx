@@ -2,22 +2,20 @@ import { type ReactNode, useEffect, useState } from "react";
 import type { LanguageTypes } from "../../types/state.types";
 import { LanguageContext } from "./language.context";
 
-type LanguageProviderProps = {
-  children: ReactNode;
-};
 /**
  * TODO(LOW)
  *
  * Can consider persisting language settings even when
  * user refresh or leave site
  *  */
-export function LanguageProvider({ children }: LanguageProviderProps) {
+export function LanguageProvider({ children }: { children: ReactNode }) {
   const [languageDetect, setLanguageDetect] = useState<LanguageTypes>("en");
   const [userSelect, setUserSelect] = useState<boolean>(false);
 
   const supportedLanguages: LanguageTypes[] = ["en", "cn", "my"] as const;
 
   useEffect(() => {
+    console.log("Language provider effect test");
     const userDefaultLang = supportedLanguages.find(
       (lang) => navigator.language === lang,
     );
@@ -25,7 +23,6 @@ export function LanguageProvider({ children }: LanguageProviderProps) {
     if (!userSelect && userDefaultLang) {
       setLanguageDetect(userDefaultLang);
     }
-    console.log("Language provider effect test");
   }, [userSelect, supportedLanguages]);
 
   return (

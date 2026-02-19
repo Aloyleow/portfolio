@@ -1,4 +1,24 @@
-p {
-  font-size: larger;
-  font-weight: bolder;
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root.dark {
+  background-color: black;
+  color: whitesmoke;
+}
+
+.button-as-div {
+  border: 0;
+  cursor: pointer;
+  background: none;
+  width: fit-content;
+
+  font: inherit;
+  color: inherit;
+  text-align: inherit;
+  line-height: inherit;
+
+  appearance: none;
+  -webkit-appearance: none;
 }
