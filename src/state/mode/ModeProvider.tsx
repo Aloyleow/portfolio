@@ -23,17 +23,14 @@ export function ModeProvider({ children }: { children: ReactNode }) {
       ).matches;
 
       if (userSettingsDark) {
-        setMode("dark");
+        setMode("light");
       }
     }
 
     for (const x of supportedModes) {
       root.classList.remove(x);
     }
-
-    if (mode !== "light") {
-      root.classList.add(mode);
-    }
+    root.classList.add(mode);
   }, [mode, userSelect, supportedModes]);
 
   return (

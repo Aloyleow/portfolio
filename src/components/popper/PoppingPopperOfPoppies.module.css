@@ -1,2 +1,42 @@
 .container {
+  top: 0;
+  left: 0;
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.limit {
+  width: 80%;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: var(--shadow-color);
+}
+
+@media (min-width: 640px) {
+  .limit {
+    width: 60%;
+  }
+}
+@media (min-width: 768px) {
+  .limit {
+    width: 50%;
+  }
+}
+@media (min-width: 1024px) {
+  .limit {
+    width: 40%;
+  }
+}
+@media (min-width: 1280px) {
+  .limit {
+    width: 30%;
+  }
+}
+/* @media (min-width: 1536px) { */
+/* } */

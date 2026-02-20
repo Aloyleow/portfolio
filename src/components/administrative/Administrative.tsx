@@ -44,6 +44,11 @@ export function Administrative() {
 
   return (
     <nav className={styles.container}>
+      {showPopper && (
+        <PoppingPopperOfPoppies>
+          <h1>??SAD?ASDASDADSDas</h1>
+        </PoppingPopperOfPoppies>
+      )}
       {Object.entries(themeSetting[mode]).map(([key, value], index) => {
         const adminAction = routeSettings[key as AdminImages];
         if (adminAction === null) {
@@ -55,7 +60,6 @@ export function Administrative() {
               style={rotateImageBaseOnIndex(index, 20)}
             >
               <img src={value} alt={key} className={styles.image} />
-              {showPopper && <PoppingPopperOfPoppies />}
             </button>
           );
         } else {
