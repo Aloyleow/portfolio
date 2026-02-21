@@ -6,16 +6,13 @@
  * https://npmjs.com/vite-css-modules
  */
 
-declare const container: string;
-declare const limit: string;
+declare const cancelButton: string;
 
 export {
-	container,
-	limit
+	cancelButton
 };
 
 declare const __default_export__: {
-	container: typeof container;
-	limit: typeof limit;
+	cancelButton: typeof cancelButton;
 };
 export default __default_export__;

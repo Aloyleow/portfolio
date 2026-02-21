@@ -34,6 +34,8 @@
   align-items: center;
 }
 
+
+
 @media (min-width: 768px) {
   .image {
     height: 60px;

@@ -1,6 +1,5 @@
 // src/routes/index.tsx
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
 import { Administrative } from "../components/feature/administrative/Administrative";
 import { ResumeSelection } from "../components/toggles/resumeSelection/ResumeSelection";
 import { useMode } from "../state/mode/useMode";
@@ -11,12 +10,12 @@ export const Route = createFileRoute("/")({
 });
 
 function Home() {
-  const { popper, setPopper } = usePoppers();
+  const { popper } = usePoppers();
   const { mode } = useMode();
   return (
     <>
       {popper.RESUME && (
-        <ResumeSelection popper={popper} setPopper={setPopper} mode={mode} />
+        <ResumeSelection mode={mode} />
       )}
 
       <Administrative />

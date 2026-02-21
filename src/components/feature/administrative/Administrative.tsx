@@ -1,4 +1,3 @@
-import { useState } from "react";
 import dgithub from "../../../assets/icons/dark/github-d.svg";
 import dlinkedin from "../../../assets/icons/dark/linkedin-d.svg";
 import dresume from "../../../assets/icons/dark/resume-d.svg";

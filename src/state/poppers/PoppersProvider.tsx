@@ -1,4 +1,4 @@
-import { type ReactNode, useEffect, useState } from "react";
+import { type ReactNode, useState } from "react";
 import type { PopperTypes } from "../../types/state.types";
 import { PopperContext } from "./poppers.context";
 
