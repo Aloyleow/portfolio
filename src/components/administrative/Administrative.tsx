@@ -8,9 +8,9 @@ import resume from "../../assets/icons/light/resume.svg";
 import { useMode } from "../../state/mode/useMode";
 import type { ModeTypes } from "../../types/state.types";
 import type { TypePeeker } from "../../types/utility.types";
-import { PoppingPopperOfPoppies } from "../popper/PoppingPopperOfPoppies";
 import styles from "./Administrative.module.css";
 import { rotateImageBaseOnIndex } from "./Administrative.style";
+import { ResumeSelection } from "./fragments/ResumeSelection";
 
 type AdminImages = "github" | "linkedin" | "resume";
 type ThemeSettingType = Record<
@@ -40,14 +40,12 @@ const routeSettings: RouteSettingType = {
 
 export function Administrative() {
   const { mode } = useMode();
-  const [showPopper, setShowPopper] = useState<boolean>(true);
+  const [showPopper, setShowPopper] = useState<boolean>(false);
 
   return (
     <nav className={styles.container}>
       {showPopper && (
-        <PoppingPopperOfPoppies>
-          <h1>??SAD?ASDASDADSDas</h1>
-        </PoppingPopperOfPoppies>
+        <ResumeSelection setShowPopper={setShowPopper} mode={mode} />
       )}
       {Object.entries(themeSetting[mode]).map(([key, value], index) => {
         const adminAction = routeSettings[key as AdminImages];
@@ -58,6 +56,7 @@ export function Administrative() {
               type="button"
               className={`button-as-div ${styles.imageHolder}`}
               style={rotateImageBaseOnIndex(index, 20)}
+              onClick={() => setShowPopper(true)}
             >
               <img src={value} alt={key} className={styles.image} />
             </button>

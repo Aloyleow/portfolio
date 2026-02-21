@@ -1,15 +1,20 @@
 // src/routes/index.tsx
 import { createFileRoute } from "@tanstack/react-router";
 import { Administrative } from "../components/administrative/Administrative";
+import { useState } from "react";
+
+type PopperListType = "RESUME"
+type PopperConditions = Record<PopperListType, boolean>
 
 export const Route = createFileRoute("/")({
   component: Home,
 });
 
 function Home() {
+
   return (
     <>
-      <Administrative />
+      <Administrative/>
       <h1>
         Lorem Ipsum is simply dummy text of the printing and typesetting
         industry. Lorem Ipsum has been the industry's standard dummy text ever

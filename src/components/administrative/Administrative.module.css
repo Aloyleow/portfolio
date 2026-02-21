@@ -1,15 +1,19 @@
 .container {
   position: fixed;
-  z-index: 2;
   right: 20px;
   top: 20px;
+  border-radius: 28px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  backdrop-filter: var(--blur-amount);
+  -webkit-backdrop-filter: var(--blur-amount);
 }
 
 .imageHolder {
+  position: relative;
+  z-index: 5;
   padding: 10px;
 }
 

@@ -1,12 +1,14 @@
 :root {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --blur-amount: blur(4px);
 }
 
 :root.light {
   background-color: white;
+  --background-color: white;
   color: black;
-  --border-color: rgba(0, 0, 0, 0.2);
+  --border-color: rgba(0, 0, 0, 0.4);
   --shadow-color:
     0 0 18px rgba(0, 0, 0, 0.05), 0 0 28px rgba(0, 0, 0, 0.08),
     0 0 48px rgba(0, 0, 0, 0.18);
@@ -14,6 +16,7 @@
 
 :root.dark {
   background-color: black;
+  --background-color: black;
   color: whitesmoke;
   --border-color: rgba(255, 255, 255, 0.2);
   --shadow-color:
@@ -34,4 +37,12 @@
 
   appearance: none;
   -webkit-appearance: none;
+}
+
+.standard-hover {
+  transition: ease-in-out 0.1s;
+}
+
+.standard-hover:hover {
+  transform: scale(1.1);
 }

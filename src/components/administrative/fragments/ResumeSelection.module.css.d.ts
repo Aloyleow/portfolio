@@ -6,19 +6,25 @@
  * https://npmjs.com/vite-css-modules
  */
 
-declare const container: string;
+declare const upperlimit: string;
+declare const middlelimit: string;
 declare const imageHolder: string;
 declare const image: string;
+declare const lowerlimit: string;
 
 export {
-	container,
+	upperlimit,
+	middlelimit,
 	imageHolder,
-	image
+	image,
+	lowerlimit
 };
 
 declare const __default_export__: {
-	container: typeof container;
+	upperlimit: typeof upperlimit;
+	middlelimit: typeof middlelimit;
 	imageHolder: typeof imageHolder;
 	image: typeof image;
+	lowerlimit: typeof lowerlimit;
 };
 export default __default_export__;
