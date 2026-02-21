@@ -1,0 +1,15 @@
+import { type ReactNode, useEffect, useState } from "react";
+import type { PopperTypes } from "../../types/state.types";
+import { PopperContext } from "./poppers.context";
+
+export function PoppersProvider({ children }: { children: ReactNode }) {
+  const [popper, setPopper] = useState<PopperTypes>({
+    RESUME: false,
+  });
+
+  return (
+    <PopperContext.Provider value={{ popper, setPopper }}>
+      {children}
+    </PopperContext.Provider>
+  );
+}

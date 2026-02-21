@@ -1,16 +1,16 @@
 import { useState } from "react";
-import dgithub from "../../assets/icons/dark/github-d.svg";
-import dlinkedin from "../../assets/icons/dark/linkedin-d.svg";
-import dresume from "../../assets/icons/dark/resume-d.svg";
-import github from "../../assets/icons/light/github.svg";
-import linkedin from "../../assets/icons/light/linkedin.svg";
-import resume from "../../assets/icons/light/resume.svg";
-import { useMode } from "../../state/mode/useMode";
-import type { ModeTypes } from "../../types/state.types";
-import type { TypePeeker } from "../../types/utility.types";
+import dgithub from "../../../assets/icons/dark/github-d.svg";
+import dlinkedin from "../../../assets/icons/dark/linkedin-d.svg";
+import dresume from "../../../assets/icons/dark/resume-d.svg";
+import github from "../../../assets/icons/light/github.svg";
+import linkedin from "../../../assets/icons/light/linkedin.svg";
+import resume from "../../../assets/icons/light/resume.svg";
+import { useMode } from "../../../state/mode/useMode";
+import { usePoppers } from "../../../state/poppers/usePoppers";
+import type { ModeTypes } from "../../../types/state.types";
+import type { TypePeeker } from "../../../types/utility.types";
 import styles from "./Administrative.module.css";
 import { rotateImageBaseOnIndex } from "./Administrative.style";
-import { ResumeSelection } from "./fragments/ResumeSelection";
 
 type AdminImages = "github" | "linkedin" | "resume";
 type ThemeSettingType = Record<
@@ -40,13 +40,9 @@ const routeSettings: RouteSettingType = {
 
 export function Administrative() {
   const { mode } = useMode();
-  const [showPopper, setShowPopper] = useState<boolean>(false);
-
+  const { popper, setPopper } = usePoppers();
   return (
     <nav className={styles.container}>
-      {showPopper && (
-        <ResumeSelection setShowPopper={setShowPopper} mode={mode} />
-      )}
       {Object.entries(themeSetting[mode]).map(([key, value], index) => {
         const adminAction = routeSettings[key as AdminImages];
         if (adminAction === null) {
@@ -56,7 +52,7 @@ export function Administrative() {
               type="button"
               className={`button-as-div ${styles.imageHolder}`}
               style={rotateImageBaseOnIndex(index, 20)}
-              onClick={() => setShowPopper(true)}
+              onClick={() => setPopper({ ...popper, RESUME: true })}
             >
               <img src={value} alt={key} className={styles.image} />
             </button>

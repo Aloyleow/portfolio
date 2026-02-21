@@ -9,6 +9,7 @@ import {
 import type { ReactNode } from "react";
 import { LanguageProvider } from "../state/language/LanguageProvider";
 import { ModeProvider } from "../state/mode/ModeProvider";
+import { PoppersProvider } from "../state/poppers/PoppersProvider";
 import globalCss from "../styles/global.css?url";
 
 export const Route = createRootRoute({
@@ -34,7 +35,9 @@ function RootComponent() {
     <RootDocument>
       <LanguageProvider>
         <ModeProvider>
-          <Outlet />
+          <PoppersProvider>
+            <Outlet />
+          </PoppersProvider>
         </ModeProvider>
       </LanguageProvider>
     </RootDocument>

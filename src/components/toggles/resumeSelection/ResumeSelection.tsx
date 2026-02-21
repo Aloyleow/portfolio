@@ -3,9 +3,11 @@ import dworddoc from "../../../assets/icons/dark/docx-d.svg";
 import dpdf from "../../../assets/icons/dark/pdf-d.svg";
 import worddoc from "../../../assets/icons/light/docx.svg";
 import pdf from "../../../assets/icons/light/pdf.svg";
-import type { ModeTypes } from "../../../types/state.types";
+import { useMode } from "../../../state/mode/useMode";
+import { usePoppers } from "../../../state/poppers/usePoppers";
+import type { ModeTypes, PopperTypes } from "../../../types/state.types";
 import type { TypePeeker } from "../../../types/utility.types";
-import { PoppingPopperOfPoppies } from "../../popper/PoppingPopperOfPoppies";
+import { PoppingPopperOfPoppies } from "../../ui/popper/PoppingPopperOfPoppies";
 import styles from "./ResumeSelection.module.css";
 
 type ResumeFormatTypes = "word" | "pdf";
@@ -34,11 +36,16 @@ const resumeLinks: ResumeLinkType = {
 };
 
 type ResumeSelectionProps = {
-  setShowPopper: Dispatch<SetStateAction<boolean>>;
+  popper: PopperTypes;
+  setPopper: Dispatch<SetStateAction<PopperTypes>>;
   mode: ModeTypes;
 };
 
-export function ResumeSelection({ setShowPopper, mode }: ResumeSelectionProps) {
+export function ResumeSelection({
+  popper,
+  setPopper,
+  mode,
+}: ResumeSelectionProps) {
   return (
     <PoppingPopperOfPoppies>
       <header className={styles.upperlimit}>
@@ -64,7 +71,7 @@ export function ResumeSelection({ setShowPopper, mode }: ResumeSelectionProps) {
         <button
           className="button-as-div standard-hover"
           type="button"
-          onClick={() => setShowPopper(false)}
+          onClick={() => setPopper({ ...popper, RESUME: false })}
         >
           <h2>Cancel</h2>
         </button>
