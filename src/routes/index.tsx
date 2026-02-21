@@ -14,9 +14,7 @@ function Home() {
   const { mode } = useMode();
   return (
     <>
-      {popper.RESUME && (
-        <ResumeSelection mode={mode} />
-      )}
+      {popper.RESUME && <ResumeSelection mode={mode} />}
 
       <Administrative />
       <h1>

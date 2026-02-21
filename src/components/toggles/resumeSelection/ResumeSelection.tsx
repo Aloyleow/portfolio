@@ -1,9 +1,8 @@
-
 import dworddoc from "../../../assets/icons/dark/docx-d.svg";
 import dpdf from "../../../assets/icons/dark/pdf-d.svg";
 import worddoc from "../../../assets/icons/light/docx.svg";
 import pdf from "../../../assets/icons/light/pdf.svg";
-import type { ModeTypes } from "../../../types/state.types";
+import type { ModeTypes, ThemeSettingType } from "../../../types/state.types";
 import type { TypePeeker } from "../../../types/utility.types";
 import { PoppingPopperOfPoppies } from "../../ui/popper/PoppingPopperOfPoppies";
 import { PopperBackButton } from "../../ui/popperBackButton/PopperBackButton";
@@ -11,14 +10,9 @@ import styles from "./ResumeSelection.module.css";
 
 type ResumeFormatTypes = "word" | "pdf";
 
-type ThemeSettingType = Record<
-  ModeTypes,
-  TypePeeker<Record<ResumeFormatTypes, string>>
->;
-
 type ResumeLinkType = Record<ResumeFormatTypes, string>;
 
-const themeSetting: ThemeSettingType = {
+const themeSetting: ThemeSettingType<ResumeFormatTypes> = {
   light: {
     word: worddoc,
     pdf,
@@ -38,9 +32,7 @@ type ResumeSelectionProps = {
   mode: ModeTypes;
 };
 
-export function ResumeSelection({
-  mode,
-}: ResumeSelectionProps) {
+export function ResumeSelection({ mode }: ResumeSelectionProps) {
   return (
     <PoppingPopperOfPoppies>
       <header className={styles.upperlimit}>
@@ -63,7 +55,7 @@ export function ResumeSelection({
         })}
       </div>
       <footer className={styles.lowerlimit}>
-        <PopperBackButton/>
+        <PopperBackButton />
       </footer>
     </PoppingPopperOfPoppies>
   );
