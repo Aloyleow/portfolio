@@ -9,10 +9,13 @@
 declare const langButton: string;
 declare const fades: string;
 
-export { langButton, fades };
+export {
+	langButton,
+	fades
+};
 
 declare const __default_export__: {
-  langButton: typeof langButton;
-  fades: typeof fades;
+	langButton: typeof langButton;
+	fades: typeof fades;
 };
 export default __default_export__;
