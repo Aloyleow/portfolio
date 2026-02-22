@@ -5,7 +5,6 @@ import { useLanguage } from "../../../state/language/useLanguage";
 import type {
   LanguageTypes,
   LocaleSettingType,
-  ModeTypes,
 } from "../../../types/state.types";
 import { PoppingPopperOfPoppies } from "../../ui/popper/PoppingPopperOfPoppies";
 import { PopperBackButton } from "../../ui/popperBackButton/PopperBackButton";
@@ -21,7 +20,7 @@ const localeSetting: LocaleSettingType<ContentType> = {
   my,
 };
 
-export function LangSelection({ mode }: { mode: ModeTypes }) {
+export function LangSelection() {
   const { languageDetect, setLanguageDetect } = useLanguage();
 
   const languages: Record<string, LanguageTypes> = {
