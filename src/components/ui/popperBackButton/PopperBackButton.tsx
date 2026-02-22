@@ -17,13 +17,13 @@ const localeSetting: LocaleSettingType<ContentType> = {
 };
 
 export function PopperBackButton() {
-  const { popper, setPopper } = usePoppers();
+  const { setPopper } = usePoppers();
   const { languageDetect } = useLanguage();
   return (
     <button
       className={`button-as-div standard-hover ${styles.cancelButton}`}
       type="button"
-      onClick={() => setPopper({ ...popper, RESUME: false })}
+      onClick={() => setPopper({ RESUME: false, LANGUAGE: false })}
     >
       {localeSetting[languageDetect].back}
     </button>

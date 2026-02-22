@@ -2,7 +2,16 @@ import dworddoc from "../../../assets/icons/dark/docx-d.svg";
 import dpdf from "../../../assets/icons/dark/pdf-d.svg";
 import worddoc from "../../../assets/icons/light/docx.svg";
 import pdf from "../../../assets/icons/light/pdf.svg";
-import type { ModeTypes, ThemeSettingType } from "../../../types/state.types";
+import cn from "../../../locale/cn/ui_cn.json";
+import en from "../../../locale/en/ui_en.json";
+import my from "../../../locale/my/ui_my.json";
+
+import type {
+  LanguageTypes,
+  LocaleSettingType,
+  ModeTypes,
+  ThemeSettingType,
+} from "../../../types/state.types";
 import { PoppingPopperOfPoppies } from "../../ui/popper/PoppingPopperOfPoppies";
 import { PopperBackButton } from "../../ui/popperBackButton/PopperBackButton";
 import styles from "./ResumeSelection.module.css";
@@ -10,6 +19,10 @@ import styles from "./ResumeSelection.module.css";
 type ResumeFormatTypes = "word" | "pdf";
 
 type ResumeLinkType = Record<ResumeFormatTypes, string>;
+
+type ContentType = {
+  format: string;
+};
 
 const themeSetting: ThemeSettingType<ResumeFormatTypes> = {
   light: {
@@ -27,15 +40,25 @@ const resumeLinks: ResumeLinkType = {
   pdf: "public/resume.pdf",
 };
 
-type ResumeSelectionProps = {
-  mode: ModeTypes;
+const localeSetting: LocaleSettingType<ContentType> = {
+  en,
+  cn,
+  my,
 };
 
-export function ResumeSelection({ mode }: ResumeSelectionProps) {
+type ResumeSelectionProps = {
+  mode: ModeTypes;
+  languageDetect: LanguageTypes;
+};
+
+export function ResumeSelection({
+  mode,
+  languageDetect,
+}: ResumeSelectionProps) {
   return (
     <PoppingPopperOfPoppies>
       <header className={styles.upperlimit}>
-        <h2>Select format</h2>
+        <h2>{localeSetting[languageDetect].format}</h2>
       </header>
       <nav className={styles.middlelimit}>
         {Object.entries(themeSetting[mode]).map(([key, value]) => {

@@ -20,10 +20,15 @@ export function Settings({ mode }: { mode: ModeTypes }) {
       {open && <ModeSwitcher />}
       <button
         type="button"
-        className={`button-as-div ${styles.button}`}
+        className={`button-as-div ${styles.settingButton}`}
         onMouseEnter={() => setOpen(true)}
+        onFocus={() => setOpen(true)}
       >
-        <img src={themeSetting[mode]} alt="setting" className={styles.image} />
+        <img
+          src={themeSetting[mode]}
+          alt="setting"
+          className={styles.settingImage}
+        />
       </button>
     </section>
   );

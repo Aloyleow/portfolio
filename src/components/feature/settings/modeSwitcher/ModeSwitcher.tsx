@@ -26,7 +26,7 @@ export function ModeSwitcher() {
   };
   return (
     <button
-      className={`button-as-div ${styles.modeButton}`}
+      className={`button-as-div standard-hover ${styles.modeButton}`}
       type="button"
       onClick={() => handleSwitchMode()}
     >

@@ -8,13 +8,13 @@
   -webkit-backdrop-filter: var(--blur-amount);
 }
 
-.button {
+.settingButton {
   position: relative;
   z-index: 5;
   padding: 10px;
 }
 
-.image {
+.settingImage {
   height: 30px;
   width: 30px;
 }

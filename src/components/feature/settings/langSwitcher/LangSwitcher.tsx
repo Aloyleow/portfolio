@@ -25,7 +25,7 @@ export function LangSwitcher({ mode, setOpen }: LangSwitcherProps) {
 
   return (
     <button
-      className={`button-as-div ${styles.langButton}`}
+      className={`button-as-div standard-hover ${styles.langButton}`}
       type="button"
       onClick={() => handleLangSelect()}
     >

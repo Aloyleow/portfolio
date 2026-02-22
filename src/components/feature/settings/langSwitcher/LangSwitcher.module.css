@@ -2,7 +2,7 @@
   position: relative;
   z-index: 5;
   padding: 10px;
-  animation: fades 1s ease forwards;
+  animation: fades 1s ease-in-out forwards;
 }
 
 .langButton img {
