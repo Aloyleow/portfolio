@@ -1,0 +1,39 @@
+.container {
+  position: fixed;
+
+  right: 20px;
+  bottom: 20px;
+  border-radius: 28px;
+  backdrop-filter: var(--blur-amount);
+  -webkit-backdrop-filter: var(--blur-amount);
+}
+
+.button {
+  position: relative;
+  z-index: 5;
+  padding: 10px;
+}
+
+.image {
+  height: 30px;
+  width: 30px;
+}
+
+/* @media (min-width: 640px) {
+  
+} */
+@media (min-width: 768px) {
+  .image {
+    height: 35px;
+    width: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    right: 40px;
+  }
+}
+/* @media (min-width: 1280px) {
+}
+@media (min-width: 1536px) {
+} */

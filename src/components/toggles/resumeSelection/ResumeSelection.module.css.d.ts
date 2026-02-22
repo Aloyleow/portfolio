@@ -12,19 +12,13 @@ declare const imageHolder: string;
 declare const image: string;
 declare const lowerlimit: string;
 
-export {
-	upperlimit,
-	middlelimit,
-	imageHolder,
-	image,
-	lowerlimit
-};
+export { upperlimit, middlelimit, imageHolder, image, lowerlimit };
 
 declare const __default_export__: {
-	upperlimit: typeof upperlimit;
-	middlelimit: typeof middlelimit;
-	imageHolder: typeof imageHolder;
-	image: typeof image;
-	lowerlimit: typeof lowerlimit;
+  upperlimit: typeof upperlimit;
+  middlelimit: typeof middlelimit;
+  imageHolder: typeof imageHolder;
+  image: typeof image;
+  lowerlimit: typeof lowerlimit;
 };
 export default __default_export__;

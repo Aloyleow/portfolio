@@ -5,6 +5,7 @@ import { PopperContext } from "./poppers.context";
 export function PoppersProvider({ children }: { children: ReactNode }) {
   const [popper, setPopper] = useState<PopperTypes>({
     RESUME: false,
+    LANGUAGE: false,
   });
 
   return (

@@ -1,4 +1,4 @@
-import type { CustomCssVars } from "../../types/utility.types";
+import type { CustomCssVars } from "../../../types/utility.types";
 
 /**
  * Returning negative or positive base on index

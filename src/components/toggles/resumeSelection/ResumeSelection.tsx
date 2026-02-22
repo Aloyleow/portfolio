@@ -3,7 +3,6 @@ import dpdf from "../../../assets/icons/dark/pdf-d.svg";
 import worddoc from "../../../assets/icons/light/docx.svg";
 import pdf from "../../../assets/icons/light/pdf.svg";
 import type { ModeTypes, ThemeSettingType } from "../../../types/state.types";
-import type { TypePeeker } from "../../../types/utility.types";
 import { PoppingPopperOfPoppies } from "../../ui/popper/PoppingPopperOfPoppies";
 import { PopperBackButton } from "../../ui/popperBackButton/PopperBackButton";
 import styles from "./ResumeSelection.module.css";
@@ -38,7 +37,7 @@ export function ResumeSelection({ mode }: ResumeSelectionProps) {
       <header className={styles.upperlimit}>
         <h2>Select format</h2>
       </header>
-      <div className={styles.middlelimit}>
+      <nav className={styles.middlelimit}>
         {Object.entries(themeSetting[mode]).map(([key, value]) => {
           const linkAction = key as ResumeFormatTypes;
           return (
@@ -53,7 +52,7 @@ export function ResumeSelection({ mode }: ResumeSelectionProps) {
             </a>
           );
         })}
-      </div>
+      </nav>
       <footer className={styles.lowerlimit}>
         <PopperBackButton />
       </footer>

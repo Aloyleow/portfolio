@@ -6,11 +6,19 @@
  * https://npmjs.com/vite-css-modules
  */
 
-declare const cancelButton: string;
+declare const container: string;
+declare const button: string;
+declare const image: string;
 
-export { cancelButton };
+export {
+	container,
+	button,
+	image
+};
 
 declare const __default_export__: {
-  cancelButton: typeof cancelButton;
+	container: typeof container;
+	button: typeof button;
+	image: typeof image;
 };
 export default __default_export__;

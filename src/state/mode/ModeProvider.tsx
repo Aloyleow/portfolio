@@ -34,7 +34,7 @@ export function ModeProvider({ children }: { children: ReactNode }) {
   }, [mode, userSelect, supportedModes]);
 
   return (
-    <ModeContext.Provider value={{ mode, setMode, setUserSelect }}>
+    <ModeContext.Provider value={{ mode, setMode, userSelect, setUserSelect }}>
       {children}
     </ModeContext.Provider>
   );

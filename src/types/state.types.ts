@@ -8,5 +8,5 @@ export type ThemeSettingType<T extends PropertyKey> = Record<
   ModeTypes,
   TypePeeker<Record<T, string>>
 >;
-export type PopperListTypes = "RESUME"
+export type PopperListTypes = "RESUME" | "LANGUAGE"
 export type PopperTypes = Record<PopperListTypes, boolean>

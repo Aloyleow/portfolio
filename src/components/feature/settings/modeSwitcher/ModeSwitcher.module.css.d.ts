@@ -6,11 +6,13 @@
  * https://npmjs.com/vite-css-modules
  */
 
-declare const cancelButton: string;
+declare const modeButton: string;
+declare const fades: string;
 
-export { cancelButton };
+export { modeButton, fades };
 
 declare const __default_export__: {
-  cancelButton: typeof cancelButton;
+  modeButton: typeof modeButton;
+  fades: typeof fades;
 };
 export default __default_export__;

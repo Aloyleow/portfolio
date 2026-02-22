@@ -6,11 +6,16 @@
  * https://npmjs.com/vite-css-modules
  */
 
-declare const cancelButton: string;
+declare const langButton: string;
+declare const fades: string;
 
-export { cancelButton };
+export {
+	langButton,
+	fades
+};
 
 declare const __default_export__: {
-  cancelButton: typeof cancelButton;
+	langButton: typeof langButton;
+	fades: typeof fades;
 };
 export default __default_export__;

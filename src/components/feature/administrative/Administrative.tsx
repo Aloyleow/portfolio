@@ -1,24 +1,30 @@
+import type { Dispatch, SetStateAction } from "react";
 import dgithub from "../../../assets/icons/dark/github-d.svg";
 import dlinkedin from "../../../assets/icons/dark/linkedin-d.svg";
 import dresume from "../../../assets/icons/dark/resume-d.svg";
 import github from "../../../assets/icons/light/github.svg";
 import linkedin from "../../../assets/icons/light/linkedin.svg";
 import resume from "../../../assets/icons/light/resume.svg";
-import { useMode } from "../../../state/mode/useMode";
-import { usePoppers } from "../../../state/poppers/usePoppers";
-import type { ModeTypes } from "../../../types/state.types";
-import type { TypePeeker } from "../../../types/utility.types";
+import type {
+  ModeTypes,
+  PopperTypes,
+  ThemeSettingType,
+} from "../../../types/state.types";
+
 import styles from "./Administrative.module.css";
 import { rotateImageBaseOnIndex } from "./Administrative.style";
 
 type AdminImages = "github" | "linkedin" | "resume";
-type ThemeSettingType = Record<
-  ModeTypes,
-  TypePeeker<Record<AdminImages, string>>
->;
+
 type RouteSettingType = Record<AdminImages, string | null>;
 
-const themeSetting: ThemeSettingType = {
+type AdministrativeProps = {
+  mode: ModeTypes;
+  popper: PopperTypes;
+  setPopper: Dispatch<SetStateAction<PopperTypes>>;
+};
+
+const themeSetting: ThemeSettingType<AdminImages> = {
   light: {
     github,
     linkedin,
@@ -37,9 +43,11 @@ const routeSettings: RouteSettingType = {
   resume: null,
 };
 
-export function Administrative() {
-  const { mode } = useMode();
-  const { popper, setPopper } = usePoppers();
+export function Administrative({
+  mode,
+  popper,
+  setPopper,
+}: AdministrativeProps) {
   return (
     <nav className={styles.container}>
       {Object.entries(themeSetting[mode]).map(([key, value], index) => {
