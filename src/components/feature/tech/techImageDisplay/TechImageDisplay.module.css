@@ -7,8 +7,9 @@
 }
 
 .imageHolder {
-  padding: 10px 20px;
+  margin: 10px 20px;
   filter: grayscale(0.3);
+  animation: float 5s ease-in-out infinite;
 }
 
 .image {
@@ -25,6 +26,20 @@
 
 @media (min-width: 1024px) {
   .imageHolder {
-    padding: 20px 40px;
+    margin: 20px 40px;
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(8px);
+  }
+
+  100% {
+    transform: translateY(0px);
   }
 }

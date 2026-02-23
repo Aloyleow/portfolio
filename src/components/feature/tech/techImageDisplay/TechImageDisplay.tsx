@@ -1,3 +1,4 @@
+import { useState } from "react";
 import aws from "../../../../assets/tech/aws.svg";
 import azure from "../../../../assets/tech/azure.svg";
 import bun from "../../../../assets/tech/bun.svg";
@@ -79,6 +80,7 @@ const themeSetting: ThemeSettingType<string> = {
 };
 
 export function TechImageDisplay({ mode }: { mode: ModeTypes }) {
+  const [description, setDescription] = useState<string>("");
   return (
     <main className={styles.container}>
       {Object.entries(themeSetting[mode]).map(([key, value], index) => (
@@ -86,10 +88,15 @@ export function TechImageDisplay({ mode }: { mode: ModeTypes }) {
           type="button"
           key={key}
           className={`button-as-div ${styles.imageHolder}`}
+          onMouseEnter={() => setDescription(`${key}`)}
+          onMouseLeave={() => setDescription("")}
         >
           <img alt={key} src={value} className={styles.image} />
         </button>
       ))}
+      <footer>
+        <p>{description}</p>
+      </footer>
     </main>
   );
 }
