@@ -11,17 +11,12 @@ declare const settingButton: string;
 declare const settingImage: string;
 declare const image: string;
 
-export {
-	container,
-	settingButton,
-	settingImage,
-	image
-};
+export { container, settingButton, settingImage, image };
 
 declare const __default_export__: {
-	container: typeof container;
-	settingButton: typeof settingButton;
-	settingImage: typeof settingImage;
-	image: typeof image;
+  container: typeof container;
+  settingButton: typeof settingButton;
+  settingImage: typeof settingImage;
+  image: typeof image;
 };
 export default __default_export__;

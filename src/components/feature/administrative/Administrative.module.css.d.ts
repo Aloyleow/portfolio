@@ -10,15 +10,11 @@ declare const container: string;
 declare const imageHolder: string;
 declare const image: string;
 
-export {
-	container,
-	imageHolder,
-	image
-};
+export { container, imageHolder, image };
 
 declare const __default_export__: {
-	container: typeof container;
-	imageHolder: typeof imageHolder;
-	image: typeof image;
+  container: typeof container;
+  imageHolder: typeof imageHolder;
+  image: typeof image;
 };
 export default __default_export__;

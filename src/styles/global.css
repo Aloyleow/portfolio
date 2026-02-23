@@ -8,6 +8,7 @@
   font-family: Tektur, system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  letter-spacing: 1.2px;
   --blur-amount: blur(4px);
 }
 

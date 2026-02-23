@@ -1,6 +1,6 @@
 .container {
   position: fixed;
-
+  z-index: 5;
   right: 20px;
   bottom: 20px;
   border-radius: 28px;
@@ -10,7 +10,7 @@
 
 .settingButton {
   position: relative;
-  z-index: 5;
+
   padding: 10px;
 }
 
