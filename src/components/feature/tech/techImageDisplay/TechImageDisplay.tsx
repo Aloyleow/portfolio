@@ -2,8 +2,8 @@ import { useState } from "react";
 import aws from "../../../../assets/tech/aws.svg";
 import azure from "../../../../assets/tech/azure.svg";
 import bun from "../../../../assets/tech/bun.svg";
-import rust from "../../../../assets/tech/corro.svg";
-import cpp from "../../../../assets/tech/cpp.svg";
+// import rust from "../../../../assets/tech/corro.svg";
+// import cpp from "../../../../assets/tech/cpp.svg";
 import css from "../../../../assets/tech/css.svg";
 import digital_ocean from "../../../../assets/tech/digitalocean.svg";
 import docker from "../../../../assets/tech/docker.svg";
@@ -28,7 +28,9 @@ import type {
   ModeTypes,
   ThemeSettingType,
 } from "../../../../types/state.types";
+import type { CustomCssVars } from "../../../../types/utility.types";
 import styles from "./TechImageDisplay.module.css";
+import { getNumbersForFloating } from "./techImageDisplay.style";
 
 const themeSetting: ThemeSettingType<string> = {
   light: {
@@ -51,8 +53,8 @@ const themeSetting: ThemeSettingType<string> = {
     vercel,
     tailwind,
     openai,
-    rust,
-    cpp,
+    // rust,
+    // cpp,
   },
   dark: {
     type_script,
@@ -74,28 +76,45 @@ const themeSetting: ThemeSettingType<string> = {
     dvercel,
     tailwind,
     dopenai,
-    rust,
-    cpp,
+    // rust,
+    // cpp,
   },
 };
 
 export function TechImageDisplay({ mode }: { mode: ModeTypes }) {
   const [description, setDescription] = useState<string>("");
+  const imageSource = Object.entries(themeSetting[mode]);
+  const [randomNumArray] = useState<number[]>(
+    getNumbersForFloating(imageSource.length, 12),
+  );
+
   return (
     <main className={styles.container}>
-      {Object.entries(themeSetting[mode]).map(([key, value], index) => (
-        <button
-          type="button"
-          key={key}
-          className={`button-as-div ${styles.imageHolder}`}
-          onMouseEnter={() => setDescription(`${key}`)}
-          onMouseLeave={() => setDescription("")}
-        >
-          <img alt={key} src={value} className={styles.image} />
-        </button>
-      ))}
-      <footer>
-        <p>{description}</p>
+      <div className={styles.middlelimit}>
+        {imageSource.map(([key, value], index) => {
+          return (
+            <button
+              type="button"
+              key={key}
+              className={`button-as-div ${styles.imageHolder}`}
+              onMouseEnter={() => setDescription(`${key}`)}
+              onMouseLeave={() => setDescription("")}
+              style={
+                {
+                  "--float-direction": `${randomNumArray[index]}px`,
+                } as CustomCssVars
+              }
+            >
+              <img alt={key} src={value} className={styles.image} />
+            </button>
+          );
+        })}
+      </div>
+      <footer className={styles.lowerlimit}>
+        <p>
+          {description.charAt(0).toUpperCase() +
+            description.slice(1).split("_").join(" ")}
+        </p>
       </footer>
     </main>
   );
