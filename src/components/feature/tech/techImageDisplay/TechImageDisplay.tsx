@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { type Dispatch, type SetStateAction, useState } from "react";
 import aws from "../../../../assets/tech/aws.svg";
 import azure from "../../../../assets/tech/azure.svg";
 import bun from "../../../../assets/tech/bun.svg";
@@ -80,9 +80,17 @@ const themeSetting: ThemeSettingType<string> = {
     // cpp,
   },
 };
+type TechImageDisplayProps = {
+  mode: ModeTypes;
+  header: string;
+  setDescription: Dispatch<SetStateAction<string>>;
+};
 
-export function TechImageDisplay({ mode }: { mode: ModeTypes }) {
-  const [description, setDescription] = useState<string>("");
+export function TechImageDisplay({
+  mode,
+  header,
+  setDescription,
+}: TechImageDisplayProps) {
   const imageSource = Object.entries(themeSetting[mode]);
   const [randomNumArray] = useState<number[]>(
     getNumbersForFloating(imageSource.length, 12),
@@ -97,8 +105,12 @@ export function TechImageDisplay({ mode }: { mode: ModeTypes }) {
               type="button"
               key={key}
               className={`button-as-div ${styles.imageHolder}`}
-              onMouseEnter={() => setDescription(`${key}`)}
-              onMouseLeave={() => setDescription("")}
+              onMouseEnter={() =>
+                setDescription(
+                  `${key.charAt(0).toUpperCase() + key.slice(1).split("_").join(" ")}`,
+                )
+              }
+              onMouseLeave={() => setDescription(header)}
               style={
                 {
                   "--float-direction": `${randomNumArray[index]}px`,
@@ -110,12 +122,12 @@ export function TechImageDisplay({ mode }: { mode: ModeTypes }) {
           );
         })}
       </div>
-      <footer className={styles.lowerlimit}>
+      {/* <footer className={styles.lowerlimit}>
         <p>
           {description.charAt(0).toUpperCase() +
             description.slice(1).split("_").join(" ")}
         </p>
-      </footer>
+      </footer> */}
     </main>
   );
 }
