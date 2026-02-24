@@ -4,18 +4,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 100px;
+  padding-bottom: 20px;
 }
 
 .container header {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   z-index: -1;
   font-size: 18vw;
   font-weight: bolder;
   overflow-wrap: break-word;
-  opacity: 0.08;
+  opacity: 0.05;
 }
 
 .limit {
@@ -23,21 +23,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 1px solid red;
 }
 /* @media (min-width: 640px) {
 } */
 @media (min-width: 768px) {
-  .limit {
+  /* .limit {
     width: 60%;
-  }
+  } */
   .container header {
-    width: 90%;
     font-size: 16vw;
   }
 }
 @media (min-width: 1024px) {
   .container header {
-    width: 50%;
     font-size: 9vw;
   }
   .limit {

@@ -1,6 +1,7 @@
 // src/routes/index.tsx
 import { createFileRoute } from "@tanstack/react-router";
 import { Administrative } from "../components/feature/administrative/Administrative";
+import { Career } from "../components/feature/career/Career";
 import { Introduction } from "../components/feature/introduction/Introduction";
 import { Settings } from "../components/feature/settings/Settings";
 import { Tech } from "../components/feature/tech/Tech";
@@ -28,6 +29,7 @@ function Home() {
       <Settings mode={mode} />
       <Introduction languageDetect={languageDetect} />
       <Tech mode={mode} languageDetect={languageDetect} />
+      <Career mode={mode} languageDetect={languageDetect} />
     </>
   );
 }

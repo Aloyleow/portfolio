@@ -1,4 +1,5 @@
 {
+  "title": "Career",
   "items": [
     {
       "index": "2",
@@ -18,7 +19,7 @@
         "next"
       ],
       "description": [
-        "Involved in designing, building, and maintaining end-to-end systems across backend and frontend for a large-scale Training Managment System.",
+        "Involved in designing, building, and maintaining end-to-end systems across backend and frontend for a Training Managment System.",
         "Worked on scalable APIs, database design, third-party integrations, CI/CD pipelines, performance testing, security, and environment management, supporting projects from development through production and live deployment.",
         "Concurrently supported other major projects that levrages on CMS such as Sitefinity, Kentico and Strapi"
       ]

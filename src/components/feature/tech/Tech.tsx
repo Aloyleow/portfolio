@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import cn from "../../../locale/cn/tech_cn.json";
 import en from "../../../locale/en/tech_en.json";
 import my from "../../../locale//my/tech_my.json";
@@ -28,6 +28,10 @@ const localeSetting: LocaleSettingType<ContentType> = {
 export function Tech({ mode, languageDetect }: TechProps) {
   const header = localeSetting[languageDetect].tech;
   const [description, setDescription] = useState<string>(header);
+
+  useEffect(() => {
+    setDescription(header);
+  }, [header]);
 
   return (
     <section className={styles.container}>
