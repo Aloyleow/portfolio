@@ -13,6 +13,7 @@
   margin: 10px 20px;
   filter: grayscale(0.3);
   animation: float 10s ease-in-out infinite;
+  cursor: default;
 }
 
 .imageHolder:hover {
@@ -37,6 +38,9 @@
 }
 
 @media (min-width: 768px) {
+  .imageHolder {
+    margin: 20px 40px;
+  }
   .image {
     height: 40px;
     width: 40px;
@@ -45,7 +49,7 @@
 
 @media (min-width: 1024px) {
   .imageHolder {
-    margin: 20px 40px;
+    margin: 30px 40px;
   }
 }
 

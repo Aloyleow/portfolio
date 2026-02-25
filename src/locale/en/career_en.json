@@ -3,6 +3,7 @@
   "items": [
     {
       "index": "2",
+      "image": "amber",
       "company": "Amber Creative Pte Ltd",
       "position": "Full stack Developer",
       "duration": "Apr 2025 to Present",
@@ -26,6 +27,7 @@
     },
     {
       "index": "1",
+      "image": "figurelab",
       "company": "FigureLab.com",
       "position": "Web-Developer, FreeLance",
       "duration": "Nov 2024 to Dec 2024",

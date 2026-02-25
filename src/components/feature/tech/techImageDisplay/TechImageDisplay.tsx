@@ -9,8 +9,8 @@ import digital_ocean from "../../../../assets/tech/digitalocean.svg";
 import docker from "../../../../assets/tech/docker.svg";
 import fastify from "../../../../assets/tech/fastify.svg";
 import dfastify from "../../../../assets/tech/fastify-d.svg";
-import openai from "../../../../assets/tech/gpt.svg";
-import dopenai from "../../../../assets/tech/gpt-d.svg";
+// import openai from "../../../../assets/tech/gpt.svg";
+// import dopenai from "../../../../assets/tech/gpt-d.svg";
 import html from "../../../../assets/tech/html.svg";
 import java_script from "../../../../assets/tech/js.svg";
 import next from "../../../../assets/tech/next.svg";
@@ -52,7 +52,7 @@ const themeSetting: ThemeSettingType<string> = {
     react,
     vercel,
     tailwind,
-    openai,
+    // openai,
     // rust,
     // cpp,
   },
@@ -75,7 +75,7 @@ const themeSetting: ThemeSettingType<string> = {
     react,
     dvercel,
     tailwind,
-    dopenai,
+    // dopenai,
     // rust,
     // cpp,
   },

@@ -62,6 +62,10 @@ h1 {
 h2 {
   font-size: large;
 }
+
+h4 {
+  font-size: smaller;
+}
 /* @media (min-width: 640px) {
 
 } */
@@ -71,6 +75,9 @@ h2 {
   }
   h2 {
     font-size: x-large;
+  }
+  h4 {
+    font-size: large;
   }
   p {
     font-size: large;
