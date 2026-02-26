@@ -1,7 +1,8 @@
 {
+  "title": "Projects",
   "items": [
     {
-      "index": "1",
+      "index": "0",
       "name": "Three Endventure Game",
       "images": ["teg1", "teg2", "teg3", "teg4"],
       "tech": [
