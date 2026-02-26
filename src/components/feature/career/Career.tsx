@@ -72,24 +72,20 @@ export function Career({ languageDetect }: CareerProps) {
             onMouseEnter={() => setLogo(obj.image as ImagesType)}
             onMouseLeave={() => setLogo(null)}
           >
-            <div>
-              <h2>{obj.company}</h2>
-            </div>
+            <h2>{obj.company}</h2>
             <div className={styles.subHeading}>
               <h4>{obj.position}</h4>
               <h4>{obj.duration}</h4>
             </div>
-            <div>
-              <ul>
-                {obj.description.map((x) => (
-                  <li key={x.slice(0, 5).trim()}>{x}</li>
-                ))}
-              </ul>
-            </div>
+            <ul>
+              {obj.description.map((x) => (
+                <li key={x.slice(0, 5).trim()}>{x}</li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
-      <div>
+      <footer>
         <button
           type="button"
           className="button-as-div"
@@ -97,7 +93,7 @@ export function Career({ languageDetect }: CareerProps) {
         >
           <p>{showMore ? "Show Less" : "Show More"}</p>
         </button>
-      </div>
+      </footer>
     </section>
   );
 }
