@@ -1,6 +1,7 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import amber from "../../../assets/career/amber.svg";
 import figurelab from "../../../assets/career/figurelab.png";
+import ge from "../../../assets/career/ge.svg";
 import cn from "../../../locale/cn/career_cn.json";
 import en from "../../../locale/en/career_en.json";
 import my from "../../../locale//my/career_my.json";
@@ -25,7 +26,7 @@ type ContentType = {
   }[];
 };
 
-type ImagesType = "amber" | "figurelab";
+type ImagesType = "amber" | "figurelab" | "ge";
 
 type CareerProps = {
   mode: ModeTypes;
@@ -41,15 +42,32 @@ const localeSetting: LocaleSettingType<ContentType> = {
 const imageSettings: Record<ImagesType, string> = {
   amber,
   figurelab,
+  ge,
 };
 
 export function Career({ mode, languageDetect }: CareerProps) {
   const [logo, setLogo] = useState<ImagesType | null>(null);
+  const [showMore, setShowMore] = useState<boolean>(false);
+  const [content, setContent] = useState<ContentType["items"]>(
+    localeSetting[languageDetect].items,
+  );
+
+  useEffect(() => {
+    const totalLength = localeSetting[languageDetect].items.length;
+    const toShow = showMore
+      ? localeSetting[languageDetect].items
+      : localeSetting[languageDetect].items.slice(0, 2);
+    setContent(toShow);
+  }, [showMore, languageDetect]);
+
   return (
     <section className={styles.container}>
-      <header>{localeSetting[languageDetect].title}</header>
-      <div className={styles.limit}>
-        {localeSetting[languageDetect].items.map((obj) => (
+      <div className={styles.upperlimit}>
+        <header>{localeSetting[languageDetect].title}</header>
+        {logo && <img src={imageSettings[logo]} alt={logo} />}
+      </div>
+      <div className={styles.middlelimit}>
+        {content.map((obj) => (
           // biome-ignore lint/a11y/noStaticElementInteractions: <Ridiculous to make this a button>
           <div
             key={obj.index}
@@ -74,7 +92,13 @@ export function Career({ mode, languageDetect }: CareerProps) {
         ))}
       </div>
       <div>
-        {logo && <img src={imageSettings[logo]} alt={logo} height={40} />}
+        <button
+          type="button"
+          className="button-as-div"
+          onClick={() => setShowMore((prev) => !prev)}
+        >
+          <p>{showMore ? "Show Less" : "Show More"}</p>
+        </button>
       </div>
     </section>
   );

@@ -2,24 +2,35 @@
   position: relative;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 20px;
 }
 
-.container header {
+.upperlimit {
   max-width: 90%;
   position: absolute;
   top: 0;
   right: 0;
   z-index: -1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upperlimit header {
   font-size: 60px;
   font-weight: bolder;
   overflow-wrap: break-word;
   opacity: 0.05;
 }
 
-.limit {
+.upperlimit img {
+  opacity: 0;
+}
+
+.middlelimit {
   width: 90%;
   display: flex;
   flex-direction: column;
@@ -27,7 +38,7 @@
   align-items: center;
 }
 
-.limit li {
+.middlelimit li {
   font-size: smaller;
   margin-bottom: 10px;
 }
@@ -44,19 +55,22 @@
 /* @media (min-width: 640px) {
 } */
 @media (min-width: 768px) {
-  .container header {
+  .upperlimit header {
     font-size: 100px;
   }
-  .limit {
+  .middlelimit {
     width: 80%;
   }
-  .limit li {
+  .middlelimit li {
     font-size: medium;
   }
 }
 @media (min-width: 1024px) {
-  .container header {
+  .upperlimit {
     max-width: 70%;
+  }
+
+  .upperlimit header {
     font-size: 130px;
   }
 
@@ -64,18 +78,32 @@
     flex-direction: row;
     justify-content: space-between;
   }
+
+  .upperlimit {
+    height: 500px;
+  }
+
+  .upperlimit img {
+    opacity: 0.2;
+    transition: opacity 0.3s ease-in;
+  }
 }
 @media (min-width: 1280px) {
-  .container header {
+  .upperlimit {
     max-width: 60%;
+  }
+
+  .upperlimit header {
     font-size: 140px;
   }
-  .limit {
+
+  .middlelimit {
     width: 60%;
   }
 }
+
 @media (min-width: 1536px) {
-  .limit {
+  .middlelimit {
     width: 50%;
   }
 }

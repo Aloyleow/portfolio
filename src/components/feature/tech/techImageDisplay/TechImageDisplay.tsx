@@ -1,4 +1,4 @@
-import { type Dispatch, type SetStateAction, useState } from "react";
+import { type Dispatch, type SetStateAction, useEffect, useState } from "react";
 import aws from "../../../../assets/tech/aws.svg";
 import azure from "../../../../assets/tech/azure.svg";
 import bun from "../../../../assets/tech/bun.svg";
@@ -91,10 +91,13 @@ export function TechImageDisplay({
   header,
   setDescription,
 }: TechImageDisplayProps) {
+  const [randomNumArray, setRandomNumArray] = useState<number[]>([]);
   const imageSource = Object.entries(themeSetting[mode]);
-  const [randomNumArray] = useState<number[]>(
-    getNumbersForFloating(imageSource.length, 12),
-  );
+
+  useEffect(() => {
+    const nums = getNumbersForFloating(imageSource.length, 12);
+    setRandomNumArray(nums);
+  }, [imageSource.length]);
 
   return (
     <main className={styles.container}>
@@ -113,7 +116,7 @@ export function TechImageDisplay({
               onMouseLeave={() => setDescription(header)}
               style={
                 {
-                  "--float-direction": `${randomNumArray[index]}px`,
+                  "--float-direction": `${randomNumArray[index] ?? 0}px`,
                 } as CustomCssVars
               }
             >
@@ -122,12 +125,6 @@ export function TechImageDisplay({
           );
         })}
       </div>
-      {/* <footer className={styles.lowerlimit}>
-        <p>
-          {description.charAt(0).toUpperCase() +
-            description.slice(1).split("_").join(" ")}
-        </p>
-      </footer> */}
     </main>
   );
 }

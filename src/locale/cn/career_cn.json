@@ -35,6 +35,17 @@
       "description": [
         "为 FigureLab.com (Figure Lab PLT) 开发和设计了 Web 应用程序。独立管理项目生命周期，包括初始规划、线框图、编码和部署。"
       ]
+    },
+    {
+      "index": "0",
+      "image": "ge",
+      "company": "Great Eastern Life",
+      "position": "保险顾问",
+      "duration": "Jan 2015 to July 2024",
+      "tech": [""],
+      "description": [
+        "为客户提供个性化的战略性财务指导，包括退休规划、财富积累和财务保障。"
+      ]
     }
   ]
 }
