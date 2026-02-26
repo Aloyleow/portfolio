@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
+  margin-bottom: 100px;
 }
 
 .upperlimit {
@@ -66,6 +66,10 @@
   }
 }
 @media (min-width: 1024px) {
+  .container {
+    margin-bottom: 200px;
+  }
+
   .upperlimit {
     max-width: 70%;
   }
@@ -84,7 +88,7 @@
   }
 
   .upperlimit img {
-    opacity: 0.2;
+    opacity: 0.3;
     transition: opacity 0.3s ease-in;
   }
 }

@@ -11,7 +11,6 @@ import type {
   ModeTypes,
 } from "../../../types/state.types";
 import styles from "./Career.module.css";
-import { CareerRoadDisplay } from "./careerRoadDisplay/CareerRoadDisplay";
 
 type ContentType = {
   title: string;
@@ -45,7 +44,7 @@ const imageSettings: Record<ImagesType, string> = {
   ge,
 };
 
-export function Career({ mode, languageDetect }: CareerProps) {
+export function Career({ languageDetect }: CareerProps) {
   const [logo, setLogo] = useState<ImagesType | null>(null);
   const [showMore, setShowMore] = useState<boolean>(false);
   const [content, setContent] = useState<ContentType["items"]>(
@@ -53,7 +52,6 @@ export function Career({ mode, languageDetect }: CareerProps) {
   );
 
   useEffect(() => {
-    const totalLength = localeSetting[languageDetect].items.length;
     const toShow = showMore
       ? localeSetting[languageDetect].items
       : localeSetting[languageDetect].items.slice(0, 2);
