@@ -6,6 +6,7 @@ import type {
   LocaleSettingType,
   ModeTypes,
 } from "../../../types/state.types";
+import { ImageCarousel } from "./imageCarousel/ImageCarousel";
 import styles from "./Project.module.css";
 
 type ContentType = {
@@ -16,7 +17,10 @@ type ContentType = {
     images: string[];
     tech: string[];
     description: string[];
-    link: string;
+    link: {
+      button: string;
+      url: string;
+    };
     githublink: string[];
   }[];
 };
@@ -36,6 +40,26 @@ export function Project({ mode, languageDetect }: ProjectProps) {
   return (
     <section className={styles.container}>
       <header>{localeSetting[languageDetect].title}</header>
+      <main className={styles.middlelimit}>
+        {localeSetting[languageDetect].items.map((item) => (
+          <article key={item.index}>
+            <h3>{item.name}</h3>
+            <ImageCarousel
+              imagesToShow={item.images}
+              key={item.index}
+              mode={mode}
+            />
+            <ul>
+              {item.description.map((dec) => (
+                <li key={dec.slice(0, 8).trim()}>{dec}</li>
+              ))}
+            </ul>
+            <a href={item.link.url} target="_blank" rel="noopener noreferrer">
+              {item.link.button}
+            </a>
+          </article>
+        ))}
+      </main>
     </section>
   );
 }

@@ -19,7 +19,10 @@
         "Perkhidmatan hujung belakang yang dilaksanakan menggunakan Fastify dan Node.js, termasuk pengesahan, kuki berasaskan sesi, cache Redis, pemodelan dan pertanyaan data PostgreSQL, dan aliran logik permainan teras.",
         "Pada bahagian hadapan, melaksanakan perlindungan laluan, pengurusan keadaan dan pemaparan UI dinamik berdasarkan keadaan pengguna."
       ],
-      "link": "https://www.teg.aloylks.com",
+      "link": {
+        "button": "Main Sekarang!",
+        "url": "https://www.teg.aloylks.com"
+      },
       "githublink": [
         "https://github.com/aloyleow/threeEG-front",
         " https://github.com/aloyleow/threeEG-back"

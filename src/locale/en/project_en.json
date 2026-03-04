@@ -19,10 +19,13 @@
         "Implemented backend services using Fastify and Node.js, including authentication, session-based cookies, Redis caching, PostgreSQL data modeling and querying, and core game-logic flows.",
         "On the frontend, implemented route protection, state management, and dynamic UI rendering based on user state."
       ],
-      "link": "https://www.teg.aloylks.com",
+      "link": {
+        "button": "Play Now!",
+        "url": "https://www.teg.aloylks.com"
+      },
       "githublink": [
         "https://github.com/aloyleow/threeEG-front",
-        " https://github.com/aloyleow/threeEG-back"
+        "https://github.com/aloyleow/threeEG-back"
       ]
     }
   ]
