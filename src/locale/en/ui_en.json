@@ -1,5 +1,7 @@
 {
   "back": "Back",
   "format": "Select format",
-  "language": "Select language"
+  "language": "Select language",
+  "showmore": "Show More",
+  "showless": "Show Less"
 }

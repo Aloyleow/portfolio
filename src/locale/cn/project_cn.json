@@ -2,7 +2,7 @@
   "title": "项目",
   "items": [
     {
-      "index": "1",
+      "index": "0",
       "name": "三局游戏",
       "images": ["teg1", "teg2", "teg3", "teg4"],
       "tech": [
@@ -27,6 +27,18 @@
         "https://github.com/aloyleow/threeEG-front",
         " https://github.com/aloyleow/threeEG-back"
       ]
+    },
+    {
+      "index": "1",
+      "name": "FigureLab.com",
+      "images": ["fl1", "fl2", "fl3"],
+      "tech": [],
+      "description": ["我为 FigureLab.com 开发的一款 Web 应用程序"],
+      "link": {
+        "button": "看看!",
+        "url": "https://www.figurelabmy.com"
+      },
+      "githublink": []
     }
   ]
 }

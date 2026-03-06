@@ -2,7 +2,7 @@
   "title": "Projek",
   "items": [
     {
-      "index": "1",
+      "index": "0",
       "name": "Three Endventure Game",
       "images": ["teg1", "teg2", "teg3", "teg4"],
       "tech": [
@@ -27,6 +27,18 @@
         "https://github.com/aloyleow/threeEG-front",
         " https://github.com/aloyleow/threeEG-back"
       ]
+    },
+    {
+      "index": "1",
+      "name": "FigureLab.com",
+      "images": ["fl1", "fl2", "fl3"],
+      "tech": [],
+      "description": ["Apl Web yang saya bangunkan untuk FigureLab.com"],
+      "link": {
+        "button": "Lihat",
+        "url": "https://www.figurelabmy.com"
+      },
+      "githublink": []
     }
   ]
 }
