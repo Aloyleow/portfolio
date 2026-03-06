@@ -27,6 +27,18 @@
         "https://github.com/aloyleow/threeEG-front",
         "https://github.com/aloyleow/threeEG-back"
       ]
+    },
+    {
+      "index": "1",
+      "name": "FigureLab.com",
+      "images": ["fl1", "fl2", "fl3"],
+      "tech": [],
+      "description": ["A Web-app that I developed for FigureLab.com"],
+      "link": {
+        "button": "Visit",
+        "url": "https://www.figurelabmy.com"
+      },
+      "githublink": []
     }
   ]
 }

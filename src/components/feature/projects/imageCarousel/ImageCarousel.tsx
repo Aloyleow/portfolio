@@ -1,4 +1,7 @@
 import { useEffect, useState } from "react";
+import fl1 from "../../../../assets/projects/fl1.png";
+import fl2 from "../../../../assets/projects/fl2.png";
+import fl3 from "../../../../assets/projects/fl3.png";
 import teg1 from "../../../../assets/projects/teg1.png";
 import teg2 from "../../../../assets/projects/teg2.png";
 import teg3 from "../../../../assets/projects/teg3.png";
@@ -11,6 +14,9 @@ const projectImages: Record<string, string> = {
   teg2,
   teg3,
   teg4,
+  fl1,
+  fl2,
+  fl3,
 };
 
 type ImageCarouselProps = {

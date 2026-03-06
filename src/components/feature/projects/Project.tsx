@@ -54,9 +54,11 @@ export function Project({ mode, languageDetect }: ProjectProps) {
                 <li key={dec.slice(0, 8).trim()}>{dec}</li>
               ))}
             </ul>
-            <a href={item.link.url} target="_blank" rel="noopener noreferrer">
-              {item.link.button}
-            </a>
+            <div className={styles.link}>
+              <a href={item.link.url} target="_blank" rel="noopener noreferrer">
+                {item.link.button}
+              </a>
+            </div>
           </article>
         ))}
       </main>
