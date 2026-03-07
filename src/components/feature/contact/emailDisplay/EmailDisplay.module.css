@@ -1,0 +1,63 @@
+.container {
+  width: 100%;
+}
+
+.container p {
+  margin: 10px 0px;
+  padding: 0;
+  font-size: small;
+}
+
+.customcursor::after {
+  content: "█";
+  animation: blink 0.8s infinite;
+  color: var(--text-color);
+}
+
+.middlelimit {
+  height: 250px;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-y: auto;
+}
+.lowerlimit {
+  height: 50px;
+  width: 100%;
+  word-wrap: break-word;
+  overflow-y: auto;
+}
+
+.hide {
+  opacity: 0;
+}
+
+/* @media (min-width: 640px) {
+} */
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+    max-width: 500px;
+  }
+}
+@media (min-width: 1024px) {
+  .container p {
+    font-size: medium;
+  }
+  .middlelimit {
+    height: 370px;
+  }
+  .lowerlimit {
+    height: 80px;
+  }
+}
+@media (min-width: 1280px) {
+}
+
+@media (min-width: 1536px) {
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}

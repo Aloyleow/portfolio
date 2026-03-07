@@ -10,7 +10,7 @@ import type {
   PopperTypes,
   ThemeSettingType,
 } from "../../../types/state.types";
-
+import type { CustomCssVars } from "../../../types/utility.types";
 import styles from "./Administrative.module.css";
 import { rotateImageBaseOnIndex } from "./Administrative.style";
 
@@ -58,10 +58,20 @@ export function Administrative({
               key={key}
               type="button"
               className={`button-as-div ${styles.imageHolder}`}
-              style={rotateImageBaseOnIndex(index, 20)}
+              style={
+                {
+                  ...rotateImageBaseOnIndex(index, 20),
+                  "--image-comin-delay": `${index / 3}s`,
+                } as CustomCssVars
+              }
               onClick={() => setPopper({ ...popper, RESUME: true })}
             >
-              <img src={value} alt={key} className={styles.image} />
+              <img
+                src={value}
+                alt={key}
+                className={styles.image}
+                style={rotateImageBaseOnIndex(index, 20)}
+              />
             </button>
           );
         } else {
@@ -72,9 +82,18 @@ export function Administrative({
               rel="noopener noreferrer"
               href={adminAction}
               className={styles.imageHolder}
-              style={rotateImageBaseOnIndex(index, 20)}
+              style={
+                {
+                  "--image-comin-delay": `${index / 3}s`,
+                } as CustomCssVars
+              }
             >
-              <img src={value} alt={key} className={styles.image} />
+              <img
+                src={value}
+                alt={key}
+                className={styles.image}
+                style={rotateImageBaseOnIndex(index, 20)}
+              />
             </a>
           );
         }

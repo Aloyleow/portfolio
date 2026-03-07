@@ -1,7 +1,9 @@
 {
   "back": "Back",
+  "next": "Next",
   "format": "Select format",
   "language": "Select language",
   "showmore": "Show More",
-  "showless": "Show Less"
+  "showless": "Show Less",
+  "submit": "Submit"
 }

@@ -1,5 +1,6 @@
 /// <reference types="vite/client" />
 
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import {
   createRootRoute,
   HeadContent,
@@ -30,16 +31,20 @@ export const Route = createRootRoute({
   component: RootComponent,
 });
 
+const queryClient = new QueryClient();
+
 function RootComponent() {
   return (
     <RootDocument>
-      <LanguageProvider>
-        <ModeProvider>
-          <PoppersProvider>
-            <Outlet />
-          </PoppersProvider>
-        </ModeProvider>
-      </LanguageProvider>
+      <QueryClientProvider client={queryClient}>
+        <LanguageProvider>
+          <ModeProvider>
+            <PoppersProvider>
+              <Outlet />
+            </PoppersProvider>
+          </ModeProvider>
+        </LanguageProvider>
+      </QueryClientProvider>
     </RootDocument>
   );
 }

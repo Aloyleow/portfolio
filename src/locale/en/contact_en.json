@@ -1,0 +1,20 @@
+{
+  "title": "Contact",
+  "username": "Company / Name",
+  "message": "Message",
+  "contact": "Contact Info",
+  "error": {
+    "un": {
+      "min": "Please tell me your name =)",
+      "max": "Wow you have an unique name"
+    },
+    "me": {
+      "min": "Maybe you could write me something =)",
+      "max": "Woah, thats too much. Lets talk more in person!"
+    },
+    "ce": {
+      "min": "How do i find you ?",
+      "max": "Woah, or a phone number ?"
+    }
+  }
+}

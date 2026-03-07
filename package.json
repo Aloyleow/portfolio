@@ -24,9 +24,12 @@
     "typescript": "^5"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "@tanstack/react-query": "^5.90.21",
     "@tanstack/react-router": "^1.160.2",
     "@tanstack/react-start": "^1.160.2",
     "react": "^19.2.4",
-    "react-dom": "^19.2.4"
+    "react-dom": "^19.2.4",
+    "zod": "^4.3.6"
   }
 }

@@ -15,12 +15,14 @@
 .imageHolder {
   position: relative;
   padding: 10px;
+  opacity: 0;
+  animation: comein 0.8s ease-out var(--image-comin-delay) forwards;
 }
 
 .image {
   height: 30px;
   width: 30px;
-  transition: ease-in-out 0.1s;
+  transition: transform 0.1s ease-in-out;
 }
 
 .image:hover {
@@ -44,3 +46,15 @@
 }
 @media (min-width: 1536px) {
 } */
+
+@keyframes comein {
+  0% {
+    opacity: 0;
+    transform: translateX(200%);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

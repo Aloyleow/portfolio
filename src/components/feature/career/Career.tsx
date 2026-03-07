@@ -104,11 +104,9 @@ export function Career({ languageDetect }: CareerProps) {
           className="button-as-button standard-hover"
           onClick={() => setShowMore((prev) => !prev)}
         >
-          <p>
-            {showMore
-              ? uiLocaleSetting[languageDetect].showless
-              : uiLocaleSetting[languageDetect].showmore}
-          </p>
+          {showMore
+            ? uiLocaleSetting[languageDetect].showless
+            : uiLocaleSetting[languageDetect].showmore}
         </button>
       </footer>
     </section>

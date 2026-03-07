@@ -1,0 +1,5 @@
+export const SharedConstants = {
+  EMAIL_INPUT_USERNAME_MAX: 50,
+  EMAIL_INPUT_MESSAGE_MAX: 100,
+  EMAIL_INPUT_CONTACT_MAX: 50,
+};

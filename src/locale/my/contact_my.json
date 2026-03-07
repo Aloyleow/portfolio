@@ -1,0 +1,20 @@
+{
+  "title": "Hubungi",
+  "username": "Syarikat / Nama",
+  "message": "Mesej",
+  "contact": "Emel / Telefon",
+  "error": {
+    "un": {
+      "min": "Sila beritahu saya nama anda =)",
+      "max": "Wah, nama awak sungguh unik."
+    },
+    "me": {
+      "min": "Mungkin anda boleh menulis sesuatu kepada saya. =)",
+      "max": "Wah, terlalu banyak. Mari bercakap secara peribadi!"
+    },
+    "ce": {
+      "min": "Bagaimana saya boleh menghubungi anda?",
+      "max": "Wah, atau nombor telefon?"
+    }
+  }
+}

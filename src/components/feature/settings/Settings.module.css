@@ -10,8 +10,8 @@
 
 .settingButton {
   position: relative;
-
   padding: 10px;
+  animation: comein 0.8s ease-out forwards;
 }
 
 .settingImage {
@@ -37,3 +37,15 @@
 }
 @media (min-width: 1536px) {
 } */
+
+@keyframes comein {
+  0% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

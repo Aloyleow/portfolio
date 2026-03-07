@@ -1,7 +1,9 @@
 {
   "back": "Kembali",
+  "next": "Nekst",
   "format": "Pilih format",
   "language": "Pilih bahasa",
   "showmore": "Lihat Lagi",
-  "showless": "Lihat Kurang"
+  "showless": "Lihat Kurang",
+  "submit": "Hantar"
 }
