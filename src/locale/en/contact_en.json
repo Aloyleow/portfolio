@@ -3,6 +3,8 @@
   "username": "Company / Name",
   "message": "Message",
   "contact": "Contact Info",
+  "success": "Email Sent!",
+  "emailsentinfo": "You recently sent an email to me on this device!",
   "error": {
     "un": {
       "min": "Please tell me your name =)",
@@ -15,6 +17,9 @@
     "ce": {
       "min": "How do i find you ?",
       "max": "Woah, or a phone number ?"
+    },
+    "email": {
+      "default": "Sorry! email function not working, please contact me at aloyloew91@gmail.com"
     }
   }
 }

@@ -38,7 +38,7 @@ type ProjectProps = {
 
 export function Project({ mode, languageDetect }: ProjectProps) {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="project">
       <header>{localeSetting[languageDetect].title}</header>
       <main className={styles.middlelimit}>
         {localeSetting[languageDetect].items.map((item) => (

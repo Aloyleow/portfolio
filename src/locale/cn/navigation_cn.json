@@ -1,8 +1,7 @@
 {
+  "home": "主页",
   "tech": "技术技能",
-  "work": "工作",
-  "proj": "项目",
-  "dark": "黑暗",
-  "light": "亮",
-  "colorfull": "丰富多彩"
+  "work": "职业",
+  "proj": "职业",
+  "contact": "联系"
 }

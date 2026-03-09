@@ -34,7 +34,7 @@ export function Tech({ mode, languageDetect }: TechProps) {
   }, [header]);
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="tech">
       <header>{description}</header>
 
       <div className={styles.limit}>

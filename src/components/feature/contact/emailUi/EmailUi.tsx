@@ -2,8 +2,11 @@ import type { Dispatch, SetStateAction } from "react";
 import cn from "../../../../locale/cn/contact_cn.json";
 import en from "../../../../locale/en/contact_en.json";
 import my from "../../../../locale/my/contact_my.json";
-import type { InputStageTypes } from "../../../../types/components/contact";
-import type { EmailPayloadType } from "../../../../types/server/emailjs";
+import type {
+  EmailJsPayloadType,
+  InputStageTypes,
+} from "../../../../types/components/contact";
+
 import type {
   LanguageTypes,
   LocaleSettingType,
@@ -27,15 +30,14 @@ type EmailUiProps = {
   mode: ModeTypes;
   languageDetect: LanguageTypes;
   inputStage: InputStageTypes;
-  payload: EmailPayloadType["data"];
-  setPayload: Dispatch<SetStateAction<EmailPayloadType["data"]>>;
+  payload: EmailJsPayloadType;
+  setPayload: Dispatch<SetStateAction<EmailJsPayloadType>>;
   errMsg: string | null;
   setErrMsg: Dispatch<SetStateAction<string | null>>;
 };
 
 //TODO(HIGH) created single func
 export function EmailUi({
-  mode,
   languageDetect,
   inputStage,
   payload,

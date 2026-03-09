@@ -1,8 +1,7 @@
 {
-  "tech": "Teknical kemahiran",
+  "home": "Home",
+  "tech": "Teknical",
   "work": "kerjaya",
   "proj": "Projek",
-  "dark": "Hitam",
-  "light": "Terang",
-  "colorfull": "Berwana"
+  "contact": "Hubungi"
 }

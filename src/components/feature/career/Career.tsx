@@ -2,12 +2,10 @@ import { useEffect, useState } from "react";
 import amber from "../../../assets/career/amber.svg";
 import figurelab from "../../../assets/career/figurelab.png";
 import ge from "../../../assets/career/ge.svg";
+import { uiLocaleSettings } from "../../../locale";
 import cn from "../../../locale/cn/career_cn.json";
-import uicn from "../../../locale/cn/ui_cn.json";
 import en from "../../../locale/en/career_en.json";
-import uien from "../../../locale/en/ui_en.json";
 import my from "../../../locale//my/career_my.json";
-import uimy from "../../../locale//my/ui_my.json";
 import type {
   LanguageTypes,
   LocaleSettingType,
@@ -28,10 +26,6 @@ type ContentType = {
   }[];
 };
 
-type UiContentType = {
-  showmore: string;
-  showless: string;
-};
 type ImagesType = "amber" | "figurelab" | "ge";
 
 type CareerProps = {
@@ -43,12 +37,6 @@ const localeSetting: LocaleSettingType<ContentType> = {
   en,
   cn,
   my,
-};
-
-const uiLocaleSetting: LocaleSettingType<UiContentType> = {
-  en: uien,
-  cn: uicn,
-  my: uimy,
 };
 
 const imageSettings: Record<ImagesType, string> = {
@@ -72,7 +60,7 @@ export function Career({ languageDetect }: CareerProps) {
   }, [showMore, languageDetect]);
 
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="career">
       <div className={styles.upperlimit}>
         <header>{localeSetting[languageDetect].title}</header>
         {logo && <img src={imageSettings[logo]} alt={logo} />}
@@ -105,8 +93,8 @@ export function Career({ languageDetect }: CareerProps) {
           onClick={() => setShowMore((prev) => !prev)}
         >
           {showMore
-            ? uiLocaleSetting[languageDetect].showless
-            : uiLocaleSetting[languageDetect].showmore}
+            ? uiLocaleSettings[languageDetect].showless
+            : uiLocaleSettings[languageDetect].showmore}
         </button>
       </footer>
     </section>

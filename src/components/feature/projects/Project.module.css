@@ -42,10 +42,6 @@
   margin-top: 50px;
 }
 
-.link a {
-  color: var(--text-color);
-}
-
 /* @media (min-width: 640px) {
 } */
 @media (min-width: 768px) {

@@ -1,15 +1,18 @@
-import type { InputStageTypes } from "../../../../types/components/contact";
-import type { EmailPayloadType } from "../../../../types/server/emailjs";
-import { LanguageTypes, type ModeTypes } from "../../../../types/state.types";
+import type {
+  EmailJsPayloadType,
+  InputStageTypes,
+} from "../../../../types/components/contact";
+
+import type { ModeTypes } from "../../../../types/state.types";
 import styles from "./EmailDisplay.module.css";
 
 type EmailDisplayProps = {
   mode: ModeTypes;
-  payload: EmailPayloadType["data"];
+  payload: EmailJsPayloadType;
   inputStage: InputStageTypes;
 };
 
-export function EmailDisplay({ mode, payload, inputStage }: EmailDisplayProps) {
+export function EmailDisplay({ payload, inputStage }: EmailDisplayProps) {
   return (
     <div className={styles.container}>
       <h4>To: aloyleow91@gmail.com</h4>

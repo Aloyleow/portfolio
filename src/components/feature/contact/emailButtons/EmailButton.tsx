@@ -1,22 +1,28 @@
 import emailjs from "@emailjs/browser";
-import type { Dispatch, SetStateAction } from "react";
-import cn from "../../../../locale/cn/ui_cn.json";
-import en from "../../../../locale/en/ui_en.json";
-import my from "../../../../locale/my/ui_my.json";
-import type { InputStageTypes } from "../../../../types/components/contact";
-import type { EmailJsPayloadType } from "../../../../types/server/emailjs";
+import { type Dispatch, type SetStateAction, useState } from "react";
+import { uiLocaleSettings } from "../../../../locale";
+import cn from "../../../../locale/cn/contact_cn.json";
+import en from "../../../../locale/en/contact_en.json";
+import my from "../../../../locale/my/contact_my.json";
+import type {
+  EmailJsPayloadType,
+  InputStageTypes,
+} from "../../../../types/components/contact";
 import type {
   LanguageTypes,
   LocaleSettingType,
   ModeTypes,
 } from "../../../../types/state.types";
+import { setEmailSentFlag } from "../limiter";
 import styles from "./EmailButton.module.css";
 import { emailPayloadParser } from "./validator";
 
 type ContentType = {
-  next: string;
-  back: string;
-  submit: string;
+  error: {
+    email: {
+      default: string;
+    };
+  };
 };
 
 const localeSetting: LocaleSettingType<ContentType> = {
@@ -33,17 +39,19 @@ type EmailButtonProps = {
   payload: EmailJsPayloadType;
   setPayload: Dispatch<SetStateAction<EmailJsPayloadType>>;
   setErrMsg: Dispatch<SetStateAction<string | null>>;
+  setRestrict: Dispatch<SetStateAction<boolean>>;
 };
 
 export function EmailButton({
-  mode,
   languageDetect,
   inputStage,
   setInputStage,
   payload,
   setPayload,
   setErrMsg,
+  setRestrict,
 }: EmailButtonProps) {
+  const [loader, setLoader] = useState<boolean>(false);
   const handleNext = () => {
     setErrMsg(null);
     if (inputStage === "un") {
@@ -83,57 +91,66 @@ export function EmailButton({
   };
 
   const handleSubmit = async () => {
+    setLoader(true);
     const result =
       emailPayloadParser(languageDetect).payload.safeParse(payload);
     if (!result.success) {
       setErrMsg(`${result.error.issues[0]?.message}`);
+      setLoader(false);
       return;
     }
 
     try {
       await emailjs.send(
-        process.env.EJS_SERVICE_ID,
-        process.env.EJS_TEMPLATE_IDFP,
+        import.meta.env.VITE_EJS_SERVICE_ID,
+        import.meta.env.VITE_EJS_TEMPLATE_IDFP,
         payload,
-        process.env.EJS_PUBLIC_KEY,
+        { publicKey: import.meta.env.VITE_EJS_PUBLIC_KEY },
       );
-    } catch (error) {
-      console.error(error);
+      setEmailSentFlag();
+      setRestrict(true);
+    } catch (_error) {
+      setErrMsg(`${localeSetting[languageDetect].error.email.default}`);
     }
-
+    setLoader(false);
     return;
   };
+
   return (
     <div className={styles.container}>
-      <div className={styles.limit}>
-        {inputStage !== "un" && (
-          <button
-            type="button"
-            className="button-as-button standard-hover"
-            onClick={() => handleBack()}
-          >
-            {localeSetting[languageDetect].back}
-          </button>
-        )}
-        {inputStage !== "ce" && (
-          <button
-            type="button"
-            className="button-as-button standard-hover"
-            onClick={() => handleNext()}
-          >
-            {localeSetting[languageDetect].next}
-          </button>
-        )}
-        {inputStage === "ce" && (
-          <button
-            type="button"
-            className="button-as-button standard-hover"
-            onClick={() => handleSubmit()}
-          >
-            {localeSetting[languageDetect].submit}
-          </button>
-        )}
-      </div>
+      {!loader ? (
+        <div className={styles.limit}>
+          {inputStage !== "un" && (
+            <button
+              type="button"
+              className="button-as-button standard-hover"
+              onClick={() => handleBack()}
+            >
+              {uiLocaleSettings[languageDetect].back}
+            </button>
+          )}
+          {inputStage !== "ce" && (
+            <button
+              type="button"
+              className="button-as-button standard-hover"
+              onClick={() => handleNext()}
+            >
+              {uiLocaleSettings[languageDetect].next}
+            </button>
+          )}
+          {inputStage === "ce" && (
+            <button
+              type="button"
+              className="button-as-button standard-hover"
+              onClick={() => handleSubmit()}
+            >
+              {uiLocaleSettings[languageDetect].submit}
+            </button>
+          )}
+        </div>
+      ) : (
+        <div className={styles.loader}></div>
+      )}
     </div>
   );
 }

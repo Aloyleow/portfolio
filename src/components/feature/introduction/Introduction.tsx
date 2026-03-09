@@ -26,7 +26,7 @@ type IntroductionProps = {
 
 export function Introduction({ languageDetect }: IntroductionProps) {
   return (
-    <section className={styles.container}>
+    <section className={styles.container} id="home">
       <div className={styles.limit}>
         <header>
           <h1>{localeSetting[languageDetect].name}</h1>

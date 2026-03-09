@@ -8,6 +8,7 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
+import { Toaster } from "react-hot-toast";
 import { LanguageProvider } from "../state/language/LanguageProvider";
 import { ModeProvider } from "../state/mode/ModeProvider";
 import { PoppersProvider } from "../state/poppers/PoppersProvider";
@@ -40,6 +41,7 @@ function RootComponent() {
         <LanguageProvider>
           <ModeProvider>
             <PoppersProvider>
+              <Toaster />
               <Outlet />
             </PoppersProvider>
           </ModeProvider>
