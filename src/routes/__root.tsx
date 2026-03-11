@@ -9,10 +9,12 @@ import {
 } from "@tanstack/react-router";
 import type { ReactNode } from "react";
 import { Toaster } from "react-hot-toast";
+import { Footer } from "../components/feature/footer/Footer";
 import { LanguageProvider } from "../state/language/LanguageProvider";
 import { ModeProvider } from "../state/mode/ModeProvider";
 import { PoppersProvider } from "../state/poppers/PoppersProvider";
 import globalCss from "../styles/global.css?url";
+import { RootLayout } from "./-rootlayout";
 
 export const Route = createRootRoute({
   head: () => ({
@@ -42,7 +44,9 @@ function RootComponent() {
           <ModeProvider>
             <PoppersProvider>
               <Toaster />
+              <RootLayout />
               <Outlet />
+              <Footer />
             </PoppersProvider>
           </ModeProvider>
         </LanguageProvider>

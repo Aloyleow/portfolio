@@ -48,7 +48,6 @@ export function Contact({ mode, languageDetect }: ContactProps) {
 
   useEffect(() => {
     const recentlySent = getEmailSentFlag();
-    console.log(recentlySent);
     if (!recentlySent) {
       setRestrict(false);
     }
