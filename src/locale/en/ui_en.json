@@ -5,5 +5,8 @@
   "language": "Select language",
   "showmore": "Show More",
   "showless": "Show Less",
-  "submit": "Submit"
+  "submit": "Submit",
+
+  "privacy": "Privacy",
+  "source": "Source"
 }

@@ -1,4 +1,7 @@
+import { Link } from "@tanstack/react-router";
 import { type GlitchHandle, useGlitch } from "react-powerglitch";
+import { uiLocaleSettings } from "../../../locale";
+import { useLanguage } from "../../../state/language/useLanguage";
 import type { CustomCssVars } from "../../../types/utility.types";
 import { footerGlitchOpts } from "./animation";
 import styles from "./Footer.module.css";
@@ -6,6 +9,7 @@ import styles from "./Footer.module.css";
 const tagLine = ["INNOVATE", "COMPILE", "EXECUTE"];
 
 export function Footer() {
+  const { languageDetect } = useLanguage();
   const glitch: GlitchHandle = useGlitch(footerGlitchOpts);
 
   return (
@@ -13,8 +17,14 @@ export function Footer() {
       <span className={styles.limit}>
         <div className={styles.info}>
           <p>@ 2026 Aloysious Leow</p>
-          <p>Privacy</p>
-          <p>Source</p>
+          <Link to="/privacy">{uiLocaleSettings[languageDetect].privacy}</Link>
+          <a
+            href="https://github.com/Aloyleow/portfolio"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            {uiLocaleSettings[languageDetect].source}
+          </a>
         </div>
         {tagLine.map((x, index) => (
           <div

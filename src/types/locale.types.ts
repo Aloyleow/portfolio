@@ -6,4 +6,6 @@ export type UiContentType = {
   showmore: string;
   showless: string;
   submit: string;
+  privacy: string;
+  source: string;
 };
