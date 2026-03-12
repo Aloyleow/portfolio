@@ -21,7 +21,7 @@ export default defineConfig({
   ],
   build: {
     rollupOptions: {
-      external: [`server.ts`]
+      external: [`./server.ts`]
     }
   }
 });
