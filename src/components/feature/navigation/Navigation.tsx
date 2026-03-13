@@ -1,6 +1,9 @@
+import { Link, useLocation } from "@tanstack/react-router";
 import { useState } from "react";
 import dnav from "../../../assets/icons/dark/binoculars-d.svg";
+import dhome from "../../../assets/icons/dark/home-d.svg";
 import nav from "../../../assets/icons/light/binoculars.svg";
+import home from "../../../assets/icons/light/home.svg";
 import cn from "../../../locale/cn/navigation_cn.json";
 import en from "../../../locale/en/navigation_en.json";
 import my from "../../../locale/my/navigation_my.json";
@@ -20,12 +23,14 @@ type ContentType = {
   contact: string;
 };
 
-const themeSetting: ThemeSettingType<"nav"> = {
+const themeSetting: ThemeSettingType<"nav" | "home"> = {
   light: {
     nav,
+    home,
   },
   dark: {
     nav: dnav,
+    home: dhome,
   },
 };
 
@@ -41,8 +46,10 @@ type NavigationProps = {
 };
 
 export function Navigation({ mode, languageDetect }: NavigationProps) {
+  const location = useLocation();
+  const useHome = location.pathname !== "/";
   const [show, setShow] = useState<boolean>(false);
-  const navigationList = [
+  const homeNavList = [
     {
       label: localeSetting[languageDetect].home,
       link: "#home",
@@ -65,7 +72,20 @@ export function Navigation({ mode, languageDetect }: NavigationProps) {
     },
   ];
 
-  return (
+  return useHome ? (
+    <nav
+      className={`${styles.container} ${show ? styles.superblur : ""}`}
+      onMouseLeave={() => setShow(false)}
+    >
+      <Link className={`${styles.imageHolder} hover`} to="/">
+        <img
+          src={themeSetting[mode].home}
+          alt="home"
+          className={`${styles.image} standard-hover`}
+        />
+      </Link>
+    </nav>
+  ) : (
     <nav
       className={`${styles.container} ${show ? styles.superblur : ""}`}
       onMouseLeave={() => setShow(false)}
@@ -81,7 +101,7 @@ export function Navigation({ mode, languageDetect }: NavigationProps) {
       {show && (
         <div>
           <ul>
-            {navigationList.map((x) => (
+            {homeNavList.map((x) => (
               <li key={x.link}>
                 <a href={x.link} onClick={() => setShow(false)}>
                   {x.label}
