@@ -7,7 +7,7 @@
     "dev": "vite dev",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "check": "bunx biome check --write"
+    "check": "bunx biome check --write && tsc --noEmit"
   },
   "devDependencies": {
     "@biomejs/biome": "2.4.2",

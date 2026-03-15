@@ -60,6 +60,7 @@ function RootDocument({ children }: Readonly<{ children: ReactNode }>) {
     <html lang="en">
       <head>
         <link rel="stylesheet" href={globalCss} />
+        <link rel="icon" href="/favicon.png" />
         <HeadContent />
       </head>
       <body id="root">
