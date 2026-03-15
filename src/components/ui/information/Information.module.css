@@ -1,0 +1,46 @@
+.container {
+  height: 20px;
+  width: 20px;
+  border-radius: 28px;
+  border: 1px solid var(--border-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container p {
+  margin: 0;
+  font-weight: bold;
+}
+
+.toast {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.toast p {
+  margin: 0px 0px 0px 10px;
+  font-size: smaller;
+}
+
+/* @media (min-width: 640px) {
+} */
+@media (min-width: 768px) {
+  .limit {
+    width: 280px;
+  }
+
+  .toast p {
+    font-size: medium;
+  }
+}
+/* @media (min-width: 1024px) {
+  
+}
+@media (min-width: 1280px) {
+  
+}
+
+@media (min-width: 1536px) {
+} */

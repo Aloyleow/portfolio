@@ -1,0 +1,25 @@
+{
+  "title": "Contact",
+  "username": "Company / Name",
+  "message": "Message",
+  "contact": "Contact Info",
+  "success": "Email Sent!",
+  "emailsentinfo": "You recently sent an email to me on this device!",
+  "error": {
+    "un": {
+      "min": "Please tell me your name =)",
+      "max": "Wow you have an unique name"
+    },
+    "me": {
+      "min": "Maybe you could write me something =)",
+      "max": "Woah, thats too much. Lets talk more in person!"
+    },
+    "ce": {
+      "min": "How do i find you ?",
+      "max": "Woah, or a phone number ?"
+    },
+    "email": {
+      "default": "Sorry! email function not working, please contact me at aloyloew91@gmail.com"
+    }
+  }
+}

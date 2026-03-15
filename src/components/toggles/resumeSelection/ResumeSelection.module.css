@@ -1,0 +1,42 @@
+.upperlimit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middlelimit {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.imageHolder {
+  padding: 20px;
+}
+
+.image {
+  height: 50px;
+  width: 50px;
+  transition: ease-in-out 0.1s;
+}
+
+.image:hover {
+  transform: scale(1.2);
+}
+
+.lowerlimit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .image {
+    height: 60px;
+    width: 60px;
+  }
+}

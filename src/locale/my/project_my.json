@@ -1,0 +1,44 @@
+{
+  "title": "Projek",
+  "items": [
+    {
+      "index": "0",
+      "name": "Three Endventure Game",
+      "images": ["teg1", "teg2", "teg3", "teg4"],
+      "tech": [
+        "ts",
+        "fastify",
+        "node",
+        "postgres",
+        "redis",
+        "digitalocean",
+        "tss"
+      ],
+      "description": [
+        "Mereka bentuk dan membina permainan pengembaraan berasaskan web susunan penuh dengan tiga pengakhiran yang berbeza.",
+        "Perkhidmatan hujung belakang yang dilaksanakan menggunakan Fastify dan Node.js, termasuk pengesahan, kuki berasaskan sesi, cache Redis, pemodelan dan pertanyaan data PostgreSQL, dan aliran logik permainan teras.",
+        "Pada bahagian hadapan, melaksanakan perlindungan laluan, pengurusan keadaan dan pemaparan UI dinamik berdasarkan keadaan pengguna."
+      ],
+      "link": {
+        "button": "Main Sekarang!",
+        "url": "https://www.teg.aloylks.com"
+      },
+      "githublink": [
+        "https://github.com/aloyleow/threeEG-front",
+        " https://github.com/aloyleow/threeEG-back"
+      ]
+    },
+    {
+      "index": "1",
+      "name": "FigureLab.com",
+      "images": ["fl1", "fl2", "fl3"],
+      "tech": [],
+      "description": ["Apl Web yang saya bangunkan untuk FigureLab.com"],
+      "link": {
+        "button": "Lihat",
+        "url": "https://www.figurelabmy.com"
+      },
+      "githublink": []
+    }
+  ]
+}

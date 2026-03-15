@@ -1,0 +1,44 @@
+{
+  "title": "职业",
+  "items": [
+    {
+      "index": "0",
+      "name": "三局游戏",
+      "images": ["teg1", "teg2", "teg3", "teg4"],
+      "tech": [
+        "ts",
+        "fastify",
+        "node",
+        "postgres",
+        "redis",
+        "digitalocean",
+        "tss"
+      ],
+      "description": [
+        "设计并构建了一款全栈式网页冒险游戏，包含三个不同的结局。",
+        "使用 Fastify 和 Node.js 实现了后端服务，包括身份验证、基于会话的 cookie、Redis 缓存、PostgreSQL 数据建模和查询以及核心游戏逻辑流程。",
+        "前端实现了路由保护、状态管理以及基于用户状态的动态 UI 渲染。"
+      ],
+      "link": {
+        "button": "玩!",
+        "url": "https://www.teg.aloylks.com"
+      },
+      "githublink": [
+        "https://github.com/aloyleow/threeEG-front",
+        " https://github.com/aloyleow/threeEG-back"
+      ]
+    },
+    {
+      "index": "1",
+      "name": "FigureLab.com",
+      "images": ["fl1", "fl2", "fl3"],
+      "tech": [],
+      "description": ["我为 FigureLab.com 开发的一款 Web 应用程序"],
+      "link": {
+        "button": "看看!",
+        "url": "https://www.figurelabmy.com"
+      },
+      "githublink": []
+    }
+  ]
+}

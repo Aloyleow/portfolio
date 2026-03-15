@@ -1,0 +1,51 @@
+{
+  "title": "Career",
+  "items": [
+    {
+      "index": "2",
+      "image": "amber",
+      "company": "Amber Creative Pte Ltd",
+      "position": "Full stack Developer",
+      "duration": "Apr 2025 to Present",
+      "tech": [
+        "ts",
+        "js",
+        "fastify",
+        "node",
+        "docker",
+        "postgres",
+        "azure",
+        "aws",
+        "redis",
+        "next"
+      ],
+      "description": [
+        "Involved in designing, building, and maintaining end-to-end systems across backend and frontend for a Training Managment System.",
+        "Worked on scalable APIs, database design, third-party integrations, CI/CD pipelines, performance testing, security, and environment management, supporting projects from development through production and live deployment.",
+        "Concurrently supported other major projects that levrages on CMS such as Sitefinity, Kentico and Strapi"
+      ]
+    },
+    {
+      "index": "1",
+      "image": "figurelab",
+      "company": "FigureLab.com",
+      "position": "Web-Developer, FreeLance",
+      "duration": "Nov 2024 to Dec 2024",
+      "tech": ["ts", "html", "css", "react"],
+      "description": [
+        "Developed and designed a Web Application for FigureLab.com (The Figure Lab PLT) Independently managed the project lifecycle, including initial planning, wireframing, coding and deployment."
+      ]
+    },
+    {
+      "index": "0",
+      "image": "ge",
+      "company": "Great Eastern Life",
+      "position": "Insurance Advisor",
+      "duration": "Jan 2015 to July 2024",
+      "tech": [""],
+      "description": [
+        "Provided personalized, strategic financial guidance to clients which includes retirement planning, wealth accumulation and financial protection, while following strict guidlines and regulations"
+      ]
+    }
+  ]
+}

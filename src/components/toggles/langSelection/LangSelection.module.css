@@ -1,0 +1,40 @@
+.upperlimit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middlelimit {
+  width: 100%;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.middlelimit button {
+  font-size: large;
+}
+
+.lowerlimit {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* @media (min-width: 640px) {
+  
+} */
+/* @media (min-width: 768px) {
+} */
+@media (min-width: 1024px) {
+  .middlelimit button {
+    font-size: larger;
+  }
+}
+/* @media (min-width: 1280px) {
+}
+@media (min-width: 1536px) {
+} */

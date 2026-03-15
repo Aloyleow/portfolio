@@ -1,0 +1,64 @@
+.container {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  z-index: 5;
+  border-radius: 28px;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: var(--blur-amount);
+  -webkit-backdrop-filter: var(--blur-amount);
+}
+
+.superblur {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.imageHolder {
+  position: relative;
+  padding: 10px;
+  opacity: 0;
+  animation: comein 0.8s ease-out 0s forwards;
+}
+
+.image {
+  height: 35px;
+  width: 35px;
+  transition: transform 0.1s ease-in-out;
+}
+
+.container li {
+  margin-bottom: 10px;
+}
+
+/* @media (min-width: 640px) {
+  
+} */
+@media (min-width: 768px) {
+  .image {
+    height: 40px;
+    width: 40px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    left: 40px;
+  }
+}
+/* @media (min-width: 1280px) {
+}
+@media (min-width: 1536px) {
+} */
+
+@keyframes comein {
+  0% {
+    opacity: 0;
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

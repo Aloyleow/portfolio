@@ -1,0 +1,51 @@
+{
+  "title": "Kerjaya",
+  "items": [
+    {
+      "index": "2",
+      "image": "amber",
+      "company": "Amber Creative Pte Ltd",
+      "position": "Full stack Developer",
+      "duration": "Apr 2025 to Present",
+      "tech": [
+        "ts",
+        "js",
+        "fastify",
+        "node",
+        "docker",
+        "postgres",
+        "azure",
+        "aws",
+        "redis",
+        "next"
+      ],
+      "description": [
+        "Terlibat dalam mereka bentuk, membina dan menyelenggara sistem hujung ke hujung merentasi bahagian belakang dan bahagian hadapan untuk Sistem Pengurusan Latihan berskala besar.",
+        "Bekerja pada API boleh skala, reka bentuk pangkalan data, penyepaduan pihak ketiga, saluran paip CI/CD, ujian prestasi, keselamatan dan pengurusan persekitaran, menyokong projek daripada pembangunan melalui pengeluaran dan penggunaan langsung.",
+        "Pada masa yang sama menyokong projek utama lain yang memanfaatkan CMS seperti Sitefinity, Kentico dan Strapi"
+      ]
+    },
+    {
+      "index": "1",
+      "image": "figurelab",
+      "company": "FigureLab.com",
+      "position": "Web-Developer, FreeLance",
+      "duration": "Nov 2024 to Dec 2024",
+      "tech": ["ts", "html", "css", "react"],
+      "description": [
+        "Membangunkan dan mereka Aplikasi Web untuk FigureLab.com (The Figure Lab PLT) Menguruskan kitaran hayat projek secara bebas, termasuk perancangan awal, pembingkaian wayar, pengekodan dan penggunaan."
+      ]
+    },
+    {
+      "index": "0",
+      "image": "ge",
+      "company": "Great Eastern Life",
+      "position": "Penasihat Insurans",
+      "duration": "Jan 2015 to July 2024",
+      "tech": [""],
+      "description": [
+        "Menyediakan panduan kewangan strategik yang diperibadikan kepada pelanggan yang merangkumi perancangan persaraan, pengumpulan kekayaan dan perlindungan kewangan, sambil mengikut garis panduan dan peraturan yang ketat"
+      ]
+    }
+  ]
+}

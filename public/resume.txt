@@ -1,0 +1,70 @@
+Leow Kangsheng (Aloysious) | Singaporean
++65 90237248 | aloyleow91@gmail.com
+https://www.linkedin.com/in/aloyleow91/ | https://github.com/Aloyleow
+https://portfolio.aloylks.com/
+Personal Summary
+
+A Software-developer specializing in Full-Stack Engineering with Enterprise-Grade Integrations, DevOps & Cloud Infrastructure Execution. Looking at designing, building, and scaling web applications with a strong focus on security, performance, and system architecture.
+
+Work Experience
+
+Amber Creative Pte Ltd                                                                                                            
+Full-Stack Developer                                                                                                                            Apr 2025 – Present
+
+•Engineer, maintain, and scale end-to-end systems across backend and frontend in an agile environment, supporting product releases from development to production. Leading cloud migration, infrastructure security, CI/CD and system stability after development.
+•Main technologies used
+	Typescript | NodeJS | Fastify | NextJS | Docker | K6 | Azure | AWS | Vercel
+•Projects involved
+o  Training Management System with Job application functionality (ATS)
+	Took full ownership of core system architecture and delivery after initial development of the application, while supporting parallel projects and ensuring continuity across teams. 
+	Lead full production migration from Azure to AWS, including environment isolation, VM and database sizing, secret rotation, third-party IP whitelisting, and secure SSH access control.
+	Create full observability across backend services. 
+	Managing vulnerability remediation, dependency upgrades, and security patching to keep the platform compliant and secure. 
+	Writing comprehensive system documentation covering architecture, workflows, integrations, and operational procedures. 
+o  Training Management System as a Saas
+	Developing a more flexible, scalable SaaS version of the core system to support multiple tenders and varying client requirements.
+o  ISO Audits
+	Supported internal and external audit processes while participating in auditor interviews during the company ISO 27001 audit and successful ISO 27018 certification.
+
+FigureLab.com (The Figure Lab PLT) 
+Freelance Web Developer                                                                                                                Nov 2024 – Dec 2024
+
+•Developed, designed and deployed informative web application for FigureLab.com independently. Collaborated closely with stakeholders for iterative feedback.
+•Main technologies used
+        React | Vercel | GitHub 
+
+Great Eastern Life 
+Financial Planner                                                                                                                                Jan 2015 – Jun 2024
+•	Developed a profound understanding of regulatory framework, rules and ethical standards in the insurance industry, ensuring strict compliance and ethical business practices. Collaborated with different departments in the organizations to meet clients’ needs and requirements.
+
+Soft skills
+•	Self-driven | Adaptable | Analytical | Strong problem solver | Fast learner | Responsive
+•	Able to be decisive and independent when needed, while working under pressure.
+•	Agile team-player, understanding the team dynamics and supporting the team accordingly.
+•	Effective communication and interpersonal skills.
+
+Recent Project
+
+3 Endventure Game
+Full-stack web-based game application. 
+
+The backend uses Postgres and Drizzle for storing and querying data, Redis for persistence and gameplay state. Restricted routes are protected by JWT and secure session cookies. Multiple Environment with isolated environmental configurations. 
+The frontend uses TanStack Start, TanStack Query for data fetching, caching, and synchronization. Authentication contexts for route access control. Dynamic data display. CSS modules for styling. Interactivity through event handlers. 
+
+•	Tech used: Typescript | Fastify | PostgreSQL | Redis | Tanstack Start | Digital Ocean (Droplet) | Vercel
+•	Link: https://www.teg.aloylks.com 
+
+
+Certifications
+
+General Assembly Singapore – Software Engineering Bootcamp Certification                                                       2024
+
+Google Cybersecurity Professional Certification                                                                                                      2024
+
+Education
+
+Bachelor of Science in Finance | Singapore University of Social Sciences                                                   2017 – 2021
+
+Diploma in Marine Engineering | Singapore Polytechnic                                                                             2009 – 2012
+
+

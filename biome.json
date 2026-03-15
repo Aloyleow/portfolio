@@ -1,0 +1,21 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.4.2/schema.json",
+  "assist": {
+    "enabled": true,
+    "actions": {
+      "source": {
+        "organizeImports": "on"
+      }
+    }
+  },
+  "formatter": {
+    "indentStyle": "space",
+    "indentWidth": 2
+  },
+  "files": {
+    "includes": ["src/**", "!src/routeTree.gen.ts", ""]
+  },
+  "linter": {
+    "includes": ["src/**"]
+  }
+}

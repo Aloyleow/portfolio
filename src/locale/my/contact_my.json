@@ -1,0 +1,25 @@
+{
+  "title": "Hubungi",
+  "username": "Syarikat / Nama",
+  "message": "Mesej",
+  "contact": "Emel / Telefon",
+  "success": "E-mel dihantar!",
+  "emailsentinfo": "Baru-baru ini anda menghantar e-mel kepada saya pada peranti ini!",
+  "error": {
+    "un": {
+      "min": "Sila beritahu saya nama anda =)",
+      "max": "Wah, nama awak sungguh unik."
+    },
+    "me": {
+      "min": "Mungkin anda boleh menulis sesuatu kepada saya. =)",
+      "max": "Wah, terlalu banyak. Mari bercakap secara peribadi!"
+    },
+    "ce": {
+      "min": "Bagaimana saya boleh menghubungi anda?",
+      "max": "Wah, atau nombor telefon?"
+    },
+    "email": {
+      "default": "Sorry! Terdapat masalah dengan fungsi e-mel. Sila hubungi saya di aloyloew91@gmail.com."
+    }
+  }
+}
