@@ -17,6 +17,7 @@ export function Footer() {
       <span className={styles.limit}>
         <div className={styles.info}>
           <p>@ 2026 Aloysious Leow</p>
+          <p>v{import.meta.env.VITE_VERSION}</p>
           <Link to="/privacy">{uiLocaleSettings[languageDetect].privacy}</Link>
           <a
             href="https://github.com/Aloyleow/portfolio"

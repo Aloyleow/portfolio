@@ -33,9 +33,9 @@ const themeSetting: ThemeSettingType<ResumeFormatTypes> = {
 };
 
 const resumeLinks: ResumeLinkType = {
-  word: "public/resume.docx",
-  pdf: "public/resume.pdf",
-  txt: "public/resume.txt",
+  word: "/resume.docx",
+  pdf: "/resume.pdf",
+  txt: "/resume.txt",
 };
 
 type ResumeSelectionProps = {

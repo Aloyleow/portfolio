@@ -7,6 +7,7 @@ interface ImportMetaEnv {
   readonly VITE_EJS_PUBLIC_KEY: string;
   readonly VITE_EMAIL_SENT_FLAG_KEY: string;
   readonly VITE_EMAIL_REFRESH_TIME: number;
+  readonly VITE_VERSION: string;
 }
 
 interface ImportMeta {
