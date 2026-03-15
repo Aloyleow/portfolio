@@ -40,7 +40,6 @@
 }
 
 .marquee {
-  width: 100%;
   position: absolute;
   transform: translateX(-1500px);
   animation: marqueeMove 18s linear var(--tagline-delay) infinite;

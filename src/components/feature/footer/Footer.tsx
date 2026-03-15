@@ -32,8 +32,8 @@ export function Footer() {
             className={`${styles.marquee}`}
             style={{ "--tagline-delay": `${index * 6.4}s` } as CustomCssVars}
           >
-            <div>
-              <h1 ref={glitch.ref}>{x}</h1>
+            <div ref={glitch.ref}>
+              <h1>{x}</h1>
             </div>
           </div>
         ))}

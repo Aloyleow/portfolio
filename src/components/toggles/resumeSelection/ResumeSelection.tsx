@@ -1,7 +1,9 @@
 import dworddoc from "../../../assets/icons/dark/docx-d.svg";
 import dpdf from "../../../assets/icons/dark/pdf-d.svg";
+import dtxt from "../../../assets/icons/dark/txt-d.svg";
 import worddoc from "../../../assets/icons/light/docx.svg";
 import pdf from "../../../assets/icons/light/pdf.svg";
+import txt from "../../../assets/icons/light/txt.svg";
 import { uiLocaleSettings } from "../../../locale";
 
 import type {
@@ -13,7 +15,7 @@ import { PoppingPopperOfPoppies } from "../../ui/popper/PoppingPopperOfPoppies";
 import { PopperBackButton } from "../../ui/popperBackButton/PopperBackButton";
 import styles from "./ResumeSelection.module.css";
 
-type ResumeFormatTypes = "word" | "pdf";
+type ResumeFormatTypes = "word" | "pdf" | "txt";
 
 type ResumeLinkType = Record<ResumeFormatTypes, string>;
 
@@ -21,16 +23,19 @@ const themeSetting: ThemeSettingType<ResumeFormatTypes> = {
   light: {
     word: worddoc,
     pdf,
+    txt,
   },
   dark: {
     word: dworddoc,
     pdf: dpdf,
+    txt: dtxt,
   },
 };
 
 const resumeLinks: ResumeLinkType = {
   word: "public/resume.docx",
   pdf: "public/resume.pdf",
+  txt: "public/resume.txt",
 };
 
 type ResumeSelectionProps = {
