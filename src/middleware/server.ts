@@ -6,7 +6,6 @@ export const requestLogger = createMiddleware().server(
     const timestamp = new Date().toISOString();
 
     console.log(`[${timestamp}] ${request.method} ${request.url} - Starting`);
-    console.log(request);
 
     try {
       const result = await next();
