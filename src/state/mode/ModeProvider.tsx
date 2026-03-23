@@ -14,7 +14,6 @@ export function ModeProvider({ children }: { children: ReactNode }) {
   const supportedModes: ModeTypes[] = ["dark", "light"] as const;
 
   useEffect(() => {
-    console.log("Mode provider effect test");
     const root = document.documentElement;
 
     if (!userSelect) {
