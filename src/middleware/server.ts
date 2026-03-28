@@ -5,24 +5,28 @@ export const requestLogger = createMiddleware().server(
     const startTime = Date.now();
     const timestamp = new Date().toISOString();
 
-    console.log(`[${timestamp}] ${request.method} ${request.url} - Starting`);
+    // console.log(`[${timestamp}] ${request.headers.keys} - Starting`);
 
-    try {
-      const result = await next();
-      const duration = Date.now() - startTime;
+    console.log(Object.fromEntries(request.headers.entries()));
 
-      console.log(
-        `[${timestamp}] ${request.method} ${request.url} - ${result.response.status} (${duration}ms)`,
-      );
+    return await next()
 
-      return result;
-    } catch (error) {
-      const duration = Date.now() - startTime;
-      console.error(
-        `[${timestamp}] ${request.method} ${request.url} - Error (${duration}ms):`,
-        error,
-      );
-      throw error;
-    }
+    // try {
+    //   const result = await next();
+    //   const duration = Date.now() - startTime;
+
+    //   console.log(
+    //     `[${timestamp}] ${request.method} ${request.url} - ${result.response.status} (${duration}ms)`,
+    //   );
+
+    //   return result;
+    // } catch (error) {
+    //   const duration = Date.now() - startTime;
+    //   console.error(
+    //     `[${timestamp}] ${request.method} ${request.url} - Error (${duration}ms):`,
+    //     error,
+    //   );
+    //   throw error;
+    // }
   },
 );

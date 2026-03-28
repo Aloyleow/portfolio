@@ -10,11 +10,15 @@ declare const container: string;
 declare const inputError: string;
 declare const shakeError: string;
 
-export { container, inputError, shakeError };
+export {
+	container,
+	inputError,
+	shakeError
+};
 
 declare const __default_export__: {
-  container: typeof container;
-  inputError: typeof inputError;
-  shakeError: typeof shakeError;
+	container: typeof container;
+	inputError: typeof inputError;
+	shakeError: typeof shakeError;
 };
 export default __default_export__;

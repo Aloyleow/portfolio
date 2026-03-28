@@ -6,6 +6,8 @@ import type {
   LocaleSettingType,
 } from "../../../types/state.types";
 import styles from "./Introduction.module.css";
+import { useState } from "react";
+import { getServerTime } from "../../../utils/server/what-is-my-ip";
 
 type ContentType = {
   name: string;
@@ -25,6 +27,7 @@ type IntroductionProps = {
 };
 
 export function Introduction({ languageDetect }: IntroductionProps) {
+  const [test, setTest] = useState<string>("Nothing yet")
   return (
     <section className={styles.container} id="home">
       <div className={styles.limit}>
@@ -33,6 +36,8 @@ export function Introduction({ languageDetect }: IntroductionProps) {
         </header>
         <main>
           <h1>{localeSetting[languageDetect].role}</h1>
+          <h1>{test}</h1>
+          <button type="button" onClick={async () => setTest(await getServerTime({ data: { }}))}>Click</button>
         </main>
         <footer>
           <p>{localeSetting[languageDetect].iam}</p>

@@ -11,12 +11,17 @@ declare const image: string;
 declare const trackerHolder: string;
 declare const tracker: string;
 
-export { container, image, trackerHolder, tracker };
+export {
+	container,
+	image,
+	trackerHolder,
+	tracker
+};
 
 declare const __default_export__: {
-  container: typeof container;
-  image: typeof image;
-  trackerHolder: typeof trackerHolder;
-  tracker: typeof tracker;
+	container: typeof container;
+	image: typeof image;
+	trackerHolder: typeof trackerHolder;
+	tracker: typeof tracker;
 };
 export default __default_export__;

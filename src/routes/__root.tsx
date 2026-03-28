@@ -33,9 +33,6 @@ export const Route = createRootRoute({
     ],
   }),
   component: RootComponent,
-  server: {
-    middleware: [requestLogger],
-  },
 });
 
 const queryClient = new QueryClient();
