@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { uiLocaleSettings } from "../../locale";
 import { useLanguage } from "../../state/language/useLanguage";
-import styles from "./index.module.css";
+import styles from "./-index.module.css";
 export const Route = createFileRoute("/privacy/")({
   component: RouteComponent,
 });

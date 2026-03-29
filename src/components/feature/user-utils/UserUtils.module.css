@@ -1,0 +1,51 @@
+.container {
+  position: fixed;
+  z-index: 5;
+  left: 20px;
+  bottom: 20px;
+  border-radius: 28px;
+  backdrop-filter: var(--blur-amount);
+  -webkit-backdrop-filter: var(--blur-amount);
+}
+
+.utilsButton {
+  position: relative;
+  padding: 10px;
+  animation: comein 0.8s ease-out forwards;
+}
+
+.utilsImage {
+  height: 30px;
+  width: 30px;
+}
+
+/* @media (min-width: 640px) {
+  
+} */
+@media (min-width: 768px) {
+  .image {
+    height: 35px;
+    width: 35px;
+  }
+}
+@media (min-width: 1024px) {
+  .container {
+    left: 40px;
+  }
+}
+/* @media (min-width: 1280px) {
+}
+@media (min-width: 1536px) {
+} */
+
+@keyframes comein {
+  0% {
+    opacity: 0;
+    transform: translateY(200%);
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
