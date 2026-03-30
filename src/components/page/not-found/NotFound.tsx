@@ -39,7 +39,7 @@ export default function NotFound() {
         <button
           type="button"
           onClick={() => router.navigate({ to: "/" })}
-          className="button-as-button"
+          className="button-as-button standard-hover"
         >
           Home
         </button>

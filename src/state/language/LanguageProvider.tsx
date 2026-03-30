@@ -15,7 +15,6 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const supportedLanguages: LanguageTypes[] = ["en", "cn", "my"] as const;
 
   useEffect(() => {
-    console.log("Language provider effect test");
     const userDefaultLang = supportedLanguages.find(
       (lang) => navigator.language === lang,
     );
