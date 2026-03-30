@@ -72,7 +72,7 @@ export function Contact({ mode, languageDetect }: ContactProps) {
       />
       {restrict ? (
         <div className={styles.success}>
-          <p style={{ color: "green", marginRight: "10px" }}>
+          <p style={{ color: "green" }}>
             {localeSetting[languageDetect].success}
           </p>
           <Information notice={localeSetting[languageDetect].emailsentinfo} />

@@ -8,4 +8,5 @@ export type UiContentType = {
   submit: string;
   privacy: string;
   source: string;
+  coming: string;
 };

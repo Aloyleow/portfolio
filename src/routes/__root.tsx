@@ -10,6 +10,7 @@ import {
 import type { ReactNode } from "react";
 import { Toaster } from "react-hot-toast";
 import { Footer } from "../components/feature/footer/Footer";
+import NotFound from "../components/page/not-found/NotFound";
 import { LanguageProvider } from "../state/language/LanguageProvider";
 import { ModeProvider } from "../state/mode/ModeProvider";
 import { PoppersProvider } from "../state/poppers/PoppersProvider";
@@ -32,6 +33,7 @@ export const Route = createRootRoute({
     ],
   }),
   component: RootComponent,
+  notFoundComponent: NotFound,
 });
 
 const queryClient = new QueryClient();

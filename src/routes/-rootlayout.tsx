@@ -1,6 +1,7 @@
 import { Administrative } from "../components/feature/administrative/Administrative";
 import { Navigation } from "../components/feature/navigation/Navigation";
 import { Settings } from "../components/feature/settings/Settings";
+import { UserUtils } from "../components/feature/user-utils/UserUtils";
 import { LangSelection } from "../components/toggles/langSelection/LangSelection";
 import { ResumeSelection } from "../components/toggles/resumeSelection/ResumeSelection";
 import { useLanguage } from "../state/language/useLanguage";
@@ -19,6 +20,7 @@ export function RootLayout() {
       {popper.LANGUAGE && <LangSelection />}
       <Navigation mode={mode} languageDetect={languageDetect} />
       <Administrative mode={mode} popper={popper} setPopper={setPopper} />
+      <UserUtils languageDetect={languageDetect} />
       <Settings mode={mode} />
     </>
   );
