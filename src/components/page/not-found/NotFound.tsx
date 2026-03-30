@@ -11,6 +11,7 @@ type ContentType = {
   oops: string;
   full: string;
   part: string;
+  home: string;
 };
 
 const localeSetting: LocaleSettingType<ContentType> = {
@@ -41,7 +42,7 @@ export default function NotFound() {
           onClick={() => router.navigate({ to: "/" })}
           className="button-as-button standard-hover"
         >
-          Home
+          {localeSetting[languageDetect].home}
         </button>
       </footer>
     </section>
