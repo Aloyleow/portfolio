@@ -9,13 +9,10 @@
 declare const modeButton: string;
 declare const fades: string;
 
-export {
-	modeButton,
-	fades
-};
+export { modeButton, fades };
 
 declare const __default_export__: {
-	modeButton: typeof modeButton;
-	fades: typeof fades;
+  modeButton: typeof modeButton;
+  fades: typeof fades;
 };
 export default __default_export__;

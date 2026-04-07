@@ -9,13 +9,10 @@
 declare const container: string;
 declare const limit: string;
 
-export {
-	container,
-	limit
-};
+export { container, limit };
 
 declare const __default_export__: {
-	container: typeof container;
-	limit: typeof limit;
+  container: typeof container;
+  limit: typeof limit;
 };
 export default __default_export__;

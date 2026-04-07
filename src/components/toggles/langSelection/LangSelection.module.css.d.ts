@@ -10,15 +10,11 @@ declare const upperlimit: string;
 declare const middlelimit: string;
 declare const lowerlimit: string;
 
-export {
-	upperlimit,
-	middlelimit,
-	lowerlimit
-};
+export { upperlimit, middlelimit, lowerlimit };
 
 declare const __default_export__: {
-	upperlimit: typeof upperlimit;
-	middlelimit: typeof middlelimit;
-	lowerlimit: typeof lowerlimit;
+  upperlimit: typeof upperlimit;
+  middlelimit: typeof middlelimit;
+  lowerlimit: typeof lowerlimit;
 };
 export default __default_export__;

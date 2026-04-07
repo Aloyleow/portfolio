@@ -11,17 +11,12 @@ declare const limit: string;
 declare const loader: string;
 declare const l3: string;
 
-export {
-	container,
-	limit,
-	loader,
-	l3
-};
+export { container, limit, loader, l3 };
 
 declare const __default_export__: {
-	container: typeof container;
-	limit: typeof limit;
-	loader: typeof loader;
-	l3: typeof l3;
+  container: typeof container;
+  limit: typeof limit;
+  loader: typeof loader;
+  l3: typeof l3;
 };
 export default __default_export__;
