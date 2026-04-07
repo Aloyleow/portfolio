@@ -14,23 +14,9 @@ export default defineConfig({
       generateSourceTypes: true
     }),
     tsConfigPaths(),
-    tanstackStart({
-        prerender: {
-        enabled: true,
-        crawlLinks: true, // Discovers all linkable pages
-      },
-      sitemap: {
-        enabled: true,
-        host: 'https://portfolio.aloylks.com',
-      },
-    }),
+    tanstackStart(),
 
     // react's vite plugin must come after start's vite plugin
     viteReact(),
-  ],
-  build: {
-    rollupOptions: {
-      external: [`./server.ts`]
-    }
-  }
+  ]
 });
