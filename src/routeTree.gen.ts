@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PrivacyIndexRouteImport } from './routes/privacy/index'
+import { Route as GoatIndexRouteImport } from './routes/goat/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,30 +23,39 @@ const PrivacyIndexRoute = PrivacyIndexRouteImport.update({
   path: '/privacy/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GoatIndexRoute = GoatIndexRouteImport.update({
+  id: '/goat/',
+  path: '/goat/',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/goat/': typeof GoatIndexRoute
   '/privacy/': typeof PrivacyIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/goat': typeof GoatIndexRoute
   '/privacy': typeof PrivacyIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/goat/': typeof GoatIndexRoute
   '/privacy/': typeof PrivacyIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/privacy/'
+  fullPaths: '/' | '/goat/' | '/privacy/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/privacy'
-  id: '__root__' | '/' | '/privacy/'
+  to: '/' | '/goat' | '/privacy'
+  id: '__root__' | '/' | '/goat/' | '/privacy/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  GoatIndexRoute: typeof GoatIndexRoute
   PrivacyIndexRoute: typeof PrivacyIndexRoute
 }
 
@@ -65,11 +75,19 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/goat/': {
+      id: '/goat/'
+      path: '/goat'
+      fullPath: '/goat/'
+      preLoaderRoute: typeof GoatIndexRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  GoatIndexRoute: GoatIndexRoute,
   PrivacyIndexRoute: PrivacyIndexRoute,
 }
 export const routeTree = rootRouteImport

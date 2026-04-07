@@ -10,7 +10,6 @@ import {
 import type { ReactNode } from "react";
 import { Toaster } from "react-hot-toast";
 import { Footer } from "../components/feature/footer/Footer";
-import { requestLogger } from "../middleware/server";
 import NotFound from "../components/page/not-found/NotFound";
 import { LanguageProvider } from "../state/language/LanguageProvider";
 import { ModeProvider } from "../state/mode/ModeProvider";
