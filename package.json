@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite dev",
     "build": "tsc -b && vite build",
+    "start": "bun run server.ts",
     "preview": "vite preview",
     "check": "bunx biome check --write && tsc --noEmit"
   },
