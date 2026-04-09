@@ -9,13 +9,10 @@
 declare const ipButton: string;
 declare const fades: string;
 
-export {
-	ipButton,
-	fades
-};
+export { ipButton, fades };
 
 declare const __default_export__: {
-	ipButton: typeof ipButton;
-	fades: typeof fades;
+  ipButton: typeof ipButton;
+  fades: typeof fades;
 };
 export default __default_export__;

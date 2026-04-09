@@ -20,7 +20,7 @@ export function RootLayout() {
       {popper.LANGUAGE && <LangSelection />}
       <Navigation mode={mode} languageDetect={languageDetect} />
       <Administrative mode={mode} popper={popper} setPopper={setPopper} />
-      <UserUtils mode={mode} languageDetect={languageDetect} />
+      <UserUtils mode={mode} />
       <Settings mode={mode} />
     </>
   );

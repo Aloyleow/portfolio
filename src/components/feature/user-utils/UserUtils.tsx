@@ -1,16 +1,14 @@
 import { useState } from "react";
 import goat from "../../../assets/icons/goat-full-body-icon.svg";
-import { uiLocaleSettings } from "../../../locale";
-import type { LanguageTypes, ModeTypes } from "../../../types/state.types";
+import type { ModeTypes } from "../../../types/state.types";
 import styles from "./UserUtils.module.css";
 import { WhatsMyIp } from "./whatsMyIp/WhatsMyIp";
 
 type UserUtilsProps = {
   mode: ModeTypes;
-  languageDetect: LanguageTypes;
 };
 
-export function UserUtils({ mode, languageDetect }: UserUtilsProps) {
+export function UserUtils({ mode }: UserUtilsProps) {
   const [open, setOpen] = useState<boolean>(false);
   return (
     // biome-ignore lint/a11y/noStaticElementInteractions: <TODO(Urgent) find a solution to this>
