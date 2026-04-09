@@ -13,7 +13,7 @@ export const whatsMyIpDetails = createServerFn().handler(async () => {
 
   const forwardIp = headers["x-forwarded-for"]?.toString() ?? null;
   const xRealIp = headers["x-real-ip"] ?? null;
-  const cfConnectingIp = headers["cf-connecting-ip"] ?? null; 
+  const cfConnectingIp = headers["cf-connecting-ip"] ?? null;
   // This runs only on the server
   return {
     forwardIp,

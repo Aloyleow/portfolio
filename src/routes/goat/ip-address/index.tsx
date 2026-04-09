@@ -1,8 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Ipaddress } from "../../../components/page/ipaddress/Ipaddress";
-import { whatsMyIpDetails } from "../../../utils/utils-for-users";
-import { useMode } from "../../../state/mode/useMode";
 import { useLanguage } from "../../../state/language/useLanguage";
+import { useMode } from "../../../state/mode/useMode";
 
 export const Route = createFileRoute("/goat/ip-address/")({
   component: RouteComponent,
@@ -10,12 +9,8 @@ export const Route = createFileRoute("/goat/ip-address/")({
 
 function RouteComponent() {
   //HOOKS
-  const { mode } = useMode()
-  const { languageDetect } = useLanguage()
+  const { mode } = useMode();
+  const { languageDetect } = useLanguage();
 
-  //DATA
-  const data = whatsMyIpDetails()
-  
-  
-  return <Ipaddress mode={mode} languageDetect={languageDetect} data={data}/>;
+  return <Ipaddress mode={mode} languageDetect={languageDetect} />;
 }
