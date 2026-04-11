@@ -8,9 +8,11 @@
 
 declare const cancelButton: string;
 
-export { cancelButton };
+export {
+	cancelButton
+};
 
 declare const __default_export__: {
-  cancelButton: typeof cancelButton;
+	cancelButton: typeof cancelButton;
 };
 export default __default_export__;

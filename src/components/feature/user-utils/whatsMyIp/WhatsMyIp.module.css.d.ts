@@ -6,19 +6,16 @@
  * https://npmjs.com/vite-css-modules
  */
 
-declare const container: string;
-declare const middlelimit: string;
-declare const link: string;
+declare const ipButton: string;
+declare const fades: string;
 
 export {
-	container,
-	middlelimit,
-	link
+	ipButton,
+	fades
 };
 
 declare const __default_export__: {
-	container: typeof container;
-	middlelimit: typeof middlelimit;
-	link: typeof link;
+	ipButton: typeof ipButton;
+	fades: typeof fades;
 };
 export default __default_export__;

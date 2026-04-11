@@ -11,7 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as PrivacyIndexRouteImport } from './routes/privacy/index'
-import { Route as GoatIndexRouteImport } from './routes/goat/index'
+import { Route as GoatIpAddressIndexRouteImport } from './routes/goat/ip-address/index'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -23,9 +23,9 @@ const PrivacyIndexRoute = PrivacyIndexRouteImport.update({
   path: '/privacy/',
   getParentRoute: () => rootRouteImport,
 } as any)
-const GoatIndexRoute = GoatIndexRouteImport.update({
-  id: '/goat/',
-  path: '/goat/',
+const GoatIpAddressIndexRoute = GoatIpAddressIndexRouteImport.update({
+  id: '/goat/ip-address/',
+  path: '/goat/ip-address/',
   getParentRoute: () => rootRouteImport,
 } as any)
 
@@ -33,30 +33,34 @@ export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/goat/': typeof GoatIndexRoute
   '/privacy/': typeof PrivacyIndexRoute
+  '/goat/ip-address/': typeof GoatIpAddressIndexRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/goat': typeof GoatIndexRoute
   '/privacy': typeof PrivacyIndexRoute
+  '/goat/ip-address': typeof GoatIpAddressIndexRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/goat/': typeof GoatIndexRoute
   '/privacy/': typeof PrivacyIndexRoute
+  '/goat/ip-address/': typeof GoatIpAddressIndexRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/goat/' | '/privacy/'
+  fullPaths: '/' | '/privacy/' | '/goat/ip-address/'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/goat' | '/privacy'
-  id: '__root__' | '/' | '/goat/' | '/privacy/'
+  to: '/' | '/privacy' | '/goat/ip-address'
+  id: '__root__' | '/' | '/privacy/' | '/goat/ip-address/'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   GoatIndexRoute: typeof GoatIndexRoute
   PrivacyIndexRoute: typeof PrivacyIndexRoute
+  GoatIpAddressIndexRoute: typeof GoatIpAddressIndexRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -75,11 +79,11 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PrivacyIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
-    '/goat/': {
-      id: '/goat/'
-      path: '/goat'
-      fullPath: '/goat/'
-      preLoaderRoute: typeof GoatIndexRouteImport
+    '/goat/ip-address/': {
+      id: '/goat/ip-address/'
+      path: '/goat/ip-address'
+      fullPath: '/goat/ip-address/'
+      preLoaderRoute: typeof GoatIpAddressIndexRouteImport
       parentRoute: typeof rootRouteImport
     }
   }
@@ -89,6 +93,7 @@ const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   GoatIndexRoute: GoatIndexRoute,
   PrivacyIndexRoute: PrivacyIndexRoute,
+  GoatIpAddressIndexRoute: GoatIpAddressIndexRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)

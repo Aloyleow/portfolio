@@ -12,13 +12,19 @@ declare const info: string;
 declare const marquee: string;
 declare const marqueeMove: string;
 
-export { container, limit, info, marquee, marqueeMove };
+export {
+	container,
+	limit,
+	info,
+	marquee,
+	marqueeMove
+};
 
 declare const __default_export__: {
-  container: typeof container;
-  limit: typeof limit;
-  info: typeof info;
-  marquee: typeof marquee;
-  marqueeMove: typeof marqueeMove;
+	container: typeof container;
+	limit: typeof limit;
+	info: typeof info;
+	marquee: typeof marquee;
+	marqueeMove: typeof marqueeMove;
 };
 export default __default_export__;

@@ -9,4 +9,5 @@ export type UiContentType = {
   privacy: string;
   source: string;
   coming: string;
+  dismiss: string;
 };

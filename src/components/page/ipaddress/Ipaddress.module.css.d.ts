@@ -7,21 +7,21 @@
  */
 
 declare const container: string;
-declare const image: string;
-declare const trackerHolder: string;
-declare const tracker: string;
+declare const upperlimit: string;
+declare const middlelimit: string;
+declare const easternotice: string;
 
 export {
 	container,
-	image,
-	trackerHolder,
-	tracker
+	upperlimit,
+	middlelimit,
+	easternotice
 };
 
 declare const __default_export__: {
 	container: typeof container;
-	image: typeof image;
-	trackerHolder: typeof trackerHolder;
-	tracker: typeof tracker;
+	upperlimit: typeof upperlimit;
+	middlelimit: typeof middlelimit;
+	easternotice: typeof easternotice;
 };
 export default __default_export__;

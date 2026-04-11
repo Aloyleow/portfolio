@@ -8,7 +8,7 @@ import { nitro } from "nitro/vite";
 
 export default defineConfig({
   server: {
-    port: 3100, // teg is on 3000
+    port: 3100, 
   },
   plugins: [
     patchCssModules({
