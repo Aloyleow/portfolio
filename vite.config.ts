@@ -7,7 +7,7 @@ import viteReact from "@vitejs/plugin-react";
 
 export default defineConfig({
   server: {
-    port: 3100, // teg is on 3000
+    port: 3100, 
   },
   plugins: [
     patchCssModules({
