@@ -15,6 +15,7 @@ function RouteComponent() {
 
   const clicklll = async () => {
     const toto = await whatIsMyIP();
+    console.log(toto)
     setTest(toto);
   };
   return (
