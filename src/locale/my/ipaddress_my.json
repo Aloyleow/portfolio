@@ -1,3 +1,7 @@
 {
-  "title": "Mengenal pasti alamat IP"
+  "title": "Mengenal pasti alamat IP",
+  "click": "klik saya",
+  "unable": "Tidak dapat mencari IP",
+  "unableSerious": "Benar-benar tidak dapat mencari IP",
+  "fake": "?.?.?.?"
 }

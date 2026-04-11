@@ -10,11 +10,15 @@ declare const container: string;
 declare const middlelimit: string;
 declare const link: string;
 
-export { container, middlelimit, link };
+export {
+	container,
+	middlelimit,
+	link
+};
 
 declare const __default_export__: {
-  container: typeof container;
-  middlelimit: typeof middlelimit;
-  link: typeof link;
+	container: typeof container;
+	middlelimit: typeof middlelimit;
+	link: typeof link;
 };
 export default __default_export__;

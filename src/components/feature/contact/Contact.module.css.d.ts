@@ -10,11 +10,15 @@ declare const container: string;
 declare const error: string;
 declare const success: string;
 
-export { container, error, success };
+export {
+	container,
+	error,
+	success
+};
 
 declare const __default_export__: {
-  container: typeof container;
-  error: typeof error;
-  success: typeof success;
+	container: typeof container;
+	error: typeof error;
+	success: typeof success;
 };
 export default __default_export__;

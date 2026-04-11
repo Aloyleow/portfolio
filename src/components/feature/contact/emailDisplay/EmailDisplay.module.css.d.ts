@@ -13,14 +13,21 @@ declare const middlelimit: string;
 declare const lowerlimit: string;
 declare const hide: string;
 
-export { container, customcursor, blink, middlelimit, lowerlimit, hide };
+export {
+	container,
+	customcursor,
+	blink,
+	middlelimit,
+	lowerlimit,
+	hide
+};
 
 declare const __default_export__: {
-  container: typeof container;
-  customcursor: typeof customcursor;
-  blink: typeof blink;
-  middlelimit: typeof middlelimit;
-  lowerlimit: typeof lowerlimit;
-  hide: typeof hide;
+	container: typeof container;
+	customcursor: typeof customcursor;
+	blink: typeof blink;
+	middlelimit: typeof middlelimit;
+	lowerlimit: typeof lowerlimit;
+	hide: typeof hide;
 };
 export default __default_export__;

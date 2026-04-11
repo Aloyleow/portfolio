@@ -12,13 +12,19 @@ declare const imageHolder: string;
 declare const comein: string;
 declare const image: string;
 
-export { container, superblur, imageHolder, comein, image };
+export {
+	container,
+	superblur,
+	imageHolder,
+	comein,
+	image
+};
 
 declare const __default_export__: {
-  container: typeof container;
-  superblur: typeof superblur;
-  imageHolder: typeof imageHolder;
-  comein: typeof comein;
-  image: typeof image;
+	container: typeof container;
+	superblur: typeof superblur;
+	imageHolder: typeof imageHolder;
+	comein: typeof comein;
+	image: typeof image;
 };
 export default __default_export__;

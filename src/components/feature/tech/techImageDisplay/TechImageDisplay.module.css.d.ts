@@ -13,14 +13,21 @@ declare const float: string;
 declare const image: string;
 declare const lowerlimit: string;
 
-export { container, middlelimit, imageHolder, float, image, lowerlimit };
+export {
+	container,
+	middlelimit,
+	imageHolder,
+	float,
+	image,
+	lowerlimit
+};
 
 declare const __default_export__: {
-  container: typeof container;
-  middlelimit: typeof middlelimit;
-  imageHolder: typeof imageHolder;
-  float: typeof float;
-  image: typeof image;
-  lowerlimit: typeof lowerlimit;
+	container: typeof container;
+	middlelimit: typeof middlelimit;
+	imageHolder: typeof imageHolder;
+	float: typeof float;
+	image: typeof image;
+	lowerlimit: typeof lowerlimit;
 };
 export default __default_export__;

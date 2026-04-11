@@ -7,12 +7,15 @@
  */
 
 declare const container: string;
+declare const ip: string;
 
 export {
-	container
+	container,
+	ip
 };
 
 declare const __default_export__: {
 	container: typeof container;
+	ip: typeof ip;
 };
 export default __default_export__;

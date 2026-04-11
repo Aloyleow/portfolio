@@ -12,13 +12,19 @@ declare const comein: string;
 declare const utilsImage: string;
 declare const image: string;
 
-export { container, utilsButton, comein, utilsImage, image };
+export {
+	container,
+	utilsButton,
+	comein,
+	utilsImage,
+	image
+};
 
 declare const __default_export__: {
-  container: typeof container;
-  utilsButton: typeof utilsButton;
-  comein: typeof comein;
-  utilsImage: typeof utilsImage;
-  image: typeof image;
+	container: typeof container;
+	utilsButton: typeof utilsButton;
+	comein: typeof comein;
+	utilsImage: typeof utilsImage;
+	image: typeof image;
 };
 export default __default_export__;
