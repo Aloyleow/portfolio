@@ -1,6 +1,7 @@
 {
   "title": "IP address identifier",
   "click": "Find",
+  "how": "When you click the button, your browser sends a request to the server asking for information. Along with that request, some details are included automatically, Eg. return address. So the server knows where the request came from. The server reads this information to identify your internet connection (your IP address), then sends a response back to your browser. Finally, the response will be curated to displays the IP result to you.",
   "easter": {
     "unable": "Unable to find ip",
     "unableSerious": "Really cannot find ip lahhh",

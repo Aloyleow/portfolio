@@ -7,15 +7,21 @@
  */
 
 declare const container: string;
-declare const ip: string;
+declare const upperlimit: string;
+declare const middlelimit: string;
+declare const easternotice: string;
 
 export {
 	container,
-	ip
+	upperlimit,
+	middlelimit,
+	easternotice
 };
 
 declare const __default_export__: {
 	container: typeof container;
-	ip: typeof ip;
+	upperlimit: typeof upperlimit;
+	middlelimit: typeof middlelimit;
+	easternotice: typeof easternotice;
 };
 export default __default_export__;

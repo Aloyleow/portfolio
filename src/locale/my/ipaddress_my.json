@@ -1,6 +1,7 @@
 {
   "title": "Mengenal pasti alamat IP",
   "click": "Cari",
+  "how": "Apabila anda mengklik butang, penyemak imbas anda menghantar permintaan kepada pelayan untuk meminta maklumat. Bersama-sama dengan permintaan itu, beberapa butiran disertakan secara automatik, Cth. alamat pemulangan. Jadi pelayan tahu dari mana permintaan itu datang. Pelayan membaca maklumat ini untuk mengenal pasti sambungan internet anda (alamat IP anda), kemudian menghantar balasan kembali ke penyemak imbas anda. Akhir sekali, respons akan dipilih susun untuk memaparkan hasil IP kepada anda.",
   "easter": {
     "unable": "Tidak dapat mencari IP",
     "unableSerious": "Benar-benar tidak dapat mencari IP",

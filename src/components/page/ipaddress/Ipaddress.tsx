@@ -13,12 +13,14 @@ import {
   type WhatsMyIpDetailsResponseType,
   whatsMyIpDetails,
 } from "../../../utils/utils-for-users";
+import { Information } from "../../ui/information/Information";
 import { ipGlitchOpts } from "./animation";
 import styles from "./Ipaddress.module.css";
 
 type ContentType = {
   title: string;
   click: string;
+  how: string;
   easter: {
     unable: string;
     unableSerious: string;
@@ -82,17 +84,24 @@ export function Ipaddress({ languageDetect }: IpaddressProps) {
   };
   return (
     <section className={styles.container}>
-      <h1>{localeSetting[languageDetect].title}</h1>
+      <header className={styles.upperlimit}>
+        <h1>{localeSetting[languageDetect].title}</h1>
+        <Information
+          notice={localeSetting[languageDetect].how}
+          customDelay={60}
+          languageDetect={languageDetect}
+        />
+      </header>
 
-      <div className={styles.ip}>
+      <div className={styles.middlelimit}>
         {easterState !== "fake" ? (
           !easterState ? (
             <h2>{ipAddressData?.forwardIp}</h2>
           ) : (
-            <>
-              <h2>{localeSetting[languageDetect].easter[easterState]}</h2>
+            <div className={styles.easternotice}>
+              <p>{localeSetting[languageDetect].easter[easterState]}</p>
               <h2>{emotiForEasterState[easterState] ?? ""}</h2>
-            </>
+            </div>
           )
         ) : (
           <div>

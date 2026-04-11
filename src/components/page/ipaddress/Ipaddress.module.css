@@ -7,11 +7,16 @@
   align-items: center;
 }
 
-.ip {
+.upperlimit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.middlelimit {
   height: 100px;
   width: 90%;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -19,14 +24,26 @@
   box-shadow: inset 0 2px 4px var(--border-color);
 }
 
-.ip h2 {
+.middlelimit h2 {
   margin: 0;
+}
+
+.middlelimit p {
+  margin: 0;
+}
+
+.easternotice {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-display: grayscale(0.3);
 }
 
 /* @media (min-width: 640px) {
 } */
 @media (min-width: 768px) {
-  .ip {
+  .middlelimit {
     width: 500px;
   }
 }
