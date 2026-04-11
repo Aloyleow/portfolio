@@ -1,7 +1,10 @@
 {
   "title": "IP 地址标识符",
-  "click": "点击我",
-  "unable": "找不到 IP",
-  "unableSerious": "真的找不到 IP",
-  "fake": "?.?.?.?"
+  "click": "寻找",
+  "easter": {
+    "unable": "找不到 IP",
+    "unableSerious": "真的找不到 IP",
+    "fake": "?.?.?.?",
+    "serious": "不可以就是不可以!"
+  }
 }

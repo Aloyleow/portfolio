@@ -1,7 +1,10 @@
 {
   "title": "IP address identifier",
-  "click": "Click me",
-  "unable": "Unable to find ip",
-  "unableSerious": "Really cannot find ip lahhh",
-  "fake": "?.?.?.?"
+  "click": "Find",
+  "easter": {
+    "unable": "Unable to find ip",
+    "unableSerious": "Really cannot find ip lahhh",
+    "fake": "?.?.?.?",
+    "serious": "Cannot means cannot!"
+  }
 }

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import toast from "react-hot-toast";
 import { type GlitchHandle, useGlitch } from "react-powerglitch";
 import cn from "../../../locale/cn/ipaddress_cn.json";
 import en from "../../../locale/en/ipaddress_en.json";
@@ -6,7 +7,6 @@ import my from "../../../locale//my/ipaddress_my.json";
 import type {
   LanguageTypes,
   LocaleSettingType,
-  ModeTypes,
 } from "../../../types/state.types";
 import { sadEmotis } from "../../../utils/emots/sad";
 import {
@@ -19,12 +19,15 @@ import styles from "./Ipaddress.module.css";
 type ContentType = {
   title: string;
   click: string;
-  unable: string;
-  unableSerious: string;
-  fake: string;
+  easter: {
+    unable: string;
+    unableSerious: string;
+    fake: string;
+    serious: string;
+  };
 };
 type IpaddressProps = {
-  mode: ModeTypes;
+  // mode: ModeTypes;
   languageDetect: LanguageTypes;
 };
 
@@ -34,16 +37,18 @@ const localeSetting: LocaleSettingType<ContentType> = {
   my,
 };
 
-const emotiForEasterState: Partial<Record<keyof ContentType, string>> = {
+const emotiForEasterState: Partial<
+  Record<keyof ContentType["easter"], string>
+> = {
   unable: sadEmotis[0],
   unableSerious: sadEmotis[1],
 };
 
-export function Ipaddress({ mode, languageDetect }: IpaddressProps) {
+export function Ipaddress({ languageDetect }: IpaddressProps) {
   const [easterCount, setEasterCount] = useState<number>(0);
-  const [easterState, setEasterState] = useState<null | keyof ContentType>(
-    null,
-  );
+  const [easterState, setEasterState] = useState<
+    null | keyof ContentType["easter"]
+  >(null);
   const [ipAddressData, setIpAddressData] =
     useState<WhatsMyIpDetailsResponseType>();
   const glitch: GlitchHandle = useGlitch(ipGlitchOpts);
@@ -54,9 +59,6 @@ export function Ipaddress({ mode, languageDetect }: IpaddressProps) {
     if (data.forwardIp) {
       setIpAddressData(data);
       setEasterCount(0);
-    } else {
-      setEasterState("unable");
-      setEasterCount(() => easterCount + 1);
     }
 
     showEaster();
@@ -64,17 +66,18 @@ export function Ipaddress({ mode, languageDetect }: IpaddressProps) {
     return;
   };
   const showEaster = () => {
-    if (easterCount > 3) {
-      setEasterState("unableSerious");
-    }
+    setEasterCount(() => easterCount + 1);
 
-    if (easterCount > 8) {
-      setEasterState("fake");
-    }
-
-    if (easterCount > 9) {
+    if (easterCount > 6) {
       setEasterCount(0);
       setEasterState(null);
+      toast.error(`${localeSetting[languageDetect].easter.serious}`);
+    } else if (easterCount > 4) {
+      setEasterState("fake");
+    } else if (easterCount > 2) {
+      setEasterState("unableSerious");
+    } else {
+      setEasterState("unable");
     }
   };
   return (
@@ -87,14 +90,14 @@ export function Ipaddress({ mode, languageDetect }: IpaddressProps) {
             <h2>{ipAddressData?.forwardIp}</h2>
           ) : (
             <>
-              <h2>{localeSetting[languageDetect][easterState]}</h2>
+              <h2>{localeSetting[languageDetect].easter[easterState]}</h2>
               <h2>{emotiForEasterState[easterState] ?? ""}</h2>
             </>
           )
         ) : (
           <div>
             <h2 ref={glitch.ref}>
-              {localeSetting[languageDetect][easterState]}
+              {localeSetting[languageDetect].easter[easterState]}
             </h2>
           </div>
         )}

@@ -1,7 +1,10 @@
 {
   "title": "Mengenal pasti alamat IP",
-  "click": "klik saya",
-  "unable": "Tidak dapat mencari IP",
-  "unableSerious": "Benar-benar tidak dapat mencari IP",
-  "fake": "?.?.?.?"
+  "click": "Cari",
+  "easter": {
+    "unable": "Tidak dapat mencari IP",
+    "unableSerious": "Benar-benar tidak dapat mencari IP",
+    "fake": "?.?.?.?",
+    "serious": "Tidak boleh bermakna tidak boleh!"
+  }
 }
