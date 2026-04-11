@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { type GlitchHandle, useGlitch } from "react-powerglitch";
 import cn from "../../../locale/cn/ipaddress_cn.json";
 import en from "../../../locale/en/ipaddress_en.json";
 import my from "../../../locale//my/ipaddress_my.json";
@@ -12,6 +13,7 @@ import {
   type WhatsMyIpDetailsResponseType,
   whatsMyIpDetails,
 } from "../../../utils/utils-for-users";
+import { ipGlitchOpts } from "./animation";
 import styles from "./Ipaddress.module.css";
 
 type ContentType = {
@@ -44,6 +46,7 @@ export function Ipaddress({ mode, languageDetect }: IpaddressProps) {
   );
   const [ipAddressData, setIpAddressData] =
     useState<WhatsMyIpDetailsResponseType>();
+  const glitch: GlitchHandle = useGlitch(ipGlitchOpts);
 
   const handleGetMyIp = async () => {
     const data = await whatsMyIpDetails();
@@ -56,6 +59,11 @@ export function Ipaddress({ mode, languageDetect }: IpaddressProps) {
       setEasterCount(() => easterCount + 1);
     }
 
+    showEaster();
+
+    return;
+  };
+  const showEaster = () => {
     if (easterCount > 3) {
       setEasterState("unableSerious");
     }
@@ -63,22 +71,32 @@ export function Ipaddress({ mode, languageDetect }: IpaddressProps) {
     if (easterCount > 8) {
       setEasterState("fake");
     }
-    return;
-  };
 
+    if (easterCount > 9) {
+      setEasterCount(0);
+      setEasterState(null);
+    }
+  };
   return (
     <section className={styles.container}>
-      <header>{localeSetting[languageDetect].title}</header>
+      <h1>{localeSetting[languageDetect].title}</h1>
 
       <div className={styles.ip}>
         {easterState !== "fake" ? (
-          <h1>
-            {!easterState
-              ? ipAddressData?.forwardIp
-              : `${localeSetting[languageDetect][easterState]} ${emotiForEasterState[easterState] ?? ""}`}
-          </h1>
+          !easterState ? (
+            <h2>{ipAddressData?.forwardIp}</h2>
+          ) : (
+            <>
+              <h2>{localeSetting[languageDetect][easterState]}</h2>
+              <h2>{emotiForEasterState[easterState] ?? ""}</h2>
+            </>
+          )
         ) : (
-          <h1>{localeSetting[languageDetect][easterState]}</h1>
+          <div>
+            <h2 ref={glitch.ref}>
+              {localeSetting[languageDetect][easterState]}
+            </h2>
+          </div>
         )}
       </div>
       <button
