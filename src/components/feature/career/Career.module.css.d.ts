@@ -11,12 +11,17 @@ declare const upperlimit: string;
 declare const middlelimit: string;
 declare const subHeading: string;
 
-export { container, upperlimit, middlelimit, subHeading };
+export {
+	container,
+	upperlimit,
+	middlelimit,
+	subHeading
+};
 
 declare const __default_export__: {
-  container: typeof container;
-  upperlimit: typeof upperlimit;
-  middlelimit: typeof middlelimit;
-  subHeading: typeof subHeading;
+	container: typeof container;
+	upperlimit: typeof upperlimit;
+	middlelimit: typeof middlelimit;
+	subHeading: typeof subHeading;
 };
 export default __default_export__;

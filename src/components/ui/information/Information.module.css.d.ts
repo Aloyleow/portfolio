@@ -8,13 +8,20 @@
 
 declare const container: string;
 declare const toast: string;
+declare const notice: string;
 declare const limit: string;
 
-export { container, toast, limit };
+export {
+	container,
+	toast,
+	notice,
+	limit
+};
 
 declare const __default_export__: {
-  container: typeof container;
-  toast: typeof toast;
-  limit: typeof limit;
+	container: typeof container;
+	toast: typeof toast;
+	notice: typeof notice;
+	limit: typeof limit;
 };
 export default __default_export__;

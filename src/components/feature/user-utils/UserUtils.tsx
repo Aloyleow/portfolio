@@ -1,23 +1,27 @@
-import toast from "react-hot-toast";
+import { useState } from "react";
 import goat from "../../../assets/icons/goat-full-body-icon.svg";
-import { uiLocaleSettings } from "../../../locale";
-import type { LanguageTypes } from "../../../types/state.types";
+import type { ModeTypes } from "../../../types/state.types";
 import styles from "./UserUtils.module.css";
+import { WhatsMyIp } from "./whatsMyIp/WhatsMyIp";
 
 type UserUtilsProps = {
-  languageDetect: LanguageTypes;
+  mode: ModeTypes;
 };
 
-export function UserUtils({ languageDetect }: UserUtilsProps) {
+export function UserUtils({ mode }: UserUtilsProps) {
+  const [open, setOpen] = useState<boolean>(false);
   return (
-    <section className={styles.container}>
+    // biome-ignore lint/a11y/noStaticElementInteractions: <TODO(Urgent) find a solution to this>
+    <section className={styles.container} onMouseLeave={() => setOpen(false)}>
       <button
         type="button"
         className={`button-as-div ${styles.utilsButton}`}
-        onClick={() => toast(`${uiLocaleSettings[languageDetect].coming} !`)}
+        onMouseEnter={() => setOpen(true)}
+        onFocus={() => setOpen(true)}
       >
         <img src={goat} alt="goat" className={styles.utilsImage} />
       </button>
+      {open && <WhatsMyIp mode={mode} setOpen={setOpen} />}
     </section>
   );
 }

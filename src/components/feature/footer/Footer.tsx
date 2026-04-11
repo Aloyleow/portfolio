@@ -16,16 +16,33 @@ export function Footer() {
     <footer className={styles.container}>
       <span className={styles.limit}>
         <div className={styles.info}>
-          <p>@ 2026 Aloysious Leow</p>
-          <p>v{import.meta.env.VITE_VERSION}</p>
-          <Link to="/privacy">{uiLocaleSettings[languageDetect].privacy}</Link>
-          <a
-            href="https://github.com/Aloyleow/portfolio"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {uiLocaleSettings[languageDetect].source}
-          </a>
+          <div>
+            <p>@ 2026 Aloysious Leow</p>
+            <p>v{import.meta.env.VITE_VERSION}</p>
+            <Link to="/privacy">
+              {uiLocaleSettings[languageDetect].privacy}
+            </Link>
+            <a
+              href="https://github.com/Aloyleow/portfolio"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {uiLocaleSettings[languageDetect].source}
+            </a>
+          </div>
+          <div>
+            <p>
+              Credits -{" "}
+              <a
+                href="https://uxwing.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                uxwing
+              </a>{" "}
+              for icons
+            </p>
+          </div>
         </div>
         {tagLine.map((x, index) => (
           <div
