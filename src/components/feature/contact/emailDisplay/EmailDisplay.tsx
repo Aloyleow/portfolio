@@ -1,7 +1,7 @@
 import type {
   EmailJsPayloadType,
   InputStageTypes,
-} from "../../../../types/components/contact";
+} from "../../../../types/components/contact.types";
 
 import type { ModeTypes } from "../../../../types/state.types";
 import styles from "./EmailDisplay.module.css";
