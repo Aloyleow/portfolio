@@ -12,7 +12,7 @@ import { sadEmotis } from "../../../utils/emots/sad";
 import {
   type WhatsMyIpDetailsResponseType,
   whatsMyIpDetails,
-} from "../../../utils/utils-for-users";
+} from "../../../utils/server/utils-for-users";
 import { Information } from "../../ui/information/Information";
 import { ipGlitchOpts } from "./animation";
 import styles from "./Ipaddress.module.css";
