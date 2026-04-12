@@ -5,7 +5,7 @@ import my from "../../../../locale/my/contact_my.json";
 import type {
   EmailJsPayloadType,
   InputStageTypes,
-} from "../../../../types/components/contact";
+} from "../../../../types/components/contact.types";
 
 import type {
   LanguageTypes,

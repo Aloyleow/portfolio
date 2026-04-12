@@ -1,0 +1,65 @@
+.topcontainer {
+  position: fixed;
+  z-index: 5;
+  top: 20px;
+  left: 50%;
+}
+
+.topguide {
+  position: relative;
+  right: 50%;
+  transform: rotate(180deg);
+  animation: fade 10s ease-in-out infinite;
+}
+
+.bottomcontainer {
+  position: fixed;
+  z-index: 5;
+  bottom: 20px;
+  left: 50%;
+}
+
+.bottomguide {
+  position: relative;
+  right: 50%;
+  animation: fade 10s ease-in-out infinite;
+}
+
+.image {
+  height: 35px;
+  width: 35px;
+}
+/* @media (min-width: 640px) {
+  
+} */
+@media (min-width: 768px) {
+  .image {
+    height: 40px;
+    width: 40px;
+  }
+}
+/* @media (min-width: 1024px) {
+
+} */
+/* @media (min-width: 1280px) {
+}
+@media (min-width: 1536px) {
+} */
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  75% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
