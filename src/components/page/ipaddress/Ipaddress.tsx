@@ -62,10 +62,9 @@ export function Ipaddress({ languageDetect }: IpaddressProps) {
     if (data.forwardIp) {
       setIpAddressData(data);
       setEasterCount(0);
+    } else {
+      showEaster();
     }
-
-    showEaster();
-
     return;
   };
   const showEaster = () => {
