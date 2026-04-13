@@ -57,7 +57,7 @@ export function Ipaddress({ languageDetect }: IpaddressProps) {
 
   const handleGetMyIp = async () => {
     const data = await whatsMyIpDetails();
-    console.log(data)
+    console.log(data);
 
     if (data.forwardIp) {
       setIpAddressData(data);

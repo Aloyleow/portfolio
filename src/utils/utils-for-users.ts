@@ -19,3 +19,19 @@ export const whatsMyIpDetails = createServerFn().handler(async () => {
     xRealIp,
   };
 });
+
+export const marco = createServerFn().handler(() => `polo`);
+
+export const trolltest = createServerFn().handler(async () => {
+  const request = getRequest();
+
+  const headers = Object.fromEntries(request.headers.entries());
+
+  // const forwardIp = headers["x-forwarded-for"]?.split(",")[0] ?? null;
+  // const xRealIp = headers["x-real-ip"] ?? null;
+  // const cfConnectingIp = headers["cf-connecting-ip"] ?? null;
+
+  return {
+    headers,
+  };
+});
